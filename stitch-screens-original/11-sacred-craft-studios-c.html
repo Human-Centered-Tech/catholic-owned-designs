@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e8e8e4",
+                        "tertiary-container": "#c9a84e",
+                        "on-surface-variant": "#44474e",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#354769",
+                        "background": "#faf9f5",
+                        "on-secondary-fixed": "#241a00",
+                        "on-primary-container": "#7284aa",
+                        "tertiary-fixed-dim": "#e6c366",
+                        "tertiary-fixed": "#ffdf90",
+                        "primary-container": "#061b3c",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-tertiary-fixed": "#241a00",
+                        "tertiary": "#755b00",
+                        "primary-fixed": "#d8e2ff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#b5c6f0",
+                        "secondary-fixed-dim": "#e9c256",
+                        "secondary-fixed": "#ffe08e",
+                        "on-secondary-fixed-variant": "#584400",
+                        "surface-variant": "#e2e3df",
+                        "on-secondary-container": "#755c00",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#b5c6f0",
+                        "surface-container-low": "#f4f4f0",
+                        "surface-dim": "#dadad6",
+                        "on-background": "#1a1c1a",
+                        "surface-bright": "#faf9f5",
+                        "secondary": "#755b00",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#061b3c",
+                        "on-tertiary-container": "#503d00",
+                        "inverse-on-surface": "#f1f1ed",
+                        "primary": "#000000",
+                        "surface-tint": "#4d5e83",
+                        "inverse-surface": "#2f312e",
+                        "surface-container-highest": "#e2e3df",
+                        "outline-variant": "#c5c6cf",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#eeeeea",
+                        "error-container": "#ffdad6",
+                        "surface": "#faf9f5",
+                        "outline": "#75777f",
+                        "on-surface": "#1a1c1a",
+                        "secondary-container": "#fed667",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .serif-italic { font-family: 'Noto Serif'; font-style: italic; }
+        .hero-gradient {
+            background: linear-gradient(0deg, rgba(6,27,60,0.8) 0%, rgba(6,27,60,0) 60%);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #755b00 0%, #BE9B32 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 z-50 w-full bg-stone-50/85 dark:bg-slate-950/85 backdrop-blur-md border-b border-slate-200/10">
+<div class="flex flex-col w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<!-- Top Row -->
+<div class="flex items-center justify-between gap-8 mb-4">
+<div class="text-2xl font-serif italic text-slate-900 dark:text-stone-50 flex-shrink-0">
+                    Sacred Craft Studios
+                </div>
+<div class="flex-grow max-w-2xl">
+<div class="relative flex items-center bg-surface-container-highest rounded-full px-4 py-2 group">
+<input class="bg-transparent border-none focus:ring-0 w-full text-sm font-body" placeholder="Search for liturgical goods..." type="text"/>
+<button class="gold-gradient text-white p-2 rounded-full flex items-center justify-center transition-transform active:scale-95">
+<span class="material-symbols-outlined text-sm">search</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 text-on-surface-variant">
+<button class="hover:bg-stone-200/50 transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="hover:bg-stone-200/50 transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+<button class="bg-primary-container text-white px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-opacity-90 transition-all active:scale-95">
+                        JOIN THE ECONOMY
+                    </button>
+</div>
+</div>
+<!-- Bottom Row -->
+<nav class="flex justify-center items-center gap-10">
+<a class="uppercase tracking-widest text-xs text-amber-700 dark:text-amber-500 font-bold border-b-2 border-amber-700 pb-1" href="#">SHOP</a>
+<a class="uppercase tracking-widest text-xs text-slate-600 dark:text-slate-400 hover:text-slate-900 pb-1 transition-colors" href="#">DIRECTORY</a>
+<a class="uppercase tracking-widest text-xs text-slate-600 dark:text-slate-400 hover:text-slate-900 pb-1 transition-colors" href="#">EVENTS</a>
+<a class="uppercase tracking-widest text-xs text-slate-600 dark:text-slate-400 hover:text-slate-900 pb-1 transition-colors" href="#">BARTER</a>
+<a class="uppercase tracking-widest text-xs text-slate-600 dark:text-slate-400 hover:text-slate-900 pb-1 transition-colors" href="#">REGISTRY</a>
+</nav>
+</div>
+</header>
+<main class="pt-[116px]">
+<!-- Hero Section -->
+<section class="relative h-[450px] w-full overflow-hidden">
+<img alt="Sacred Workshop" class="w-full h-full object-cover" data-alt="cinematic close-up of a sunlit artisan workshop with golden beeswax candles, dark wood rosaries, and old leather books on a textured stone table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn8LyE2h9sxX5QpEpFEKOWjVXOwwFSzFkpqPCJEpNKnMLk9CprgmfEDUqj7tjX0eRuEYOLcilyR7HvKGi2YCzRroAhpmRMxRjm-9-BRHpdrU_AM3qynXSbWE3tc29Dp-56fUeWt0jKWROGxEI5ixTuILm3J2HCPFemRlz92XExYu2wKZVG0SFVbw6EdQVvDsAD1FwkFI4GgA8Qd2n3oAn0uL9L4sdIVGTsaqTXTYMuLDAOKAsWHClbYHRumufShAxbW6k8CxQhwvY"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</section>
+<!-- Profile Card Overlap -->
+<div class="max-w-7xl mx-auto px-8 relative -mt-32 z-10">
+<div class="bg-surface-container-lowest rounded-lg p-8 shadow-2xl flex flex-col md:flex-row items-center md:items-start gap-8">
+<div class="w-32 h-32 bg-[#001435] flex items-center justify-center rounded-lg flex-shrink-0 shadow-lg">
+<span class="font-headline text-6xl text-secondary-fixed">S</span>
+</div>
+<div class="flex-grow space-y-3 text-center md:text-left">
+<h1 class="font-headline text-4xl font-bold text-on-primary-fixed">Sacred Craft Studios</h1>
+<p class="serif-italic text-secondary text-lg">Handcrafted liturgical goods for the domestic church</p>
+<div class="flex items-center justify-center md:justify-start gap-6 pt-2">
+<div class="flex flex-col">
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Products</span>
+<span class="font-headline text-xl">24</span>
+</div>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<div class="flex flex-col">
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Reviews</span>
+<span class="font-headline text-xl">156</span>
+</div>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<div class="flex flex-col">
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Rating</span>
+<div class="flex items-center gap-1">
+<span class="font-headline text-xl">4.8</span>
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 self-center">
+<button class="bg-[#001435] text-white px-8 py-4 rounded-full font-bold tracking-widest text-xs uppercase hover:bg-opacity-90 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">mail</span>
+                        MESSAGE SELLER
+                    </button>
+</div>
+</div>
+</div>
+<!-- Product Section -->
+<section class="max-w-7xl mx-auto px-8 py-16">
+<div class="border-b border-secondary/30 mb-12 flex items-center justify-between">
+<div class="flex gap-12">
+<button class="pb-4 text-on-primary-fixed font-bold border-b-2 border-secondary relative">
+                        Products
+                    </button>
+<button class="pb-4 text-on-surface-variant hover:text-on-primary-fixed transition-colors">
+                        About
+                    </button>
+<button class="pb-4 text-on-surface-variant hover:text-on-primary-fixed transition-colors">
+                        Reviews
+                    </button>
+</div>
+<div class="pb-4">
+<span class="text-sm font-body italic text-on-surface-variant">Showing 8 of 24 items</span>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product 1 -->
+<div class="bg-surface-container-lowest group overflow-hidden">
+<div class="aspect-square overflow-hidden bg-surface-container-low mb-4 relative">
+<img alt="Beeswax Candles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="pure honeycomb beeswax altar candles tied with a rustic twine on a dark wooden surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD5FlDi8kNV8TqV_WkoKZNCMxHTy0ua3gYsX0yaoce0JErnotU0RqYJThmEpBh8mNL_HWxZhYNmsRxbVRlk208uY8Iw8wnHeKRCsAzlETdmGH6BcC4aoCVfcUTE59Is7V4Zr265MIZjp3YvONhgYd1Ri6ixSuZ5y3RmA59GMtVKL3doEWPcP6Sle8aTCVTBGHPKYDf51qiGB3K1u15Q5oxW_Y6ZTD0RSUWoyWqayDbilvVPmepmxQuhehTyjavKC_0jKBSnT9zj40"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-2 py-1 rounded text-[10px] font-bold tracking-tighter uppercase text-secondary">New Arrival</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-body text-on-surface font-semibold">Pure Beeswax Altar Candles</h3>
+<p class="font-headline text-lg text-on-primary-fixed">$38.00</p>
+<button class="w-full mt-4 gold-gradient text-white py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:shadow-lg transition-all active:scale-95">
+                            ADD TO CART
+                        </button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-surface-container-lowest group overflow-hidden">
+<div class="aspect-square overflow-hidden bg-surface-container-low mb-4">
+<img alt="Olive Wood Rosary" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="heritage olive wood rosary with dark beads and a carved wooden crucifix on a linen cloth background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzhnKWD9Jn7WCoPcGkdi9TrkX4veh5b6xAfQ6xJ5zf80jCmwDVZQrVQ4m19s9Ux7NbXmL7h_-AgJxkGfAKfcMfZMtWPaX_G3jFZu8LKy69g3mbP7Hsmo633eVAKYuyl0bDGHhz5NYgX3wBEDk_hYKf_nXaFykQdbr_u3EmVjz8vr4v53-c_EscGH5deLNsb6UX7ye7QsSGr0njJ_ql4TXxEmU4eh8YM_8IOnH1Wf1CJvyW2wAqWYHgLOZ26dFfUEL7SpGjPOr-lwg"/>
+</div>
+<div class="space-y-1">
+<h3 class="font-body text-on-surface font-semibold">Heritage Olive Wood Rosary</h3>
+<p class="font-headline text-lg text-on-primary-fixed">$52.00</p>
+<button class="w-full mt-4 gold-gradient text-white py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:shadow-lg transition-all active:scale-95">
+                            ADD TO CART
+                        </button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-surface-container-lowest group overflow-hidden">
+<div class="aspect-square overflow-hidden bg-surface-container-low mb-4">
+<img alt="Prayer Journal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="minimalist dark leather-bound prayer journal with gold leaf edges on a slate background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiW4yZvDv0r1l2bGxO_HTsfcvQMcZO5pwR81gE5tg_nAA9RRLL77oAkMWaOifJa9g1NVUMDOj20K5UFsKCOR5EEaNY3wQqIj6vtvjaXqUDL93q9td960g-vSe6vtVfjjtry7FMA9De9DY8eYCewdO7RvdW0VikzLoO8gyrbcOb6-jtCPj5yw6z_UF1jSJXDsDhGpdw8BtA95kc8ofy-n5sPLsufn06Yvt_-rAe0t0vA1lMAdLyzDFVMHW367hFk4LneZIDVoGH-hs"/>
+</div>
+<div class="space-y-1">
+<h3 class="font-body text-on-surface font-semibold">The Editorial Prayer Journal</h3>
+<p class="font-headline text-lg text-on-primary-fixed">$45.00</p>
+<button class="w-full mt-4 gold-gradient text-white py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:shadow-lg transition-all active:scale-95">
+                            ADD TO CART
+                        </button>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="bg-surface-container-lowest group overflow-hidden">
+<div class="aspect-square overflow-hidden bg-surface-container-low mb-4">
+<img alt="Bronze Crucifix" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="aged bronze wall crucifix with intricate details resting against a warm white plaster wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2suh8rt3tfaNd-X5R4LulPG_-VqhTJIWSMAFHNEzDoEuHHKt1lwMsEEWxk5-lsYOzfVgIPX0zt6jpCztWw067Lb6B6ZSnNElU4flTmMR2P788oEgOYQ6e_tvSqZ_RjJ6uovr2ic54oR8dC0rbpUn4CWUydJmsCzSk_ekDTDt1pDdo9MIm5pOrtCrZeaCSjlXVUsR6WaqRFbgg0mNGqsGZAtAPiR1D065Dpwc6BR5u4lRgl-DR9ZZtMileHNC1U0KgigKpPOIkMxA"/>
+</div>
+<div class="space-y-1">
+<h3 class="font-body text-on-surface font-semibold">Artisan Bronze Wall Crucifix</h3>
+<p class="font-headline text-lg text-on-primary-fixed">$89.00</p>
+<button class="w-full mt-4 gold-gradient text-white py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:shadow-lg transition-all active:scale-95">
+                            ADD TO CART
+                        </button>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="bg-surface-container-lowest group overflow-hidden">
+<div class="aspect-square overflow-hidden bg-surface-container-low mb-4">
+<img alt="Incense Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="small glass jars filled with colorful resin incense and charcoal tablets in a small wooden box" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg_u-0Qe-fLelDbH3fhZUopoPtf54oYa8CI-5ZnOW4cN86zdcF2wh7pESsDEXu79mUJPOSC0GAsEdBI0KjqmrhyPEFzpj6mbNTivmXU2qEwJ-s9FDsYXiXp0v5ZIaJTyIRmmcVjuOkZfN-s-8wqI3j1Fxt6RcsGJXky51iE_YMHVT6v4KTBrtfpu0AcWXMTq-2OJuG5igBgJqJ34gvXPOkoCoPV12L2hY_hWqeJZ1-fVq7NnrxiDGcnSMKGNXSZHumeF_RClgl71M"/>
+</div>
+<div class="space-y-1">
+<h3 class="font-body text-on-surface font-semibold">Sacred Resin Incense Set</h3>
+<p class="font-headline text-lg text-on-primary-fixed">$29.00</p>
+<button class="w-full mt-4 gold-gradient text-white py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:shadow-lg transition-all active:scale-95">
+                            ADD TO CART
+                        </button>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="bg-surface-container-lowest group overflow-hidden">
+<div class="aspect-square overflow-hidden bg-surface-container-low mb-4">
+<img alt="Sandstone Font" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="minimalist sandstone wall-mounted holy water font with a subtle carved cross" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmh10AsncOLGEClD9MZgVBc4m9N68YyatsE3-eQA6PogcoYSKJHsoyo0WyBStd2HYAkbitGtVHR33kGFUuqYDiy5JM1LNNgdBGOvQncviJm4uOxLk9TlmCZNKKfEbFLaUHuh0LMQfboG8uHOzDRr_G7qkspoJTtgtGeHLCNrVEJ7e0vdYigHObRxVyzDKXHKMO_ewlZjyNvUKCte2Th3fIUXSGb1i_QPxHdmI5SaSxi2n1NPXcQeXjE3DdDhB0xIHave-t8i8ZWc4"/>
+</div>
+<div class="space-y-1">
+<h3 class="font-body text-on-surface font-semibold">Domestic Font - Sandstone</h3>
+<p class="font-headline text-lg text-on-primary-fixed">$64.00</p>
+<button class="w-full mt-4 gold-gradient text-white py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:shadow-lg transition-all active:scale-95">
+                            ADD TO CART
+                        </button>
+</div>
+</div>
+<!-- Product 7 -->
+<div class="bg-surface-container-lowest group overflow-hidden">
+<div class="aspect-square overflow-hidden bg-surface-container-low mb-4">
+<img alt="Liturgical Print" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="vintage-style liturgical art print framed in dark oak on a neutral gallery wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh-u4uM6C4DiL72TBWj-ypDWJ19ehn_6fk2ehSmvLDoAPIAjZuH1CLgez-k1UahTrqrFmfufgODgQw8WMfDsj0Ac7kO2pNL6s40s9MQ8qIm6A6x9f8XKL7-_KlDjYd7tKSbUquqK0u8zDX4OejQ70-bByCCIJOMxENGNqyuVkaS8K5tsyOUHW1YVhup9gJedIhgonsitVFbeRS7mhKkM_3wu91N3O5t3WhqaSz4fsHyry-Y9XAM_4WpEHb2rprfw1pXqLSWbDx2pw"/>
+</div>
+<div class="space-y-1">
+<h3 class="font-body text-on-surface font-semibold">Vintage Liturgical Print</h3>
+<p class="font-headline text-lg text-on-primary-fixed">$120.00</p>
+<button class="w-full mt-4 gold-gradient text-white py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:shadow-lg transition-all active:scale-95">
+                            ADD TO CART
+                        </button>
+</div>
+</div>
+<!-- Product 8 -->
+<div class="bg-surface-container-lowest group overflow-hidden">
+<div class="aspect-square overflow-hidden bg-surface-container-low mb-4">
+<img alt="Walnut Crucifix" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="dark walnut wood study crucifix with silver corpus on a leather desk mat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKEnPO6YTri0BMIZtuu6bzboKGbpx-kpIDzMlpWyefcwVdY2bNw0_FxG6pr-_I7sH-9RWQPxTafSSJaBPnsNUVgcLTDE6lWBNlLYS3LBKku4dn-6-or9i_CRVQm5fVLbeIV5FxtvUVbW5rQwIMt_pYO5dFOC7ZcdVf5zEo17IM2Rb3PqkE6WywX_AB7hRxvQ4te6M5kIS4ejCFpJImwOuhWqhwATslLZS1vpNTRZ9ESGHeJr0c1cJZz8zYF-Cn97TLg-qUH6_mu8E"/>
+</div>
+<div class="space-y-1">
+<h3 class="font-body text-on-surface font-semibold">Walnut Study Crucifix</h3>
+<p class="font-headline text-lg text-on-primary-fixed">$75.00</p>
+<button class="w-full mt-4 gold-gradient text-white py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:shadow-lg transition-all active:scale-95">
+                            ADD TO CART
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#001435] dark:bg-slate-950 text-stone-50 pt-16 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 w-full max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-xl font-serif text-stone-50">Sacred Craft Studios</div>
+<p class="font-body text-sm text-stone-300 leading-relaxed">
+                    Crafting heritage goods to elevate the ordinary into the sacred. Each piece is handmade with prayer and intention.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline text-lg text-amber-400">Marketplace</h4>
+<ul class="space-y-2 font-body text-stone-300">
+<li><a class="hover:text-amber-400 transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-amber-400 transition-colors" href="#">Artisans</a></li>
+<li><a class="hover:text-amber-400 transition-colors" href="#">Bulk Orders</a></li>
+<li><a class="hover:text-amber-400 transition-colors" href="#">Gift Cards</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline text-lg text-amber-400">Legal</h4>
+<ul class="space-y-2 font-body text-stone-300">
+<li><a class="hover:text-amber-400 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-amber-400 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-amber-400 transition-colors" href="#">Shipping &amp; Returns</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline text-lg text-amber-400">Connect</h4>
+<ul class="space-y-2 font-body text-stone-300">
+<li><a class="hover:text-amber-400 transition-colors" href="#">Instagram</a></li>
+<li><a class="hover:text-amber-400 transition-colors" href="#">Newsletter</a></li>
+<li><a class="hover:text-amber-400 transition-colors" href="#">Support</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-white/10 text-center font-body text-xs text-stone-400 uppercase tracking-[0.2em]">
+            © Sacred Craft Studios. All rights reserved.
+        </div>
+</footer>
+</body></html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catholic Owned | Shopping Cart</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#755c00",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-background": "#1a1c1a",
+                        "background": "#faf9f5",
+                        "on-secondary-fixed": "#241a00",
+                        "on-surface-variant": "#44474e",
+                        "outline": "#75777f",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#d8e2ff",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#ffe08e",
+                        "surface-container-highest": "#e2e3df",
+                        "surface-container": "#eeeeea",
+                        "on-primary-fixed": "#061b3c",
+                        "outline-variant": "#c5c6cf",
+                        "on-tertiary-container": "#503d00",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f1f1ed",
+                        "surface-container-low": "#f4f4f0",
+                        "tertiary": "#755b00",
+                        "secondary-container": "#fed667",
+                        "surface-container-high": "#e8e8e4",
+                        "secondary": "#755b00",
+                        "surface": "#faf9f5",
+                        "on-surface": "#1a1c1a",
+                        "surface-tint": "#4d5e83",
+                        "primary": "#000000",
+                        "tertiary-fixed-dim": "#e6c366",
+                        "primary-container": "#061b3c",
+                        "on-primary-fixed-variant": "#354769",
+                        "inverse-primary": "#b5c6f0",
+                        "tertiary-fixed": "#ffdf90",
+                        "secondary-fixed-dim": "#e9c256",
+                        "surface-variant": "#e2e3df",
+                        "surface-dim": "#dadad6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#faf9f5",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#2f312e",
+                        "tertiary-container": "#c9a84e",
+                        "on-primary-container": "#7284aa",
+                        "on-secondary-fixed-variant": "#584400",
+                        "primary-fixed-dim": "#b5c6f0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #faf9f5; }
+        h1, h2, h3, .font-serif { font-family: 'Noto Serif', serif; }
+        .glass-header {
+            background-color: rgba(250, 249, 245, 0.85);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar (Two-row Etsy-style) -->
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 rounded-none bg-stone-50/85 dark:bg-stone-900/85 backdrop-blur-xl border-b border-stone-200/50 dark:border-stone-800/50">
+<div class="flex flex-col w-full max-w-full px-6 py-3">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<a class="font-['Noto_Serif'] text-2xl font-bold text-blue-950 dark:text-white uppercase tracking-widest" href="#">Catholic Owned</a>
+<span class="font-['Noto_Serif'] italic text-sm text-blue-950/70 dark:text-stone-400 tracking-wide">Shopping Cart</span>
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-yellow-600 dark:text-yellow-500 font-bold border-b-2 border-yellow-600 transition-colors duration-300" href="#">SHOP</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">DIRECTORY</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">EVENTS</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">BARTER</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">REGISTRY</a>
+</nav>
+<div class="flex items-center space-x-6">
+<div class="flex items-center space-x-4 text-blue-950 dark:text-stone-100">
+<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform">shopping_cart</span>
+<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform">person</span>
+</div>
+<button class="bg-primary-container text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest hover:bg-opacity-90 transition-all scale-95 active:scale-90">
+JOIN THE ECONOMY
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 pt-40 pb-24">
+<!-- Page Header -->
+<div class="mb-12 border-b border-outline-variant/20 pb-8">
+<h1 class="text-5xl font-bold text-on-primary-fixed mb-2 tracking-tight">Shopping Cart</h1>
+<p class="text-lg italic text-on-surface-variant font-serif">Curating the finest Catholic craftsmanship.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Cart Items -->
+<div class="lg:col-span-8 space-y-10">
+<!-- Seller Group 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="portrait of a craftswoman in a rustic studio with warm natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3B0SFqvuok6KLe5sKl-lFbcM2V-fY0CgICSqEH4-jcxt7J4MWKl8meUaDMXySO4u74pD_Pn4izEj66xhXBkP3u0oCav0NTLtdlApaqK8PjwBJnwfc32u4mS9YXjvJJmYbjXoKJzuabMM1wX7e6VlZKEPn95GifD3GxQFrKPpPe_vNm4iX2DcG2taihADSmDzMfFPiE_6rmSQTyGkYQfqaEdBX6VWKdv6vxRZTPJa4MVtrzHL0548H9lfxhARyMEExirYWSQAfOD8"/>
+</div>
+<div>
+<p class="text-xs font-label uppercase tracking-widest text-secondary font-bold">Seller</p>
+<h3 class="font-serif font-bold text-on-primary-fixed">Artisan Bindery</h3>
+</div>
+</div>
+<!-- Item 1 -->
+<div class="flex gap-6 items-start">
+<div class="w-32 h-40 bg-surface-container-low rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="luxury leather bound bible with gold gilding on dark wooden surface with soft candle light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpb7G7pAg_4UMeiZig1xicaGISG1o4CfrKTmvLmvG5LlJHRlQN1VMRNCtzmzlWKOR1lHOjRYk2zE2N_a3jt5hDy0Vw1x1WyGAQlTTlY-VWDVjGc7ufgM1UuOEEc43N1n4XWv_Yt1ordfab-YKhEZDOzulIyOHYeWwLgIYqybBsjP-JGQ9G3N7eb8LQJKESwVuPNmk36OOP683Z058hsxL2Uk43fqMdBXDgP7bZeV9phqpoTiTXSQr7-Rcf3NFSeODAE6ENwLRG6Dw"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between mb-2">
+<h4 class="text-xl font-serif font-bold text-on-primary-fixed">Gilded Duo-Tone Bible</h4>
+<span class="text-xl font-serif text-on-primary-fixed font-bold">$85.00</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-6 font-body">Heirloom Edition</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center bg-surface-container-high rounded-full px-3 py-1">
+<button class="p-1 hover:text-secondary transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-4 font-bold text-sm">1</span>
+<button class="p-1 hover:text-secondary transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="text-xs font-label uppercase tracking-widest text-on-surface-variant hover:text-error transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">delete</span> Remove
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Seller Group 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="artisan craftsman portrait in a woodshop with shavings in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiTQjjr5Zh9qodsO9HRsjRC5LcK0hOZy3otbl8Dz90JwVncqdfCp8mkfmGVrKCkoAnYRpSimcTqTHatdgTqRYJWRKuHkr10NlYBPp1tI-lTmpqAm2d09pow7oDfuvGMQ3UrLaRob8QJODMAAXbxJPJUbjyyAiqTCd9PwZHD3Ar_KBfBKJCloMwD9KW9UTv_zKhRsDUH-Hni7ncaOwdu90kzm5nG0bmhcnch4tyDL1In9TIAEqDrvSuC9q8Icx4W7HS4x3aSZSAg8I"/>
+</div>
+<div>
+<p class="text-xs font-label uppercase tracking-widest text-secondary font-bold">Seller</p>
+<h3 class="font-serif font-bold text-on-primary-fixed">Meadow &amp; Wick Candles</h3>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-6 items-start border-b border-outline-variant/10 pb-8 mb-8">
+<div class="w-32 h-40 bg-surface-container-low rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="set of three beeswax pillar candles on a stone tray with organic textures and warm glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdinguo0h9aUyQww1NnCB_wPtMezga7LeCXOvEMwAHNVUnDcjc2C2P8G1o3u3SiU5Md7Hy-pILu6S4gQwQYR_CcvhBDqxDRP4gZY2Hh57UbXt_xroEQfDtyXThBxrT34xAeWA672_UdGJRueSPFDEk3SvRh5QDbHm3qpZNH7M6lQdriP7BBeQpu4v5WVXP0bXy0jz3rPmI-pv_BwAFdbMDEgdLzlHyh0ZAROBfUKb_UA8iX6-sIalqzkykkpfBKUgJTH1Otww1dII"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between mb-2">
+<h4 class="text-xl font-serif font-bold text-on-primary-fixed">Artisan Beeswax Pillar Candles</h4>
+<span class="text-xl font-serif text-on-primary-fixed font-bold">$96.00</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-6 font-body">Set of 3</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center bg-surface-container-high rounded-full px-3 py-1">
+<button class="p-1 hover:text-secondary transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-4 font-bold text-sm">2</span>
+<button class="p-1 hover:text-secondary transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="text-xs font-label uppercase tracking-widest text-on-surface-variant hover:text-error transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">delete</span> Remove
+                                </button>
+</div>
+</div>
+</div>
+<!-- Item 3 (Same Seller Example) -->
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="professional photo of a male wood carver in apron" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5nYO8h54bGMQkTrxt5wjcTiZDxGT0eEniY5G6-HeMBoUizAjWe7-v4RtMgGnERCf2CW82JdsLtCf0oKhTFeU-8bfZMj-A0Xs6dwZ2qt1CxfRlW95E9vTpERQ5yYcPm_ot5ImHXrTZuweLcl4nme01An75PoGBdCn5x8IcmztGWpGaAZQxVG8niIxMmgb7YIWVrfZVV7Ls-chrtQFfJIb30kVvwuIeoE3JrSRqiwVvrMnVDVOE74WKlFKrYhPuDFN_2jSOcphRAoE"/>
+</div>
+<div>
+<p class="text-xs font-label uppercase tracking-widest text-secondary font-bold">Seller</p>
+<h3 class="font-serif font-bold text-on-primary-fixed">Olive Wood Artisans</h3>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="w-32 h-40 bg-surface-container-low rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="hand-carved olive wood rosary held in hands against soft focus church background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYQVXGvIYkMD4NKAdMTJgfgQxTtAkyvgG8cU2scJie7jKZ-kzbTGG-tB49DIVNzMKG6g0nNeOmggJ1hoAiKZeX51Iw0j4PyLqdNGK2LpocUhuQt8921K4OjRKv0BDsN4_GzNIOrAj1Geobn2JCpnX6iAL3qDLCL9cXC659RYhjrJzj6_CnAzdm-JRa5AlrKbu2aE4MQ9GA81TfWpATLJdXKqG6pnCQKJdS1m17KVQr6oqMQlPVCXT5muE7kT4dcFR2MVDigkskURk"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between mb-2">
+<h4 class="text-xl font-serif font-bold text-on-primary-fixed">Hand-Carved Olive Wood Rosary</h4>
+<span class="text-xl font-serif text-on-primary-fixed font-bold">$45.00</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-6 font-body">Natural Finish</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center bg-surface-container-high rounded-full px-3 py-1">
+<button class="p-1 hover:text-secondary transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-4 font-bold text-sm">1</span>
+<button class="p-1 hover:text-secondary transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="text-xs font-label uppercase tracking-widest text-on-surface-variant hover:text-error transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">delete</span> Remove
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Summary Card -->
+<div class="lg:col-span-4 sticky top-44">
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_8px_40px_rgba(0,0,0,0.04)] border border-outline-variant/10">
+<h2 class="text-2xl font-serif font-bold text-on-primary-fixed mb-8">Order Summary</h2>
+<div class="space-y-4 mb-8 border-b border-outline-variant/10 pb-8 font-body">
+<div class="flex justify-between text-on-surface-variant">
+<span>Subtotal</span>
+<span class="font-serif font-bold text-on-primary-fixed">$178.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Delivery</span>
+<span class="font-serif font-bold text-on-primary-fixed">$8.50</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Estimated Tax</span>
+<span class="font-serif font-bold text-on-primary-fixed">$14.68</span>
+</div>
+</div>
+<div class="flex justify-between items-end mb-10">
+<span class="font-serif text-lg font-bold text-on-primary-fixed">Total</span>
+<span class="font-serif text-3xl font-extrabold text-on-primary-fixed">$201.18</span>
+</div>
+<button class="w-full bg-primary-container text-on-primary py-5 rounded-full font-label text-sm tracking-widest uppercase font-bold hover:bg-primary transition-all shadow-lg active:scale-[0.98]">
+                        PROCEED TO CHECKOUT
+                    </button>
+<div class="mt-8 flex items-center gap-3 justify-center text-on-surface-variant/60">
+<span class="material-symbols-outlined text-lg">lock</span>
+<span class="text-[10px] font-label uppercase tracking-widest">Secure SSL Checkout</span>
+</div>
+</div>
+<!-- Promotional Tonal Shift Section -->
+<div class="mt-8 p-6 bg-surface-container-low rounded-xl border border-dashed border-outline-variant/30">
+<p class="text-xs font-label uppercase tracking-widest text-secondary font-bold mb-2">Member Benefit</p>
+<p class="text-sm text-on-surface-variant font-body">Members of <span class="font-bold">The Economy</span> receive 5% back on all purchases from Catholic artisans.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col items-center justify-center py-12 px-8 w-full bg-blue-950 dark:bg-black">
+<div class="max-w-7xl w-full flex flex-col md:flex-row justify-between items-center md:items-start space-y-12 md:space-y-0">
+<div class="text-center md:text-left">
+<a class="font-['Noto_Serif'] text-2xl text-stone-50 uppercase tracking-[0.2em] mb-4 block" href="#">Catholic Owned</a>
+<p class="font-['Manrope'] text-stone-300 text-sm max-w-xs">Restoring the marketplace through tradition, trust, and community.</p>
+</div>
+<nav class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 items-center">
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">SHOP</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">DIRECTORY</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">EVENTS</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">BARTER</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">REGISTRY</a>
+</nav>
+<div class="flex space-x-6 text-yellow-500">
+<span class="material-symbols-outlined cursor-pointer opacity-90 hover:opacity-100 transition-opacity">public</span>
+<span class="material-symbols-outlined cursor-pointer opacity-90 hover:opacity-100 transition-opacity">mail</span>
+</div>
+</div>
+<div class="w-full h-px bg-white/10 my-12"></div>
+<p class="font-['Manrope'] text-sm tracking-wide text-stone-300 text-center opacity-70">
+&copy; 2026 Catholic Owned. All rights reserved.
+</p>
+</footer>
+</body></html>

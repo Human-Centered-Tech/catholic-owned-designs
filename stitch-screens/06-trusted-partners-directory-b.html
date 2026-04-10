@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catholic Owned | Directory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdf90",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e8e8e4",
+                        "secondary": "#755b00",
+                        "primary": "#000000",
+                        "secondary-fixed-dim": "#e9c256",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#755c00",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#c9a84e",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e2e3df",
+                        "outline": "#75777f",
+                        "surface-container": "#eeeeea",
+                        "on-primary-container": "#7284aa",
+                        "inverse-primary": "#b5c6f0",
+                        "tertiary-fixed-dim": "#e6c366",
+                        "background": "#faf9f5",
+                        "primary-fixed-dim": "#b5c6f0",
+                        "on-surface": "#1a1c1a",
+                        "surface-container-low": "#f4f4f0",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#ffe08e",
+                        "surface-bright": "#faf9f5",
+                        "inverse-on-surface": "#f1f1ed",
+                        "on-primary-fixed": "#061b3c",
+                        "on-background": "#1a1c1a",
+                        "primary-fixed": "#d8e2ff",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-variant": "#e2e3df",
+                        "secondary-container": "#fed667",
+                        "outline-variant": "#c5c6cf",
+                        "on-tertiary-container": "#503d00",
+                        "tertiary": "#755b00",
+                        "surface-dim": "#dadad6",
+                        "primary-container": "#061b3c",
+                        "on-secondary": "#ffffff",
+                        "surface": "#faf9f5",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#44474e",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-primary-fixed-variant": "#354769",
+                        "inverse-surface": "#2f312e",
+                        "surface-tint": "#4d5e83",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#584400"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #faf9f5;
+        }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar (Shared Component Execution) -->
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 rounded-none bg-stone-50/85 dark:bg-stone-900/85 backdrop-blur-xl border-b border-stone-200/50 dark:border-stone-800/50">
+<div class="flex flex-col w-full max-w-full px-6 py-3">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<a class="font-['Noto_Serif'] text-2xl font-bold text-blue-950 dark:text-white uppercase tracking-widest" href="#">Catholic Owned</a>
+<span class="font-['Noto_Serif'] italic text-sm text-blue-950/70 dark:text-stone-400 tracking-wide">Directory</span>
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">SHOP</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-yellow-600 dark:text-yellow-500 font-bold border-b-2 border-yellow-600 transition-colors duration-300" href="#">DIRECTORY</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">EVENTS</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">BARTER</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">REGISTRY</a>
+</nav>
+<div class="flex items-center space-x-6">
+<div class="flex items-center space-x-4 text-blue-950 dark:text-stone-100">
+<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform">shopping_cart</span>
+<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform">person</span>
+</div>
+<button class="bg-primary-container text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest hover:bg-opacity-90 transition-all scale-95 active:scale-90">
+JOIN THE ECONOMY
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Banner -->
+<section class="bg-primary-container py-20 px-6 text-center">
+<div class="max-w-4xl mx-auto">
+<h1 class="text-5xl md:text-6xl font-serif text-white mb-6 tracking-tight leading-tight">Trusted Partners</h1>
+<p class="text-xl md:text-2xl font-serif italic text-white/70 max-w-2xl mx-auto">
+                Strengthen the domestic church through the new Catholic Economy
+            </p>
+</div>
+</section>
+<!-- Filters Row -->
+<section class="max-w-screen-2xl mx-auto px-6 -mt-8 relative z-10">
+<div class="bg-surface-container-low p-6 rounded-xl shadow-sm border border-outline-variant/10 flex flex-col md:flex-row gap-4 items-end">
+<div class="flex-1 w-full">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">Search</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white border border-outline-variant rounded-lg focus:ring-secondary focus:border-secondary transition-all" placeholder="Search businesses..." type="text"/>
+</div>
+</div>
+<div class="w-full md:w-64">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">Category</label>
+<select class="w-full px-4 py-3 bg-white border border-outline-variant rounded-lg focus:ring-secondary focus:border-secondary transition-all">
+<option>All Categories</option>
+<option>Home Services</option>
+<option>Food &amp; Beverage</option>
+<option>Education</option>
+<option>Artisan Goods</option>
+<option>Health &amp; Wellness</option>
+</select>
+</div>
+<div class="w-full md:w-48">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">State</label>
+<input class="w-full px-4 py-3 bg-white border border-outline-variant rounded-lg focus:ring-secondary focus:border-secondary transition-all" placeholder="e.g. TX" type="text"/>
+</div>
+<button class="w-full md:w-auto px-8 py-3.5 bg-gradient-to-r from-secondary to-secondary-fixed-dim text-white font-bold rounded-full hover:shadow-lg transition-all active:scale-95">
+                Filter Results
+            </button>
+</div>
+<div class="mt-8 mb-4">
+<p class="text-sm font-label text-on-surface-variant/70 uppercase tracking-widest">10 businesses found</p>
+</div>
+</section>
+<!-- Results Grid -->
+<main class="max-w-screen-2xl mx-auto px-6 pb-24">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Row 1 -->
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest overflow-hidden transition-all group hover:bg-surface-container-low rounded-xl">
+<div class="aspect-square w-full bg-[#354769] flex items-center justify-center relative">
+<span class="text-8xl font-serif text-white/20 select-none">L</span>
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-overlay group-hover:scale-105 transition-transform duration-500" data-alt="Modern electrician at work with church lighting fixtures in a historical cathedral with soft ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbwTUCL27ot0wWC6OYNHuM6FFT3JelU6JJTvgQji69u5qrFxuSGkMcWUR5P5ltaxl6mNQBhfD6dwEB1nqhNitq86PWRIsye-Fi63NKPljrynBVRzbFc933VmJTKlfn3cs_8ykhQRu_uGghTfPIwI_AT7e-1mtPL3E4VmseF7LYOW8D6RaQgAhU0pfb8SSagxJKKpzxqWXY1bGPgw9768QNsTw3h_ff9hVNzUzzXOAoJ3dYqxobx5FCvdpWdJYxG9Ghf-4YQ0MzOBU"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold tracking-[0.2em] text-secondary uppercase">Home Services</span>
+<span class="px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold rounded uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span> Verified
+                        </span>
+</div>
+<h3 class="text-2xl font-serif text-on-primary-fixed mb-3">Lux Aeterna Electric</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6 line-clamp-2">Full-service electrician and electrical contractor specializing in church lighting...</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">Chicago, IL</span>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest overflow-hidden transition-all group hover:bg-surface-container-low rounded-xl">
+<div class="aspect-square w-full bg-[#4d5e83] flex items-center justify-center relative">
+<span class="text-8xl font-serif text-white/20 select-none">C</span>
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-overlay group-hover:scale-105 transition-transform duration-500" data-alt="Close up of high quality plumbing tools on a dark textured background with dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtDLfh3BzrWDu58F9zULdsbcPW6nex0zHNJwJIzEkgAKdR1BxGfUvzeaGQlENCCntLUKxL7UNR6kLNMG2kt6rLRaqqvZ3XnYiVA0nSPzigPDTu54soAJsRCSyNVt5Yb-C0XFPB8uETVmMHZPdzq380Jfuyzq_nUexcHjd81dct-Rjj_H16p8As_tewI4OrI9cIUDGXClo4_2EhwAOHa5QSezFKf9Dd-rfMxuZa5wjQRa3lybJn5dbcjimBV5NAK3cXI_Rapg1m1vM"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold tracking-[0.2em] text-secondary uppercase">Home Services</span>
+<span class="px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold rounded uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span> Verified
+                        </span>
+</div>
+<h3 class="text-2xl font-serif text-on-primary-fixed mb-3">Steve's Plumbing</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6 line-clamp-2">Licensed master plumber and proud Knight of Columbus...</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">San Antonio, TX</span>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest overflow-hidden transition-all group hover:bg-surface-container-low rounded-xl">
+<div class="aspect-square w-full bg-[#7284aa] flex items-center justify-center relative">
+<span class="text-8xl font-serif text-white/20 select-none">B</span>
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-overlay group-hover:scale-105 transition-transform duration-500" data-alt="Artisan sourdough bread loaves cooling on a wooden rack in a rustic bakery at dawn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALOnZ1GAN9f9E9ci6ljG6bfT5kh3W2NVMwic-1oRH7BJv8ohjAPjUMVnfHiqx3ypCu35ItyUF3Ko2L55p6VrqN8Nd5x2Bhs44qzjUvucQ161-U8cvAtR-Bl9HBAGDM2_os_U57EcU8ER0zgCpKetbh4BrvcazdNDH81o__djwRo6nQ21yMXB8SOPdB3FFkzSg4MJBCYquKPzF08UnH3InN_tajXUYMPFtmTb128rdhgvuTmhFLvljG-bF0eC0whEQ8vq6eGdgnxSA"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold tracking-[0.2em] text-secondary uppercase">Food &amp; Beverage</span>
+<span class="px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold rounded uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span> Verified
+                        </span>
+</div>
+<h3 class="text-2xl font-serif text-on-primary-fixed mb-3">Golden Crust Bakery</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6 line-clamp-2">Artisan sourdough, altar breads, and European-style pastries...</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">Atlanta, GA</span>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Row 2 -->
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest overflow-hidden transition-all group hover:bg-surface-container-low rounded-xl">
+<div class="aspect-square w-full bg-[#1a1c1a] flex items-center justify-center relative">
+<span class="text-8xl font-serif text-white/20 select-none">A</span>
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-overlay group-hover:scale-105 transition-transform duration-500" data-alt="Vintage library setting with stacked leather bound books and a warm desk lamp" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEFW7XGy5qJzHdiSi4Wmlk9yUcgt-YXdprpZnhB6rw30Jg8D8IGTDf5UvuE07iahAQTHTK8h6m_JFpOWP5hMifZjfNSA0HL3t9HcwZ7UF-keyT9JJTSK_GkrPBI_sGBxjyxsEq07OemerhEezBtiuLlI8Dlr-UgAUxF6iULJRdB8sNjHyWJU93c9c1PKjJBzdeMLSRcbf7lt-c3jdCT2KCPLHY5iR8yZYnl0WE--89NYg9BOHD83cnM3WlEE1kjzb58nGM62lA8ME"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold tracking-[0.2em] text-secondary uppercase">Education</span>
+<span class="px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold rounded uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span> Verified
+                        </span>
+</div>
+<h3 class="text-2xl font-serif text-on-primary-fixed mb-3">Aquinas Tutoring</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6 line-clamp-2">Classical education support and academic excellence in the Thomistic tradition.</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">Arlington, VA</span>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest overflow-hidden transition-all group hover:bg-surface-container-low rounded-xl">
+<div class="aspect-square w-full bg-[#584400] flex items-center justify-center relative">
+<span class="text-8xl font-serif text-white/20 select-none">R</span>
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-overlay group-hover:scale-105 transition-transform duration-500" data-alt="Delicate handcrafted silver rosary resting on a vintage missal with warm light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4iAPYB5UpC_IjT33tFrirluCl1GfilxrMpoTmggQT7M3rOLik28r97CKG93F65tyVAEezQRht6s2zArtbCTBn-9neTmop56O8aY1K4zvTBevmItUgwdFg9kNRFkKdr0vSeVT4x4IrYRPEpyGZVPGTIiY5bQEIp6xhknikrzvJ4wimyDbFgn50PsnDudVZa-fGeTJxECRPbXTGw7t9liNK-K4egjszVeOybScEWXjOxB67eNwxaBD5X0QTieP0tWY6Yua9NpegbkM"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold tracking-[0.2em] text-secondary uppercase">Artisan Goods</span>
+<span class="px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold rounded uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span> Verified
+                        </span>
+</div>
+<h3 class="text-2xl font-serif text-on-primary-fixed mb-3">Regina Caeli Goods</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6 line-clamp-2">Handcrafted religious items, rosaries, and fine liturgical art for the home altar.</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">New Orleans, LA</span>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container-lowest overflow-hidden transition-all group hover:bg-surface-container-low rounded-xl">
+<div class="aspect-square w-full bg-[#e9c256] flex items-center justify-center relative">
+<span class="text-8xl font-serif text-white/20 select-none">D</span>
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-overlay group-hover:scale-105 transition-transform duration-500" data-alt="Sterile dental office environment with modern equipment in soft teal tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfo8Mz0bIIT_ghIKT2cH-S70fQgi7wxHiuD-0ROcioIa0MPgj5_d6_YozpUXCH0Q6d4T4jfbop48tXKBVPzqhCSlh98IbPYHH7TimyqowIeM_k04CzqNCL9vEfbBS2Ag1Txtu-RaWoa_8HOApz-e808LDswLJlMAKCD3LcD1WX6PVoWOs6peNUVLMX-kBJZVA2dnxKGU0vu4dwztjQ14OGoqc-qgqHMM4mTL8a5Gyf3NCHnsewgkATqUV2rGroBwq6yssOFbzJdq0"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold tracking-[0.2em] text-secondary uppercase">Health &amp; Wellness</span>
+<span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-[10px] font-bold rounded uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span> Featured
+                        </span>
+</div>
+<h3 class="text-2xl font-serif text-on-primary-fixed mb-3">Bright Smile Dental</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6 line-clamp-2">Comprehensive family dentistry with a mission of compassionate care.</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">Phoenix, AZ</span>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Row 3 -->
+<!-- Card 7 -->
+<div class="bg-surface-container-lowest overflow-hidden transition-all group hover:bg-surface-container-low rounded-xl">
+<div class="aspect-square w-full bg-[#061b3c] flex items-center justify-center relative">
+<span class="text-8xl font-serif text-white/20 select-none">S</span>
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-overlay group-hover:scale-105 transition-transform duration-500" data-alt="Interior of a boutique store selling antique religious books and handmade candles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCObqEwLkReKs3hpO3qTA7P-yhRR6nwk51Fg6p0e7WdXwAecE-aF-wraRKWzwHwIAkfDgCONl6tSVnlX4EIAmFpfFjqs7bem1vCRjORbdavATixH4Nc6sCKKqoiKOdUtdfhZcDEUu071iSr7kSsDIwLcJBt8dE96b-DLVks_SLdlv5MnAXSQOhZLNIJbrt47fgeuVRwu2EgJCL7WaMeSeIdVeLYehMoJc6fSZmXPKgZNYmTu0I3ijgfAJ-Wp8VIINvC22dvbHpClp8"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold tracking-[0.2em] text-secondary uppercase">Artisan Goods</span>
+<span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-[10px] font-bold rounded uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span> Featured
+                        </span>
+</div>
+<h3 class="text-2xl font-serif text-on-primary-fixed mb-3">Saints &amp; Sages Artisan Goods</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6 line-clamp-2">Curated collections of traditional Catholic books and handmade crafts.</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">Nashville, TN</span>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Card 8 -->
+<div class="bg-surface-container-lowest overflow-hidden transition-all group hover:bg-surface-container-low rounded-xl">
+<div class="aspect-square w-full bg-[#354769] flex items-center justify-center relative">
+<span class="text-8xl font-serif text-white/20 select-none">G</span>
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-overlay group-hover:scale-105 transition-transform duration-500" data-alt="Professional electrical panel installation with clean wiring and precision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbKnzT4nke3_SvMEUAyOyAAjOEsX2mzI0oFUcVE06dDjqvgrC-X-H6MB0uBa0Y_Ve8lXcU7RfbHI6du6g1C4L8GqzhDjJCnppd03LL7_HFrfWYyS0aWa_u7G50D8ST3a3qAFdgRrMQJuL8dZRR7PSXHskZFRgMYd0PlquZ72HDXnK_hwgpIGIU00FJS9EsAD5f_i11QlFbPq5BiFtc3B1dx8lwK9_b-PYDGyezjFD5L8DpoWMvtGRHFjP7Fz5GdFGYyNRLr23lT1U"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold tracking-[0.2em] text-secondary uppercase">Home Services</span>
+<span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-[10px] font-bold rounded uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span> Featured
+                        </span>
+</div>
+<h3 class="text-2xl font-serif text-on-primary-fixed mb-3">Guardian Angel Electric</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6 line-clamp-2">Reliable residential electrical service for the greater Dallas area.</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">Dallas, TX</span>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Card 9 -->
+<div class="bg-surface-container-lowest overflow-hidden transition-all group hover:bg-surface-container-low rounded-xl">
+<div class="aspect-square w-full bg-[#BE9B32] flex items-center justify-center relative">
+<span class="text-8xl font-serif text-white/20 select-none">S</span>
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-overlay group-hover:scale-105 transition-transform duration-500" data-alt="Elegant floral centerpiece for a wedding banquet with white roses and soft candlelight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQueo2x0NxwziKxp_U0kMRsgI4OIv_7MQp8FZQQ5yMbsnTi4ofcdJ75ezBSqlvtkNdaPE3xf6yNOt5jQdIootnZoug80SqxO-jkFR6TOuoROPBzSJ9hsPIex4G77AzunYehiguu6yCS1X62UH7_fgn_uqFHbj98mEgorJ0vavo24Qu5brvsPEl00YOI9gL1AUf4Qy-bc2RfSjghSXojIIX9gXMdtO1B67GSvah_HnJgvuLun0oPn--QbJ-41vqEpCU7-ZL-STdexs"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold tracking-[0.2em] text-secondary uppercase">Event Services</span>
+<span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-[10px] font-bold rounded uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span> Featured
+                        </span>
+</div>
+<h3 class="text-2xl font-serif text-on-primary-fixed mb-3">Stella Maris Design</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6 line-clamp-2">Elegant event planning and floral design for weddings and baptisms.</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">Miami, FL</span>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Row 4 -->
+<!-- Card 10 -->
+<div class="bg-surface-container-lowest overflow-hidden transition-all group hover:bg-surface-container-low rounded-xl">
+<div class="aspect-square w-full bg-[#755b00] flex items-center justify-center relative">
+<span class="text-8xl font-serif text-white/20 select-none">S</span>
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-overlay group-hover:scale-105 transition-transform duration-500" data-alt="Professional meeting in a high-end financial office with leather bound portfolios and elegant furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABiZh4pOWGuHJX1BxlO4qglcGYDFH_drTiaJbSr1YeT7Gw0bAtTcMWgdukoVr9SZ7MxgdZ1uES1ou8JWOqhsubtns5lbF_f4GUnsuOFqp6hQcCZj9edLVWm5HxiNUeNk5ufNP1rbZVtxTS7KE72USNcAwL8vMvtqwgXHbKl5o-NVLXVDkgkzmkwcjvZe9P-XCw858rqRxRkQcwE1IBi-CGga-N8gXwTgNJsopFy5e5sL79cneKDs1D-FrmEmKjfCxDJcvLuDp_ZKE"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold tracking-[0.2em] text-secondary uppercase">Professional Services</span>
+<span class="px-2 py-0.5 bg-amber-100 text-amber-700 text-[10px] font-bold rounded uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">business</span> Enterprise
+                        </span>
+</div>
+<h3 class="text-2xl font-serif text-on-primary-fixed mb-3">St. Joseph Financial Group</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6 line-clamp-2">Principled financial planning and investment management aligned with Catholic values.</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">Austin, TX</span>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Mid-page Statement Section -->
+<section class="bg-primary-container py-24 px-6 text-center text-white">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-4xl font-serif mb-8 italic">"Where two or three are gathered in my name, there am I in the midst of them."</h2>
+<p class="text-lg font-body uppercase tracking-[0.3em] text-secondary-fixed mb-10">Supporting the community through commerce</p>
+<button class="px-12 py-4 bg-gradient-to-r from-secondary to-secondary-fixed-dim rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform">
+                List Your Business
+            </button>
+</div>
+</section>
+<!-- Footer (Shared Component Execution) -->
+<footer class="flex flex-col items-center justify-center py-12 px-8 w-full bg-blue-950 dark:bg-black">
+<div class="max-w-7xl w-full flex flex-col md:flex-row justify-between items-center md:items-start space-y-12 md:space-y-0">
+<div class="text-center md:text-left">
+<a class="font-['Noto_Serif'] text-2xl text-stone-50 uppercase tracking-[0.2em] mb-4 block" href="#">Catholic Owned</a>
+<p class="font-['Manrope'] text-stone-300 text-sm max-w-xs">Restoring the marketplace through tradition, trust, and community.</p>
+</div>
+<nav class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 items-center">
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">SHOP</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">DIRECTORY</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">EVENTS</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">BARTER</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">REGISTRY</a>
+</nav>
+<div class="flex space-x-6 text-yellow-500">
+<span class="material-symbols-outlined cursor-pointer opacity-90 hover:opacity-100 transition-opacity">public</span>
+<span class="material-symbols-outlined cursor-pointer opacity-90 hover:opacity-100 transition-opacity">mail</span>
+</div>
+</div>
+<div class="w-full h-px bg-white/10 my-12"></div>
+<p class="font-['Manrope'] text-sm tracking-wide text-stone-300 text-center opacity-70">
+&copy; 2026 Catholic Owned. All rights reserved.
+</p>
+</footer>
+</body></html>

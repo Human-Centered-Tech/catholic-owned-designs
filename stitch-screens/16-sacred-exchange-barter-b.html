@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#584400",
+                        "secondary-container": "#fed667",
+                        "surface-dim": "#dadad6",
+                        "on-secondary-fixed": "#241a00",
+                        "on-primary-fixed": "#061b3c",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#503d00",
+                        "on-secondary-container": "#755c00",
+                        "surface-container-highest": "#e2e3df",
+                        "background": "#faf9f5",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d8e2ff",
+                        "on-primary-container": "#7284aa",
+                        "on-surface-variant": "#44474e",
+                        "inverse-primary": "#b5c6f0",
+                        "primary-fixed-dim": "#b5c6f0",
+                        "surface-tint": "#4d5e83",
+                        "surface-bright": "#faf9f5",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#c9a84e",
+                        "surface-container": "#eeeeea",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#e6c366",
+                        "secondary-fixed-dim": "#e9c256",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#75777f",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "surface-container-high": "#e8e8e4",
+                        "tertiary-fixed": "#ffdf90",
+                        "on-primary-fixed-variant": "#354769",
+                        "surface": "#faf9f5",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#241a00",
+                        "inverse-on-surface": "#f1f1ed",
+                        "secondary-fixed": "#ffe08e",
+                        "tertiary": "#755b00",
+                        "secondary": "#755b00",
+                        "primary-container": "#061b3c",
+                        "primary": "#000000",
+                        "outline-variant": "#c5c6cf",
+                        "on-background": "#1a1c1a",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2f312e",
+                        "surface-container-low": "#f4f4f0",
+                        "surface-variant": "#e2e3df",
+                        "on-surface": "#1a1c1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #faf9f5; }
+        h1, h2, h3, .serif { font-family: 'Noto Serif', serif; }
+        .gold-gradient { background: linear-gradient(135deg, #755b00 0%, #BE9B32 100%); }
+    </style>
+</head>
+<body class="text-on-background">
+<!-- TopAppBar (Shared Component Execution) -->
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 rounded-none bg-stone-50/85 dark:bg-stone-900/85 backdrop-blur-xl border-b border-stone-200/50 dark:border-stone-800/50">
+<div class="flex flex-col w-full max-w-full px-6 py-3">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<a class="font-['Noto_Serif'] text-2xl font-bold text-blue-950 dark:text-white uppercase tracking-widest" href="#">Catholic Owned</a>
+<span class="font-['Noto_Serif'] italic text-sm text-blue-950/70 dark:text-stone-400 tracking-wide">Barter & Trade</span>
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">SHOP</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">DIRECTORY</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">EVENTS</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-yellow-600 dark:text-yellow-500 font-bold border-b-2 border-yellow-600 transition-colors duration-300" href="#">BARTER</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">REGISTRY</a>
+</nav>
+<div class="flex items-center space-x-6">
+<div class="flex items-center space-x-4 text-blue-950 dark:text-stone-100">
+<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform">shopping_cart</span>
+<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform">person</span>
+</div>
+<button class="bg-primary-container text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest hover:bg-opacity-90 transition-all scale-95 active:scale-90">
+JOIN THE ECONOMY
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="relative h-[614px] min-h-[500px] w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="warm glowing beeswax altar candles in a dimly lit cathedral with soft golden light and dark mahogany textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChupplQMxrqBkh7F8haSR3Z_OjIUwjsdjEe11wtRQG4cGaqhfcWwGQYyWWCQU1laK63LW83XmJX8dZtFW9Nv8mlYBTa7NrMEwLNpI7NgGVvOrmhO7qFMQYWqVT5SbCO16KFpp_ADYB43Wxbo9dkMf9XSyWcI7L3boz8pxtG1PyDQ-a-M5jVizhdK7TkG3BwTUx_uRoCZNXI_lbwLdLFeCgMsghOMXcIwuud4av61XK3uJCgfJ8IQLiVji1a8Sl-f1ux_bjhOOi4vo"/>
+<div class="absolute inset-0 bg-gradient-to-b from-[#001435]/85 to-[#001435]/40"></div>
+</div>
+<div class="relative z-10 text-center px-6">
+<span class="text-[#F2CD69] tracking-[0.5em] text-xs font-bold uppercase mb-4 block">FAITH-LED COMMERCE</span>
+<h1 class="text-6xl md:text-8xl text-white font-bold tracking-tighter mb-6">Catholic Owned</h1>
+<p class="italic text-xl md:text-2xl text-white/80 max-w-2xl mx-auto font-['Noto_Serif']">
+                    "Strengthening our community through faithful barter and trade."
+                </p>
+</div>
+</section>
+<!-- Filter Bar -->
+<section class="bg-surface-container-low border-b border-outline-variant/15 py-4 sticky top-[132px] z-40">
+<div class="max-w-[1440px] mx-auto px-12 flex flex-wrap items-center gap-4">
+<div class="flex-grow min-w-[240px]">
+<div class="relative">
+<span class="absolute inset-y-0 left-4 flex items-center text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">search</span>
+</span>
+<input class="w-full bg-surface-container-highest border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-1 focus:ring-secondary" placeholder="Search listings..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<select class="bg-surface-container-highest border-none rounded-full py-2 px-6 text-sm font-medium text-on-surface focus:ring-1 focus:ring-secondary appearance-none cursor-pointer">
+<option>Category</option>
+<option>Goods</option>
+<option>Services</option>
+<option>Religious Items</option>
+</select>
+<select class="bg-surface-container-highest border-none rounded-full py-2 px-6 text-sm font-medium text-on-surface focus:ring-1 focus:ring-secondary appearance-none cursor-pointer">
+<option>Listing Type</option>
+<option>Barter</option>
+<option>Wanted</option>
+<option>Trade</option>
+<option>For Sale</option>
+</select>
+<select class="bg-surface-container-highest border-none rounded-full py-2 px-6 text-sm font-medium text-on-surface focus:ring-1 focus:ring-secondary appearance-none cursor-pointer">
+<option>Condition</option>
+<option>New</option>
+<option>Used</option>
+<option>Heirloom</option>
+</select>
+</div>
+<button class="ml-auto bg-primary-container text-white px-8 py-2 rounded-full text-sm font-bold tracking-wide flex items-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+                    FILTERS
+                </button>
+</div>
+</section>
+<!-- Main Content -->
+<section class="max-w-[1440px] mx-auto px-12 py-16">
+<div class="flex items-baseline justify-between mb-12">
+<h2 class="text-4xl font-bold tracking-tight text-on-primary-fixed uppercase">COMMUNITY LISTINGS</h2>
+<span class="text-on-surface-variant font-medium tracking-wide">Showing 150 results</span>
+</div>
+<!-- Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-12">
+<!-- Listing 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-2xl mb-4 bg-surface-container-lowest transition-all hover:shadow-xl hover:-translate-y-1">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-green-600 text-white text-[10px] font-bold tracking-widest rounded-full uppercase">BARTER</span>
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="professional workspace with laptop and legal documents representing graphic design and legal services exchange" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxQlameGSWn9qU9-1J7qxuLff3utXQ84R6FmiwHhAUI_U8OG_KtZHxfysx1BhjqV_QPYVcyQ_ukeN0p6ZKYkIGzlPA9S0S7mYYUb-TIblPFOimdz7e0ePyU0HJRvpWbnyen8kCa1c8529V2SNfBaVz3kICsSMjbHCW5_yWcqCuCA1jO52hxEvZRHB1Af0LVoNDanGXiIR9nIbut1h_a6XAAzRaAL6Brn2CSaQZ0GkHzdDwhH4GB9iJKKJ9JybdcaZpN90Ljdd1sWU"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Graphic Design for Legal Services</h3>
+<div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
+<span>NEW</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                Denver, CO
+                            </div>
+</div>
+</div>
+</div>
+<!-- Listing 2 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-2xl mb-4 bg-surface-container-lowest transition-all hover:shadow-xl hover:-translate-y-1">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-[#BE9B32] text-white text-[10px] font-bold tracking-widest rounded-full uppercase">WANTED</span>
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="close up of piano keys with soft bouquet of flowers in background representing piano lessons and floral trade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_VHwuhKxz0Yv6R-SQ10uBbHNGel9_QQbaZLY3uju0Er-nPUvdm47o6d0lR66jx8pfGva_kxwjmF4gWnaFUPH5TnfOJt02faavUX_kJ9uJlO7m6v6bNy26vP_5Hi0hrI2gIKsThGC7RNbHBpBYF1RYTQEfkakuv_5dIUVKwvmsUkiOa_80Z-S33mMEyVrBF9KmRnTwWZ4N5oDf-65LZC3GmC4Kv3Y400C7befu__XD-LhSn2FpW42ahMtcUQSxHeGt4linO_FEPvo"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Piano Lessons for Floral Arrangements</h3>
+<div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
+<span>SERVICE</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                Seattle, WA
+                            </div>
+</div>
+</div>
+</div>
+<!-- Listing 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-2xl mb-4 bg-surface-container-lowest transition-all hover:shadow-xl hover:-translate-y-1">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-blue-600 text-white text-[10px] font-bold tracking-widest rounded-full uppercase">FOR SALE $5-$8</span>
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="stack of vintage catholic books and textbooks on a dark wooden shelf with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOviRcgQoo3Buy69CirYK905IFlD_MqAC3uS1gHLe08IFEqAOwiLGnqCt_6efeFYvfL3UwsudBiWCMDhuVPLidveleFRIxqui7tWyTjxN5QTSlV22--HH1cVU6yRjbbuQAY4-OwEv3s-Hn9KEww--WSgkNITzaVxtavQKs8MTx3AP559UKG_uEwSaiHAAo82K4QRfS6X9RksAXjq-m7v81UkEL6BRM0CxOsOO033aT8mSnFlgIiO3eR9Ne9R96cyYgFYVAASQx368"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Catholic Textbooks Bundle</h3>
+<div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
+<span>USED</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                Nashville, TN
+                            </div>
+</div>
+</div>
+</div>
+<!-- Listing 4 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-2xl mb-4 bg-surface-container-lowest transition-all hover:shadow-xl hover:-translate-y-1">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-green-600 text-white text-[10px] font-bold tracking-widest rounded-full uppercase">BARTER</span>
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="plumber tools resting on a table in front of a church background suggesting a spiritual exchange of labor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu4sSku5czcPH3zjfqD64cPDo6kcqr_O0kkZoBpXC-Mj1wero_xzOAyGFihfxYLTvefkgyYUxDJD9cwKbkf2GBHZmLmz-JL1G9-H6SRPl0BScSM60NAlSQiDIgaZwP6gbLTpXgbZDuA_ghtSLyR-tbwmbilbrq8QFphQPhqjI2yYpPKGXedF87srrMQMFVzgMEXLFBQ-0SwQ4ZrWZKcyvH6W2H12EiNwDchrs0O-2-scqiJgAT_bltBG3QCxDePI2vmqBSMLu7CXM"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Plumbing Work for Mass Intentions</h3>
+<div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
+<span>SERVICE</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                San Antonio, TX
+                            </div>
+</div>
+</div>
+</div>
+<!-- Listing 5 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-2xl mb-4 bg-surface-container-lowest transition-all hover:shadow-xl hover:-translate-y-1">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-blue-600 text-white text-[10px] font-bold tracking-widest rounded-full uppercase">FOR SALE $45</span>
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="meticulously hand-carved wooden crucifix on a textured cream wall with dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFXiG9SJ_t1vWIK2JRRLlrHWVir8lW6-eAaAx_1NNDwJMSbbtKOfWCP68PxgLgGIMaoaTFO14g9DotRDGvFwSV7XDZ2zJcTL16LpcxO0ykQ_yj7d9pulzROQPbJvSy5R0Ux8Di53acACvfSnGtaSQUx10B2jAU47AecntFgI4o_LUkEB_XvDueGuvCLpDs8kG5TUJDHI2Bb-ocM51snzorda3NRB8tnjPKE5fcfqLKhEV_UZ1JRaR8utA-GgIfQRl1wEpY_bn2KG0"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Hand-carved Wooden Crucifix</h3>
+<div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
+<span>HEIRLOOM</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                Portland, OR
+                            </div>
+</div>
+</div>
+</div>
+<!-- Listing 6 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-2xl mb-4 bg-surface-container-lowest transition-all hover:shadow-xl hover:-translate-y-1">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-orange-500 text-white text-[10px] font-bold tracking-widest rounded-full uppercase">TRADE</span>
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="white altar server surplice and black cassock hanging in a sacristy with liturgical atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9iHZfSPfQaTrRp3BcLQA8YRDaO0X5C2THQKZ7ykwZfsU279nMzajORq89SpxEzCHeLxse0W0qrwjWpslycJhWJLJsObYRW0KJy8Op0blckLqpXc3y7k20tiRp6HblGtfIOsnILha9T6OTNQxyOsQWGTQ7iji_hRnvw9zVXmJzjRAfULID_s9hv_f-0nToUtHigbbuj1SM1BuLCGUzeYLekUm4p_W8krPRK1ozqtKdd-xWdWb1zY4P6yO13xOAP0sGXOaklDDN6a4"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Altar Server Cassock &amp; Surplice</h3>
+<div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
+<span>USED</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                Chicago, IL
+                            </div>
+</div>
+</div>
+</div>
+<!-- Listing 7 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-2xl mb-4 bg-surface-container-lowest transition-all hover:shadow-xl hover:-translate-y-1">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-blue-600 text-white text-[10px] font-bold tracking-widest rounded-full uppercase">FOR SALE $2-$5</span>
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="assorted wooden and glass beads with cord and crucifixes for making handmade rosaries" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDehCybA3_2Gwh3XxdL8VFqBPvrTX4v5y5HBLqmsY__iJ7KjKSrTHYbwqXBUphB1zNOqx8k3fQKmWKdD06NmzgznMv-0qhXt0p0KJSN4GH4OR52n7Ef-QoeA6XxaYwO2yLA9x3PYiFOKrkr9X38Gm1rYIo-dVDMVoh9t0u4SKXgP1BWc01v7Z_ySSUrpsaN81A2b6XiWcNjII4qN47h2yV63DKjG7Ybve3hBidxiinVZ4VfhpdwbXqKpksGzQ7DycKugiq0oiI83T0"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Handmade Rosary Supplies</h3>
+<div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
+<span>NEW</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                Miami, FL
+                            </div>
+</div>
+</div>
+</div>
+<!-- Listing 8 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-2xl mb-4 bg-surface-container-lowest transition-all hover:shadow-xl hover:-translate-y-1">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-[#BE9B32] text-white text-[10px] font-bold tracking-widest rounded-full uppercase">WANTED</span>
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="open latin missal on a desk with elegant typography and traditional liturgical layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9ok6JQ38sPXPKWN0yhCh_nn13xIjwsnmU4Y0r8N2HtZnFsY59tEV8SHetVTLsVKfGGPwWRVXahx5WqdxHmosWCbYVBJ_04wuM-zoph0h0p54NSEKrTWkOivh7EEdWb6Vw7E1yeLm7-JNH58DSSkTnVaeo1Bwcp_-6cxz5ILU6_v1miw1aYa_A8jH8yLsIz0FzxAZn_rsR6g2FwWMdUxCoqw0Zxkp-24tgV1ZSQAM0MXh2GF7QRyJBO7-9OoRJka9XwKNdPh94vXE"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Latin Study Books &amp; Missals</h3>
+<div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
+<span>NEW/USED</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                Boston, MA
+                            </div>
+</div>
+</div>
+</div>
+<!-- Listing 9 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-2xl mb-4 bg-surface-container-lowest transition-all hover:shadow-xl hover:-translate-y-1">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-orange-500 text-white text-[10px] font-bold tracking-widest rounded-full uppercase">TRADE</span>
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="basket of fresh garden vegetables and rustic woodwork pieces on a farmhouse porch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALRMrupH7AZdHUwY9T9fUlaSZYvTBHVOmYD1vMW7gys5hx8PJb5Bdd9aUDZVdr2rWR3ZooIQloQCtY_t7cEqRCQqRmKKUi2-xjaMtNy4WL0nZMeJB-VrB3RJzVEvqsIq0xkh5RMU0aveOBaybhRp_U0LTt953dSJjG4-ar35QtFkQcK8J7fVXxH7es90QzzlL9P63l5AV7zJEsl5ywH8riCtrhos-wtOTZkABl3MAlmfzp5LSQELJGtsp5bRX8D2JbZpny2CoBedU"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Farm Fresh Produce for Woodwork</h3>
+<div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
+<span>FRESH</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                St. Paul, MN
+                            </div>
+</div>
+</div>
+</div>
+<!-- Listing 10 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-2xl mb-4 bg-surface-container-lowest transition-all hover:shadow-xl hover:-translate-y-1">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-green-600 text-white text-[10px] font-bold tracking-widest rounded-full uppercase">BARTER</span>
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="physical therapist with a client and a web developer screen representing a skills-based trade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW3AGCrjoe_kW9HLol9EUOfqb5CH5nOaNbWQc1OKK2XpQj14ASCc3vFQ1k2LAhz0svwtXdOx7vGaXjn5034JBhZOduwNWZZWemlwtRuLAM1BaHbOY1iRtT-apYQyUkpxz4EmRRSq9GW1i87PpYiZ3lFQGrgV2d-y73W2U4QeZLo7MROTPl2XaIbBG2SWjQE25hfsb1DqVmFZr0B7ugMv_m7vNQvRDbObQtpVXK4RdME4gz0rgtXbal9tVkCYgOcczdDsl9ZvRsq-Q"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Physical Therapy for Web Dev</h3>
+<div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
+<span>SERVICE</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                Austin, TX
+                            </div>
+</div>
+</div>
+</div>
+<!-- Listing 11 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-2xl mb-4 bg-surface-container-lowest transition-all hover:shadow-xl hover:-translate-y-1">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-blue-600 text-white text-[10px] font-bold tracking-widest rounded-full uppercase">FOR SALE $120</span>
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="polished walnut chalice carrying case with velvet interior and brass hardware" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR0WQrQLjGM7-Ip1A8KoZv0OKDgSUoDs8uxKjJHDSdXnvjf5e7lLU5aJuakFbl544DLo9lBW4fxbWZNG5ozk5pryUxS3KBHZOIoA6N2TvTIk0vjsQ8VeqPTHAsksCzeTwdW7qWyaiqJqDa831CgxYY4IPzUitiVhH1XbLL9MjBEWnkQ6zoGmDO7Ib7HTTBqWM664_2uhqk7jpwYhWapucPqHiHFLPgZO-K2CpIHXJMqjWjyUBOgYsqnY9Oj_-L5pPDdtOS_QyZYUI"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Hand-turned Walnut Chalice Case</h3>
+<div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
+<span>NEW</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                Detroit, MI
+                            </div>
+</div>
+</div>
+</div>
+<!-- Listing 12 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-2xl mb-4 bg-surface-container-lowest transition-all hover:shadow-xl hover:-translate-y-1">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-[#BE9B32] text-white text-[10px] font-bold tracking-widest rounded-full uppercase">WANTED</span>
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="collection of official Vatican II document volumes bound in high-quality leather and cloth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx7j3pp1jdZoV6U-xZBJ-wrYhPYQxIPXsIZi_h10i01bHaE1imPSCZnMIW7ZzX7E0xJj8OFa78a6vOZTEDQB7t4A8ctJBVKW2VWD_fBu3LJHiJEACxtq-soS14wCpFtqbKHgvsYVz3cepZus8FEsrOnWI-5pIS7WLxY5QaHxF9DONZCFiMLEVKoDnHtnvuafldeyHgCxlxz9z4c4EJNVidAKZX2mwoyAxlSomtr7BuOumcKvbXJnD2EF5vHXGurHvvP_UVC-P0RbI"/>
+</div>
+<div class="space-y-1">
+<h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Vatican II Documents Collection</h3>
+<div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
+<span>COLLECTIBLE</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                Atlanta, GA
+                            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex justify-center items-center gap-4">
+<button class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex items-center gap-2">
+<span class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center text-sm font-bold">1</span>
+<span class="w-10 h-10 rounded-full hover:bg-surface-container flex items-center justify-center text-sm font-medium cursor-pointer">2</span>
+<span class="w-10 h-10 rounded-full hover:bg-surface-container flex items-center justify-center text-sm font-medium cursor-pointer">3</span>
+</div>
+<button class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component Execution) -->
+<footer class="flex flex-col items-center justify-center py-12 px-8 w-full bg-blue-950 dark:bg-black">
+<div class="max-w-7xl w-full flex flex-col md:flex-row justify-between items-center md:items-start space-y-12 md:space-y-0">
+<div class="text-center md:text-left">
+<a class="font-['Noto_Serif'] text-2xl text-stone-50 uppercase tracking-[0.2em] mb-4 block" href="#">Catholic Owned</a>
+<p class="font-['Manrope'] text-stone-300 text-sm max-w-xs">Restoring the marketplace through tradition, trust, and community.</p>
+</div>
+<nav class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 items-center">
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">SHOP</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">DIRECTORY</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">EVENTS</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">BARTER</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">REGISTRY</a>
+</nav>
+<div class="flex space-x-6 text-yellow-500">
+<span class="material-symbols-outlined cursor-pointer opacity-90 hover:opacity-100 transition-opacity">public</span>
+<span class="material-symbols-outlined cursor-pointer opacity-90 hover:opacity-100 transition-opacity">mail</span>
+</div>
+</div>
+<div class="w-full h-px bg-white/10 my-12"></div>
+<p class="font-['Manrope'] text-sm tracking-wide text-stone-300 text-center opacity-70">
+&copy; 2026 Catholic Owned. All rights reserved.
+</p>
+</footer>
+</body></html>

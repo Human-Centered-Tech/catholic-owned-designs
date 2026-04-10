@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sacred Exchange | Catholic Barter &amp; Trade</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#4d5e83",
+                        "tertiary-fixed": "#ffdf90",
+                        "surface-dim": "#dadad6",
+                        "on-primary-container": "#7284aa",
+                        "tertiary-container": "#c9a84e",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#ffe08e",
+                        "on-background": "#1a1c1a",
+                        "surface-container-highest": "#e2e3df",
+                        "secondary-container": "#fed667",
+                        "on-surface": "#1a1c1a",
+                        "inverse-surface": "#2f312e",
+                        "outline-variant": "#c5c6cf",
+                        "surface-variant": "#e2e3df",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-surface-variant": "#44474e",
+                        "on-secondary-fixed": "#241a00",
+                        "tertiary-fixed-dim": "#e6c366",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#e9c256",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#b5c6f0",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#755b00",
+                        "on-tertiary-container": "#503d00",
+                        "on-primary-fixed": "#061b3c",
+                        "tertiary": "#755b00",
+                        "surface-container-low": "#f4f4f0",
+                        "primary-container": "#061b3c",
+                        "background": "#faf9f5",
+                        "primary": "#000000",
+                        "surface-container-high": "#e8e8e4",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#584400",
+                        "inverse-primary": "#b5c6f0",
+                        "inverse-on-surface": "#f1f1ed",
+                        "primary-fixed": "#d8e2ff",
+                        "surface": "#faf9f5",
+                        "on-primary-fixed-variant": "#354769",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "surface-container": "#eeeeea",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#faf9f5",
+                        "outline": "#75777f",
+                        "on-secondary-container": "#755c00",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#faf9f5]/85 backdrop-blur-md border-b border-[#e2e3df]/10 flex flex-col items-center">
+<!-- Top Row: Logo and Search -->
+<div class="flex flex-row items-center justify-between w-full px-12 py-4 max-w-screen-2xl mx-auto">
+<h1 class="text-3xl font-serif italic text-[#061b3c] tracking-tight">Sacred Exchange</h1>
+<div class="flex-1 max-w-xl mx-8 relative">
+<input class="w-full bg-surface-container-highest border-none rounded-full py-2.5 px-6 focus:ring-2 focus:ring-secondary/20 font-medium text-sm placeholder:text-on-surface-variant/60" placeholder="Search for sacramentals, services, or trade..." type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-[#061b3c] hover:text-[#755b00] transition-colors"><span class="material-symbols-outlined" data-icon="favorite">favorite</span></button>
+<button class="text-[#061b3c] hover:text-[#755b00] transition-colors"><span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span></button>
+<button class="text-[#061b3c] hover:text-[#755b00] transition-colors"><span class="material-symbols-outlined" data-icon="account_circle">account_circle</span></button>
+</div>
+</div>
+<!-- Bottom Row: Nav Links -->
+<nav class="w-full px-12 pb-3 max-w-screen-2xl mx-auto flex justify-center">
+<ul class="flex gap-8">
+<li class="text-xs font-label font-medium tracking-wide uppercase text-[#755b00] border-b-2 border-[#755b00] pb-1 cursor-pointer">Sacramentals</li>
+<li class="text-xs font-label font-medium tracking-wide uppercase text-[#061b3c] opacity-70 hover:text-[#755b00] transition-colors cursor-pointer">Books</li>
+<li class="text-xs font-label font-medium tracking-wide uppercase text-[#061b3c] opacity-70 hover:text-[#755b00] transition-colors cursor-pointer">Icons</li>
+<li class="text-xs font-label font-medium tracking-wide uppercase text-[#061b3c] opacity-70 hover:text-[#755b00] transition-colors cursor-pointer">Textiles</li>
+<li class="text-xs font-label font-medium tracking-wide uppercase text-[#061b3c] opacity-70 hover:text-[#755b00] transition-colors cursor-pointer">Tools</li>
+<li class="text-xs font-label font-medium tracking-wide uppercase text-[#061b3c] opacity-70 hover:text-[#755b00] transition-colors cursor-pointer">Heritage</li>
+</ul>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="relative w-full h-[600px] flex items-center justify-center mt-32 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-[#001435]/85 to-[#001435]/40 z-10"></div>
+<img alt="Warm beeswax candles" class="w-full h-full object-cover" data-alt="Close-up of numerous glowing warm beeswax candles in a dim cathedral setting, creating a spiritual and reverent atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADaLVpCA01ikAynsaaonoRALE8qZKuRKrZtfts4u8anfcb_YhWJGFibLBLxWMZ-fWL9h46s3dJNxg-pQ8F1fbSd1oQpfFRq4eFEqx4G6BdKuuLhPqPBcP1iiW-fWm1MNsb_5Xcrd_X_Z9qA7PJqkN-pQj03Fnp3DeAnAzt7Qwp6ydvvBjNQWo5KU6ZNPrWQgwSMbPPeWsp5lKcouNZnMUCBR5YO_H4Xd5BLQzVpzbtqXfV1B3oHXzYOGWtHNrMukTcwk0-2U4qf4Q"/>
+</div>
+<div class="relative z-20 text-center max-w-4xl px-6">
+<span class="font-label text-sm tracking-[0.4em] text-[#F2CD69] uppercase font-bold mb-6 block">Faith-Led Commerce</span>
+<h2 class="font-headline text-7xl md:text-8xl text-white mb-6 tracking-tight">Sacred Exchange</h2>
+<p class="font-headline italic text-2xl text-white/80 max-w-2xl mx-auto">
+                "Strengthening our community through faithful barter and trade."
+            </p>
+</div>
+</section>
+<!-- Filter Bar -->
+<div class="sticky top-28 z-40 bg-surface px-12 py-6 border-b border-outline-variant/10">
+<div class="max-w-screen-2xl mx-auto flex flex-wrap items-center gap-4">
+<div class="flex-1 min-w-[300px] relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-12 pr-6 py-3 bg-surface-container-low rounded-full border-none focus:ring-1 focus:ring-secondary font-medium" placeholder="Search community listings..." type="text"/>
+</div>
+<div class="flex gap-3">
+<div class="relative group">
+<select class="appearance-none bg-surface-container-low border-none rounded-full py-3 pl-6 pr-12 font-medium text-sm focus:ring-1 focus:ring-secondary cursor-pointer">
+<option>Category</option>
+<option>Services</option>
+<option>Goods</option>
+<option>Education</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+<div class="relative">
+<select class="appearance-none bg-surface-container-low border-none rounded-full py-3 pl-6 pr-12 font-medium text-sm focus:ring-1 focus:ring-secondary cursor-pointer">
+<option>Listing Type</option>
+<option>Barter</option>
+<option>Wanted</option>
+<option>For Sale</option>
+<option>Trade</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+<div class="relative">
+<select class="appearance-none bg-surface-container-low border-none rounded-full py-3 pl-6 pr-12 font-medium text-sm focus:ring-1 focus:ring-secondary cursor-pointer">
+<option>Condition</option>
+<option>New</option>
+<option>Gently Used</option>
+<option>Heirloom</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<button class="ml-auto bg-primary-container text-on-primary-container px-8 py-3 rounded-full font-label text-xs tracking-widest font-bold uppercase hover:bg-on-primary-fixed-variant transition-all">
+                Filters
+            </button>
+</div>
+</div>
+<!-- Main Content Section -->
+<main class="px-12 py-16 max-w-screen-2xl mx-auto">
+<div class="flex items-baseline justify-between mb-12">
+<h3 class="font-headline text-4xl text-on-primary-fixed">Community Listings</h3>
+<span class="font-body text-on-surface-variant/70 italic">Showing 150 results</span>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-12">
+<!-- Listing 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square mb-4 overflow-hidden rounded-none bg-surface-container-low">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-green-600 text-white font-label text-[10px] font-bold tracking-widest uppercase rounded-sm">Barter</span>
+<img alt="Design Services" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Office setting with coffee and laptop, representing professional graphic design services for barter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSPifIFMb5gobSEKRCE7CwIrvHqGcattTFFiWoHEaqdtWVECcRJY2CUBWRufvlijvvfV1jMoSubfsMOORFALX3vqR4YGrElDnAWJknnZOwH9ASxqt9yFqO3JGlPErZO4a7e5tafS8M3wKZ1KsXP4PUF_hOlnl-82xSTwc60eek2DZmXcXDmc2uh71snduot5-Iv3Ks_-ol4LUKINbUxudPCWWa0pcXFcqn_UIK4EhKW8OW9eg0SdZjoc6WHF1uhYrzyijrjvU9TFM"/>
+</div>
+<h4 class="font-body font-semibold text-lg leading-snug group-hover:text-secondary transition-colors">Graphic Design for Legal Services</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-[10px] font-label font-bold uppercase tracking-wider text-on-surface-variant/60 px-2 py-0.5 border border-outline-variant/30 rounded">Used</span>
+<div class="flex items-center gap-1 text-on-surface-variant/70 text-sm">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>Denver, CO</span>
+</div>
+</div>
+</div>
+<!-- Listing 2 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square mb-4 overflow-hidden rounded-none bg-surface-container-low">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-[#BE9B32] text-white font-label text-[10px] font-bold tracking-widest uppercase rounded-sm">Wanted</span>
+<img alt="Piano Lessons" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Hands playing a grand piano, representing a request for piano lessons in trade for floral arrangements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1jedaOB3bb2PGL6oJ_K43_ngZgrKH8r6CTswvcUwIejJ2IzDU42sBK27kGAxOnmdeuYa4DOfiesuRHUbhQE2XV2Wtey_UAkW8EJTxmNX5hGm2sRuvPQ-9HMUtiyaIsGI-zbqnnPKnHrMiJ4wgpTrLv0TSHmGYcpHn7hFh18gl6PfgIpW-ARaAyYnynl_pmBqkx22J43NQw3gYSog4pRWK4YMcw5PdouH9u0N754Ai07uYq-BNpcVsfC4_TBdd7zyHKQfi6eFIdiQ"/>
+</div>
+<h4 class="font-body font-semibold text-lg leading-snug group-hover:text-secondary transition-colors">Piano Lessons for Floral Arrangements</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-[10px] font-label font-bold uppercase tracking-wider text-on-surface-variant/60 px-2 py-0.5 border border-outline-variant/30 rounded">New</span>
+<div class="flex items-center gap-1 text-on-surface-variant/70 text-sm">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>Seattle, WA</span>
+</div>
+</div>
+</div>
+<!-- Listing 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square mb-4 overflow-hidden rounded-none bg-surface-container-low">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-[#061b3c] text-white font-label text-[10px] font-bold tracking-widest uppercase rounded-sm">For Sale</span>
+<div class="absolute inset-0 flex items-center justify-center text-secondary-container opacity-20 font-headline text-8xl font-bold italic">CT</div>
+<img alt="Textbook Bundle" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A stack of old religious textbooks and manuscripts on a wooden table, representing a bundle for sale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8I1TErr8euyEaF7InkIZabjwGH3WUE9PCK3El7qjweGa64WB8tyygHyiKorglTsB6pXeNDHfhKpIxZs9DyJSZPdl2t_8TgqwiVnNbSqyiS3kp5bc23YMaIapQhOFM-6o0TXyKjxedu76k-e5ynqqJP0vNhCGgNmGo1s4aIWKu96V2z0IF-iJ7rBym3wdQ1h6S9lbKPS2-6KiSHG6hm_DQnmXJDjrjSSUcMJb9c9aESyL8Zhu1OzCNmsy_PW6o5too81xHrtBNbqk"/>
+</div>
+<div class="flex justify-between items-start">
+<h4 class="font-body font-semibold text-lg leading-snug group-hover:text-secondary transition-colors">Catholic Textbooks Bundle</h4>
+<span class="font-headline text-lg font-bold text-on-primary-fixed ml-4">$5-$8</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-[10px] font-label font-bold uppercase tracking-wider text-on-surface-variant/60 px-2 py-0.5 border border-outline-variant/30 rounded">Used</span>
+<div class="flex items-center gap-1 text-on-surface-variant/70 text-sm">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>Nashville, TN</span>
+</div>
+</div>
+</div>
+<!-- Listing 4 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square mb-4 overflow-hidden rounded-none bg-surface-container-low">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-green-600 text-white font-label text-[10px] font-bold tracking-widest uppercase rounded-sm">Barter</span>
+<img alt="Plumbing Barter" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A plumber working on pipes under a sink, representing skilled labor offered in exchange for Mass Intentions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7uY83DZPqa2GszEBIQOPvaK_VGpM2z9Z4lEgopiiFrLmR2nbkoo8Jf_lAbpMfO5a5ABMLE9FlfEbIBwmkMZhDYG7-51M2y54034Q0hwC4fyVC9aP9iLuNkyI-Qsz22jC8LGSo67e6z3NvBHjWStC2xVusk7i8RYhYPKx3wFJgsPqdHRUw3g0n8kfqR4X27uW0-hu77y6A4ywZ2yneZACqMokaBTkRB6sjDTGaynuu7RuTwJQaDeugXkgiUhX-5oHbfJZclxbPbvI"/>
+</div>
+<h4 class="font-body font-semibold text-lg leading-snug group-hover:text-secondary transition-colors">Plumbing Work for Mass Intentions</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-[10px] font-label font-bold uppercase tracking-wider text-on-surface-variant/60 px-2 py-0.5 border border-outline-variant/30 rounded">New</span>
+<div class="flex items-center gap-1 text-on-surface-variant/70 text-sm">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>San Antonio, TX</span>
+</div>
+</div>
+</div>
+<!-- Listing 5 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square mb-4 overflow-hidden rounded-none bg-surface-container-low">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-[#061b3c] text-white font-label text-[10px] font-bold tracking-widest uppercase rounded-sm">For Sale</span>
+<img alt="Wooden Crucifix" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Intricately hand-carved wooden crucifix showing fine wood grain and master craftsmanship" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwhG3pHURUVmktVSVEu7xKzTIzmO7ZuQX9p__D0kb1tRpbplhid_hnuNkc8eWhkEP9J12viOt5R_LanurOk7zN7lItM-bNpvezWuEc4gfeWvNmPb0EesQ4lJjk7tRNf08E09Q12hFX_f4rNZVshjb8RW-5-YxgDtblW7BZymXKuaMlEkGBuMXLIh5vIANDnvD5BQle5nvIytUE3Oy6vPEYNEGfuG148m55ymavMLwaACM_Vq2zIXb7k0qIsb7vSUTCn9J5ME6Ezco"/>
+</div>
+<div class="flex justify-between items-start">
+<h4 class="font-body font-semibold text-lg leading-snug group-hover:text-secondary transition-colors">Hand-carved Wooden Crucifix</h4>
+<span class="font-headline text-lg font-bold text-on-primary-fixed ml-4">$45</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-[10px] font-label font-bold uppercase tracking-wider text-on-surface-variant/60 px-2 py-0.5 border border-outline-variant/30 rounded">New</span>
+<div class="flex items-center gap-1 text-on-surface-variant/70 text-sm">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>Portland, OR</span>
+</div>
+</div>
+</div>
+<!-- Listing 6 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square mb-4 overflow-hidden rounded-none bg-surface-container-low">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-orange-500 text-white font-label text-[10px] font-bold tracking-widest uppercase rounded-sm">Trade</span>
+<img alt="Cassock &amp; Surplice" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Traditional white altar server cassock and surplice hanging in a sacristy, clean and well-maintained" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDbRrcvZrNC-J1y2hKIT32SilHy2G8uu3IMJI882xlPb_R8bfqHHQzroHJqSW2uubESjOzbaA0daaYj6hgLkMAQ8c1wWqBd68S4L5r-lE1YaYPMNdCHXxdRrYi_HZaA9dKvvO699MhUT2R_keRvcMV_XQjCoS8x4NZJjTEOnVZ0kaKGqlgsmU_5gcFJuqTCrP8IUXPmTVD4juNvqFsAc9RAAh8iKLG0NNRWxuYTa-pm524IKt-d86wqi1GL4C7h3T53HoprcL9-N8"/>
+</div>
+<h4 class="font-body font-semibold text-lg leading-snug group-hover:text-secondary transition-colors">Altar Server Cassock &amp; Surplice</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-[10px] font-label font-bold uppercase tracking-wider text-on-surface-variant/60 px-2 py-0.5 border border-outline-variant/30 rounded">Used</span>
+<div class="flex items-center gap-1 text-on-surface-variant/70 text-sm">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>Chicago, IL</span>
+</div>
+</div>
+</div>
+<!-- Listing 7 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square mb-4 overflow-hidden rounded-none bg-surface-container-low">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-[#061b3c] text-white font-label text-[10px] font-bold tracking-widest uppercase rounded-sm">For Sale</span>
+<img alt="Rosary Supplies" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Assortment of beads, silver wire, and crucifixes for handmade rosary making on a workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxEgHakwPXYFci56UvRbyIE9OCcLRtg7jcDwQT0vV6765KtnyJieO1O4UzTn0Rbi9oR3Ia4vLnkpA2gFogdG2dCg_4eu5_UynLAog70wA82q8Nj40Y8EkGWXhYu3ofAW5hN_DMBLCjVZF939fVeU6GjgD-57hfYFqB8-xmjdaXnPI6KbW_ZZu_zszhky94edXGSWir7dlvEsmV89SX7JnTCSmG5CuRAi5fpcLZROyfUeh8ZIRTj0FLkmmofPl9bbsRh-y9JHcGZwE"/>
+</div>
+<div class="flex justify-between items-start">
+<h4 class="font-body font-semibold text-lg leading-snug group-hover:text-secondary transition-colors">Handmade Rosary Supplies</h4>
+<span class="font-headline text-lg font-bold text-on-primary-fixed ml-4">$2-$5</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-[10px] font-label font-bold uppercase tracking-wider text-on-surface-variant/60 px-2 py-0.5 border border-outline-variant/30 rounded">New</span>
+<div class="flex items-center gap-1 text-on-surface-variant/70 text-sm">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>Miami, FL</span>
+</div>
+</div>
+</div>
+<!-- Listing 8 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square mb-4 overflow-hidden rounded-none bg-surface-container-low">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-[#BE9B32] text-white font-label text-[10px] font-bold tracking-widest uppercase rounded-sm">Wanted</span>
+<div class="absolute inset-0 flex items-center justify-center text-secondary-container opacity-20 font-headline text-8xl font-bold italic">LS</div>
+<img alt="Liturgical Books" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Old leather-bound liturgical books on a dark wood shelf, representing a request for heritage literature" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5knyh8KuYknLMupoarshLpQvZfSHWEo0TRKM6pWFHvBe0Nq4WmKffJWAFDn8DW-KJcrZ1NHk2J5lfpNs8cHlyrnj_xbq2ybhTIz_Xefn7iLkAWa2vhdCOMB4okxKaQfbvT4tf2MXAz9LX7nVVlAkj4Oyf7BElEj0gvJW5ofrmDCv1RmRKUr9pgsIoqwN0Nf5GXMLUSUseo3Rw6n3ey-_WKHVvzCsYHsGviyLaPBB21FKddTAEprXqhuwiSS3EGtq-cAy3XgWBX0U"/>
+</div>
+<h4 class="font-body font-semibold text-lg leading-snug group-hover:text-secondary transition-colors">Latin Study Books &amp; Missals</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-[10px] font-label font-bold uppercase tracking-wider text-on-surface-variant/60 px-2 py-0.5 border border-outline-variant/30 rounded">Heirloom</span>
+<div class="flex items-center gap-1 text-on-surface-variant/70 text-sm">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>Boston, MA</span>
+</div>
+</div>
+</div>
+<!-- Listing 9 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square mb-4 overflow-hidden rounded-none bg-surface-container-low">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-orange-500 text-white font-label text-[10px] font-bold tracking-widest uppercase rounded-sm">Trade</span>
+<img alt="Farm Produce" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern organic vegetable farm at sunrise, representing fresh produce for trade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-3QxdRvaC5wAqW83fLhO_pgszQIFf-1la6Iz8rQy6fzKBeon7Z_NVjS9t4M8IO3uI6h7Vfme65Bygh_Rnd2h7ArGBy12aCA_Omi61AkCuO8AkUz_GRYppHq6Wc7AtnXCMh_WJe0ierTxKICLFNp7_84V4wQFaI5iQiXoiFvSK0XGt4l9a1TZNAsS7fz4IqBtXuYIAjyhsEtz7FToozZ1AMASb_yDFM2HrlRZ-hID0sglRT_FQdFYXaL5iSve6-3Sug6yoBJ5NH0s"/>
+</div>
+<h4 class="font-body font-semibold text-lg leading-snug group-hover:text-secondary transition-colors">Farm Fresh Produce for Woodwork</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-[10px] font-label font-bold uppercase tracking-wider text-on-surface-variant/60 px-2 py-0.5 border border-outline-variant/30 rounded">New</span>
+<div class="flex items-center gap-1 text-on-surface-variant/70 text-sm">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>St. Paul, MN</span>
+</div>
+</div>
+</div>
+<!-- Listing 10 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square mb-4 overflow-hidden rounded-none bg-surface-container-low">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-green-600 text-white font-label text-[10px] font-bold tracking-widest uppercase rounded-sm">Barter</span>
+<img alt="Health Barter" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A peaceful yoga and stretches instructor, representing health services for trade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKEeiL9e9anSiRmyPmdFcF9KI1T06iyWGC1bICPxk2O26mnXw91WpenOWCXfb8NrQCKyvYg8BorlICxjdfMZx22DStIk0avRupraLoDIwan0GD-hODwTVbgkJJ53gYoIoclMUgbFklO1WYwUDoEGsB1D6WWrhr6MwrniBqwAWHUE58qaqVsWpB--2cqpnojo7zJ74_3YTtFZFixgHNLqcZomh-6-zJuAMAmLO2Ztz5idZxKIg5qF8AjMNp8v8X49fPVoKcH4x13Vo"/>
+</div>
+<h4 class="font-body font-semibold text-lg leading-snug group-hover:text-secondary transition-colors">Physical Therapy for Web Dev</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-[10px] font-label font-bold uppercase tracking-wider text-on-surface-variant/60 px-2 py-0.5 border border-outline-variant/30 rounded">New</span>
+<div class="flex items-center gap-1 text-on-surface-variant/70 text-sm">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>Austin, TX</span>
+</div>
+</div>
+</div>
+<!-- Listing 11 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square mb-4 overflow-hidden rounded-none bg-surface-container-low">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-[#061b3c] text-white font-label text-[10px] font-bold tracking-widest uppercase rounded-sm">For Sale</span>
+<img alt="Wooden Bowl" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A simple, elegant wooden bowl on a minimalist table, representing artisan homeware for sale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrdGmXHMF3K6qPoNCdVySxKYRMRx5F59OXAwCvoqP9Rxf7wP04SGRACWqv11f1ijhcqEu87VPWPHGJo8iZxpuOC0LgB4-sPF0IWuIusqbbnwOE7GpKUni10ko2gy63xZkhOeCQjuPK393Dg9kLCG1p9gvASi4ORpO1qtVLQy-o8aazDGykb4CGxvKRIWOoSm75aGPIMUuNb2f4lQT4iRc08W7KRfoEoGe6KcOHTj1hZM4E2iriL5f5ST0IqP1OROfrZr3iLc0WbPo"/>
+</div>
+<div class="flex justify-between items-start">
+<h4 class="font-body font-semibold text-lg leading-snug group-hover:text-secondary transition-colors">Hand-turned Walnut Chalice Case</h4>
+<span class="font-headline text-lg font-bold text-on-primary-fixed ml-4">$120</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-[10px] font-label font-bold uppercase tracking-wider text-on-surface-variant/60 px-2 py-0.5 border border-outline-variant/30 rounded">New</span>
+<div class="flex items-center gap-1 text-on-surface-variant/70 text-sm">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>Detroit, MI</span>
+</div>
+</div>
+</div>
+<!-- Listing 12 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square mb-4 overflow-hidden rounded-none bg-surface-container-low">
+<span class="absolute top-4 left-4 z-10 px-3 py-1 bg-[#BE9B32] text-white font-label text-[10px] font-bold tracking-widest uppercase rounded-sm">Wanted</span>
+<img alt="Spiritual Books" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A quiet reading corner with a comfortable chair and stacks of books, representing a request for a spiritual library collection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3gWxL6srzvegReP1tCjE9BysKlu45Yg6MV5pfCxQTgox07N00lV6QYapPAsmxIMVhyvygH4gOO1_hymWjjmtP6Xis9cPR_CemnejKPcWVUDVKVhxUUe5Sc7Em4oaF6liLq8TzmNUz1DZxWaKHEgRoKn0eMnHQ3uO_6MvjdyDsXIR3vG5Bt4b_QvJJggjkHzn-kKTewEzPSJuso3LxUuGQwcMJzM1G_DhMFexsAeOz5cQh8ZL05x1qi6NAUrMcQSkQE2aWkuBH3Zw"/>
+</div>
+<h4 class="font-body font-semibold text-lg leading-snug group-hover:text-secondary transition-colors">Vatican II Documents Collection</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-[10px] font-label font-bold uppercase tracking-wider text-on-surface-variant/60 px-2 py-0.5 border border-outline-variant/30 rounded">Used</span>
+<div class="flex items-center gap-1 text-on-surface-variant/70 text-sm">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>Atlanta, GA</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20 flex justify-center">
+<button class="bg-surface border border-outline-variant/30 px-12 py-4 rounded-full font-label text-xs tracking-widest font-bold uppercase hover:bg-surface-container-low transition-all">
+                Load More Listings
+            </button>
+</div>
+</main>
+<!-- Mid-page Statement Section -->
+<section class="bg-primary-container text-on-primary-fixed py-24 px-12">
+<div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1 text-white">
+<span class="font-label text-xs tracking-[0.3em] text-[#BE9B32] uppercase font-bold mb-4 block">The Exchange Creed</span>
+<h2 class="font-headline text-5xl mb-8 leading-tight">Commerce built for community, not just consumption.</h2>
+<p class="font-body text-xl opacity-80 leading-relaxed mb-10">
+                    We believe the digital market can reflect the beauty of a cathedral—a place of permanence, integrity, and shared purpose. Trade your talents, sell your crafts, and support your neighbor.
+                </p>
+<div class="flex gap-6">
+<button class="bg-gradient-to-r from-secondary to-[#e9c256] text-on-primary-fixed px-10 py-4 rounded-full font-label text-xs tracking-widest font-bold uppercase hover:shadow-[0_0_20px_rgba(190,155,50,0.3)] transition-all">List an Item</button>
+<button class="border border-white/20 text-white px-10 py-4 rounded-full font-label text-xs tracking-widest font-bold uppercase hover:bg-white/5 transition-all">Our Manifesto</button>
+</div>
+</div>
+<div class="w-full md:w-1/3 aspect-[4/5] bg-surface/5 overflow-hidden">
+<img alt="Artisan Heritage" class="w-full h-full object-cover grayscale opacity-60" data-alt="Traditional artisan workbench with carving tools and shavings, emphasizing craft and heritage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYPiva0NR_C1kBd593aSIekVP6CgpAk4-7-r4l6RQBdJtBspyr3lqrQNuwoYmOkkpXWEmhXmSOS-6oNSejlVR5tqMQbr2hBDwE2JedMVsZ8l3sUlUmQ6o-IF0MaXZ9Y-GOfCttZ3BisE_dz5D8A1jvAcX3zWj3JzlxlsHo5PDrjllA17jBDqtmrEYUVKLTP78QGWwmpRgfz9gSARm5yr4Fc-9MKLC7J7AgHsqZQ7oD9aAzG3IFl0h6ut66buiKzwMoeR7n7FLU3M4"/>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#061b3c] w-full py-16 px-12">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-[#faf9f5]">
+<div class="flex flex-col gap-6">
+<h5 class="text-2xl font-serif text-[#faf9f5]">Sacred Exchange</h5>
+<p class="text-sm opacity-60 font-body leading-relaxed max-w-xs">
+                    A digital cathedral for the Catholic faithful to share, trade, and build a more localized and intentional economy.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<h6 class="font-label text-[10px] tracking-widest uppercase font-bold text-[#BE9B32]">Community</h6>
+<ul class="flex flex-col gap-3">
+<li class="text-sm opacity-60 hover:text-[#BE9B32] transition-opacity cursor-pointer">The Manifesto</li>
+<li class="text-sm opacity-60 hover:text-[#BE9B32] transition-opacity cursor-pointer">Barter Guidelines</li>
+<li class="text-sm opacity-60 hover:text-[#BE9B32] transition-opacity cursor-pointer">Merchant Registry</li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h6 class="font-label text-[10px] tracking-widest uppercase font-bold text-[#BE9B32]">Legal</h6>
+<ul class="flex flex-col gap-3">
+<li class="text-sm opacity-60 hover:text-[#BE9B32] transition-opacity cursor-pointer">Privacy Policy</li>
+<li class="text-sm opacity-60 hover:text-[#BE9B32] transition-opacity cursor-pointer">Terms of Exchange</li>
+<li class="text-sm opacity-60 hover:text-[#BE9B32] transition-opacity cursor-pointer">Contact the Curator</li>
+</ul>
+</div>
+<div class="flex flex-col gap-6">
+<h6 class="font-label text-[10px] tracking-widest uppercase font-bold text-[#BE9B32]">Join the Vestry</h6>
+<p class="text-xs opacity-50">Receive curated highlights from the community registry once per week.</p>
+<div class="relative">
+<input class="w-full bg-white/5 border border-white/10 py-3 px-4 text-sm rounded-none focus:ring-1 focus:ring-[#BE9B32]" placeholder="Email Address" type="email"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 text-[#BE9B32]"><span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-[10px] font-label tracking-widest uppercase opacity-40">
+                © 2024 Sacred Exchange. A Digital Cathedral Project. Built for Permanence.
+            </p>
+<div class="flex gap-8 opacity-40">
+<span class="material-symbols-outlined text-lg">church</span>
+<span class="material-symbols-outlined text-lg">token</span>
+<span class="material-symbols-outlined text-lg">shield_with_heart</span>
+</div>
+</div>
+</footer>
+</body></html>

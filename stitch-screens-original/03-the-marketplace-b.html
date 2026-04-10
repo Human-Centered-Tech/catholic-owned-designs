@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#44474e",
+                        "on-secondary-container": "#755c00",
+                        "background": "#faf9f5",
+                        "on-secondary-fixed": "#241a00",
+                        "primary": "#000000",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1a1c1a",
+                        "surface-container-high": "#e8e8e4",
+                        "surface-container-highest": "#e2e3df",
+                        "secondary-container": "#fed667",
+                        "on-surface": "#1a1c1a",
+                        "secondary-fixed": "#ffe08e",
+                        "secondary-fixed-dim": "#e9c256",
+                        "secondary": "#755b00",
+                        "inverse-primary": "#b5c6f0",
+                        "outline": "#75777f",
+                        "inverse-on-surface": "#f1f1ed",
+                        "tertiary-fixed": "#ffdf90",
+                        "surface": "#faf9f5",
+                        "tertiary-fixed-dim": "#e6c366",
+                        "inverse-surface": "#2f312e",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dadad6",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#503d00",
+                        "outline-variant": "#c5c6cf",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#faf9f5",
+                        "on-primary-fixed-variant": "#354769",
+                        "on-primary-container": "#7284aa",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-secondary-fixed-variant": "#584400",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#c9a84e",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#755b00",
+                        "primary-fixed-dim": "#b5c6f0",
+                        "on-primary-fixed": "#061b3c",
+                        "surface-variant": "#e2e3df",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-tint": "#4d5e83",
+                        "surface-container": "#eeeeea",
+                        "primary-container": "#061b3c",
+                        "surface-container-low": "#f4f4f0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .cross-pattern {
+            background-color: #faf9f5;
+            background-image: radial-gradient(#061b3c10 1px, transparent 1px), radial-gradient(#061b3c10 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+        .hero-title-shadow {
+            text-shadow: 0 10px 30px rgba(6, 27, 60, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<nav class="sticky top-0 z-50 bg-[#faf9f5]/85 backdrop-blur-xl dark:bg-[#061b3c]/85 border-b border-[#061b3c]/10 flex flex-col w-full max-w-none px-6 py-4 space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-12">
+<a class="font-serif text-2xl font-bold text-[#061b3c] dark:text-[#faf9f5]" href="#">Catholic Owned</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#755b00] border-b-2 border-[#755b00] pb-1 font-bold font-sans uppercase tracking-widest text-xs" href="#">SHOP</a>
+<a class="text-[#061b3c] dark:text-[#faf9f5]/80 hover:text-[#755b00] transition-colors font-sans uppercase tracking-widest text-xs" href="#">DIRECTORY</a>
+<a class="text-[#061b3c] dark:text-[#faf9f5]/80 hover:text-[#755b00] transition-colors font-sans uppercase tracking-widest text-xs" href="#">EVENTS</a>
+<a class="text-[#061b3c] dark:text-[#faf9f5]/80 hover:text-[#755b00] transition-colors font-sans uppercase tracking-widest text-xs" href="#">BARTER</a>
+<a class="text-[#061b3c] dark:text-[#faf9f5]/80 hover:text-[#755b00] transition-colors font-sans uppercase tracking-widest text-xs" href="#">REGISTRY</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="bg-secondary text-on-secondary px-6 py-2 rounded-full font-sans font-semibold tracking-wide text-xs hover:bg-secondary-container hover:text-on-secondary-container transition-all">JOIN THE ECONOMY</button>
+<div class="flex items-center gap-4 text-on-primary-fixed">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary transition-colors" data-icon="shopping_cart">shopping_cart</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary transition-colors" data-icon="person">person</span>
+</div>
+</div>
+</div>
+</nav>
+<header class="cross-pattern pt-24 pb-32 px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+<span class="font-label uppercase tracking-[0.4em] text-xs text-secondary mb-6 block font-bold">ESTABLISHED IN FAITH</span>
+<h1 class="font-headline italic text-7xl md:text-8xl tracking-tighter text-on-primary-fixed hero-title-shadow leading-none">THE MARKETPLACE</h1>
+<div class="mt-12 w-full max-w-2xl relative group">
+<div class="absolute inset-0 bg-secondary/5 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="relative bg-surface-container-lowest border border-outline-variant/20 rounded-full flex items-center p-2 shadow-sm transition-all focus-within:ring-2 focus-within:ring-secondary/20">
+<span class="material-symbols-outlined ml-4 text-outline" data-icon="search">search</span>
+<input class="flex-grow bg-transparent border-none focus:ring-0 px-4 py-3 font-body text-on-surface" placeholder="Search for heritage goods..." type="text"/>
+<button class="bg-on-primary-fixed text-white px-8 py-3 rounded-full font-label font-bold text-sm hover:bg-secondary transition-all">DISCOVER</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row gap-12">
+<aside class="w-full md:w-64 flex-shrink-0">
+<div class="sticky top-32 space-y-10">
+<section>
+<h3 class="font-headline text-xl text-on-primary-fixed mb-6 border-b border-outline-variant/10 pb-2">Categories</h3>
+<ul class="space-y-4">
+<li class="group">
+<a class="flex items-center justify-between text-secondary font-bold font-body group-hover:translate-x-1 transition-transform" href="#">
+<span>Liturgy &amp; Home</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</a>
+</li>
+<li class="group">
+<a class="flex items-center justify-between text-on-surface/70 font-body group-hover:text-secondary group-hover:translate-x-1 transition-transform" href="#">
+<span>Sacred Texts</span>
+<span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</a>
+</li>
+<li class="group">
+<a class="flex items-center justify-between text-on-surface/70 font-body group-hover:text-secondary group-hover:translate-x-1 transition-transform" href="#">
+<span>Sanctuary Candles</span>
+<span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</a>
+</li>
+<li class="group">
+<a class="flex items-center justify-between text-on-surface/70 font-body group-hover:text-secondary group-hover:translate-x-1 transition-transform" href="#">
+<span>Sacramentals</span>
+<span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</a>
+</li>
+<li class="group">
+<a class="flex items-center justify-between text-on-surface/70 font-body group-hover:text-secondary group-hover:translate-x-1 transition-transform" href="#">
+<span>Journaling</span>
+<span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</a>
+</li>
+</ul>
+</section>
+<section>
+<h3 class="font-headline text-xl text-on-primary-fixed mb-6 border-b border-outline-variant/10 pb-2">Price Range</h3>
+<div class="px-2">
+<input class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-secondary" max="200" min="0" type="range" value="150"/>
+<div class="flex justify-between mt-4 font-label text-xs text-on-surface-variant font-bold">
+<span>$0</span>
+<span>$200+</span>
+</div>
+</div>
+</section>
+<section class="p-6 bg-primary-container rounded-2xl relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 text-white/5 rotate-12 transition-transform group-hover:rotate-0 duration-700">
+<span class="material-symbols-outlined text-9xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<p class="font-headline text-white italic text-lg relative z-10 leading-tight">Support Catholic families with every purchase.</p>
+</section>
+</div>
+</aside>
+<section class="flex-grow">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+<!-- Product Card 1 -->
+<div class="group">
+<div class="aspect-[4/5] bg-surface-container-lowest overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="a majestic leather bound gilded bible with intricate gold leaf details on a dark wood table illuminated by candlelight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDojHLE3QsWA46SYuL9icgb1YrrTfHYz6ZxLu0sJrvlsh38Wu2kpAYjvNSOLeQ9tvsYpWqLMxcFA0J0ttOVdxmKgO2iv_R3ve6AUOs9gwPTK5FoIxzTgvC0bfmIOlmerxkIimGZoptLDYYR-QGPpPqJjrMOeMWessMTCoVI7QNpj_ql6v1tG7MDS9pRxJjsh-FxMfHH7PoRIARoNRvCwpK4FNbK8fbBS2UBbESFhfJqrkAk8ePIc3uA-d3juZWefWlbAdbrn2DxFTM"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-label font-bold tracking-widest text-on-primary-fixed">HERITAGE</div>
+</div>
+<span class="font-label uppercase tracking-widest text-[10px] text-secondary font-bold mb-2 block">LITURGY &amp; HOME</span>
+<h3 class="font-body text-lg text-on-primary-fixed font-semibold mb-1 group-hover:text-secondary transition-colors">Gilded Bible</h3>
+<p class="font-headline text-2xl text-on-primary-fixed mb-4">$85</p>
+<button class="w-full py-4 border border-secondary text-secondary font-label font-bold text-xs tracking-widest rounded-full hover:bg-secondary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+                        ADD TO CART <span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+<!-- Product Card 2 -->
+<div class="group">
+<div class="aspect-[4/5] bg-surface-container-lowest overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="large white pillar candle with immaculate heart icon illustration in a classic etching style on marble background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5yNrhMfcJXVZdqqHdCYPwvAzl7ryXHxxhxYsCqsph4p3dSOcIE_lWNoQ_BNuhNBGVRwngL6gLjCW1mnEUVB9Ze0rZ9AoYtYpUOpzDnQLGv5lvZCG_xp5ozEtCyN3G6ffDo7qasnY2UGuLWSfcNlLgQDcwMHwy0BWH-XGlgw2efFTWzIK8Rf28wcu1WN6K0bDOJuk5J8DuS6QWSR2J-1B5MTQVSE9XsVbzuHODo5bYoOZDxTYsOjn9XqP0ykjdAw3vcNqP-B7exKo"/>
+</div>
+<span class="font-label uppercase tracking-widest text-[10px] text-secondary font-bold mb-2 block">LITURGY &amp; HOME</span>
+<h3 class="font-body text-lg text-on-primary-fixed font-semibold mb-1 group-hover:text-secondary transition-colors">Immaculate Heart Pillar</h3>
+<p class="font-headline text-2xl text-on-primary-fixed mb-4">$42</p>
+<button class="w-full py-4 border border-secondary text-secondary font-label font-bold text-xs tracking-widest rounded-full hover:bg-secondary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+                        ADD TO CART <span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+<!-- Product Card 3 -->
+<div class="group">
+<div class="aspect-[4/5] bg-surface-container-lowest overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="handcrafted olive wood rosary beads resting on a weathered stone ledge with soft natural afternoon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuhopAPry3Uns_B1fcJpzdcwxZG3O-w-mptklhYXuq52-BH7XXZ8ZzdOsYoTWsIsiU0S64gYhZ0cxwz80Y5bUCRXwC9PUyNgxlnEvHvm8HyjP1SJ3Cn-f9UZEOW6hb6z1cLMlWhewNZ_hvmR-GopmlCgJQjCbaMbwR2mcFek6FvuCfvsId2DQGu_FURLpTQY78Sk5d4O1jhaXMeQKNnP-sMoVfL7T_E5dMytH0y14MqLp3sGU2Bg680rJPQ49SfVh1ZfvezTOar7k"/>
+</div>
+<span class="font-label uppercase tracking-widest text-[10px] text-secondary font-bold mb-2 block">LITURGY &amp; HOME</span>
+<h3 class="font-body text-lg text-on-primary-fixed font-semibold mb-1 group-hover:text-secondary transition-colors">Olive Wood Rosary</h3>
+<p class="font-headline text-2xl text-on-primary-fixed mb-4">$45</p>
+<button class="w-full py-4 border border-secondary text-secondary font-label font-bold text-xs tracking-widest rounded-full hover:bg-secondary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+                        ADD TO CART <span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+<!-- Product Card 4 -->
+<div class="group">
+<div class="aspect-[4/5] bg-surface-container-lowest overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="set of three tall red glass sanctuary candles burning brightly in a quiet chapel setting with dark shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYFr59sZwuNyZRCIXG4CpvhgOM_iy5tR6xpdtImPU7ecLlcf7fErQ4mTmzBMWLpOeweOyt-PV-6qodD-D0Ge_xi7NS7kxQRz5UKzepIb1zyUbGqgQLhSo8S7ZM3hNMOEjj_6iUuJTOSCZD3n8YqOhrYn_I4ILqmPiCzVO6i4gJnFs80T5lXRSrKy1bej1NkWJPf9tWxrIrH8S44Zju1rXQug16wOllPb0IlWE2n9k03fWMVNxzAa6ondPbxtdjK7v9S8gmOaplWmk"/>
+</div>
+<span class="font-label uppercase tracking-widest text-[10px] text-secondary font-bold mb-2 block">LITURGY &amp; HOME</span>
+<h3 class="font-body text-lg text-on-primary-fixed font-semibold mb-1 group-hover:text-secondary transition-colors">Sanctuary Candle Set</h3>
+<p class="font-headline text-2xl text-on-primary-fixed mb-4">$38</p>
+<button class="w-full py-4 border border-secondary text-secondary font-label font-bold text-xs tracking-widest rounded-full hover:bg-secondary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+                        ADD TO CART <span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+<!-- Product Card 5 -->
+<div class="group">
+<div class="aspect-[4/5] bg-surface-container-lowest overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="pure yellow beeswax candles tied with twine and a sprig of dried lavender on a linen cloth background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6QjugF0VvA5952kC7qqGKHXE1uoo0N6KD1t5faDXEzqGA3iN8-YTORsqDQ9y3ld6twal5CvdOBjEErWE61dFOkFtbvX3o9DwGv6n8KXlfI1Ni1O71KyaPtXgnUiL6BrU5JTIvgDN8GK2RSbHS16JN3JtwK8NWDVM81H3qUBzzb5kbN3qux9jp16qNepf_-AWpPe4kq_gVU9IAMw02z0a-ZFMk3sPuRnKM7fpaX4T00abCyqdOMmi_d8Lt6dBAEMAlWyVLvbujj7E"/>
+</div>
+<span class="font-label uppercase tracking-widest text-[10px] text-secondary font-bold mb-2 block">LITURGY &amp; HOME</span>
+<h3 class="font-body text-lg text-on-primary-fixed font-semibold mb-1 group-hover:text-secondary transition-colors">Beeswax Candles</h3>
+<p class="font-headline text-2xl text-on-primary-fixed mb-4">$24</p>
+<button class="w-full py-4 border border-secondary text-secondary font-label font-bold text-xs tracking-widest rounded-full hover:bg-secondary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+                        ADD TO CART <span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+<!-- Product Card 6 -->
+<div class="group">
+<div class="aspect-[4/5] bg-surface-container-lowest overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="linen covered notebook with a simple cross embossed on the cover sitting on an old desk with a fountain pen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVinGTLSU0cKdA66s3eP1LXzVUa0TYgLhtO0KawOet_19ncsjjAJDAb6gvRBkETETRTSqa3UL_UcInYhYG3tOHIOeW5_pxDG-AbLSe-HiR2R2SfAnSnr-qKAbZp-3OIysDuEWIb_hOu7XzNtaoT9Z7n-VPWP6b5GNZe_qwqazmXwnX-0ZcPJD7KyfcNfluDIn14VoR8TsSEgg-Z1YDAC_jRoZxkIbNkGDKqzVKevFS7xjsBaX4Y18k0ed10v-YUVDG4kvjnVR2kfk"/>
+</div>
+<span class="font-label uppercase tracking-widest text-[10px] text-secondary font-bold mb-2 block">LITURGY &amp; HOME</span>
+<h3 class="font-body text-lg text-on-primary-fixed font-semibold mb-1 group-hover:text-secondary transition-colors">Prayer Journal</h3>
+<p class="font-headline text-2xl text-on-primary-fixed mb-4">$18</p>
+<button class="w-full py-4 border border-secondary text-secondary font-label font-bold text-xs tracking-widest rounded-full hover:bg-secondary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+                        ADD TO CART <span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+<!-- Product Card 7 -->
+<div class="group">
+<div class="aspect-[4/5] bg-surface-container-lowest overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="ornate brass and wood sacred heart crucifix with dramatic overhead lighting casting a long shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaTC6nH1wKot9Vf0WOqNj7DFJs8Nn4egYu4EJ4x4VkYOENZp1N1efK3zusDqR70l5MKI-j7XRquxxT19wAwNl32bI07BexXUgtkLuUCg0IVyszCY18xGnR4m2suXzHBdwWIT2kNtkOMgMTFhlmWW4ZbMdyaRGiJ8lErwDccxOrUBykBLGBy-JA_j99h032QPGj7b0OCsc-IAptmN-sSbYcPF8dVZYwTHR9X_-skowRvfiG6cEGcDFuttGr2o-bdLjYdHs4wfoOP9M"/>
+</div>
+<span class="font-label uppercase tracking-widest text-[10px] text-secondary font-bold mb-2 block">LITURGY &amp; HOME</span>
+<h3 class="font-body text-lg text-on-primary-fixed font-semibold mb-1 group-hover:text-secondary transition-colors">Sacred Heart Crucifix</h3>
+<p class="font-headline text-2xl text-on-primary-fixed mb-4">$145</p>
+<button class="w-full py-4 border border-secondary text-secondary font-label font-bold text-xs tracking-widest rounded-full hover:bg-secondary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+                        ADD TO CART <span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+<!-- Product Card 8 -->
+<div class="group">
+<div class="aspect-[4/5] bg-surface-container-lowest overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="blush pink scented candle in a textured glass jar with a minimalist label featuring a floral crest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDklloYJJPuHyVhmZsIOLt9Kst5LVMuAtGSZ4EE4KaOTvD08irjK0gEg48EcNpzSCbgB71d84-6uA7hNeYHWJmYkA_6JBWsjlhn8gv6pXVjKG_9a1Ru_DkeX2iQtgZtBZhgFx_Y0YNdCTEKHigSqacV1n5gHGg0qSC2mMx97jQNCXY4GYC2A-Zca-H0g2C9-M07LbK4gqKJ-mxTUqjIx7QjhfhkIldO9EZTliypnml5qASP5kD6wk0QsAeWtiUxEY_OOvYkL_fMgAM"/>
+</div>
+<span class="font-label uppercase tracking-widest text-[10px] text-secondary font-bold mb-2 block">LITURGY &amp; HOME</span>
+<h3 class="font-body text-lg text-on-primary-fixed font-semibold mb-1 group-hover:text-secondary transition-colors">Rose of Sharon Candle</h3>
+<p class="font-headline text-2xl text-on-primary-fixed mb-4">$19</p>
+<button class="w-full py-4 border border-secondary text-secondary font-label font-bold text-xs tracking-widest rounded-full hover:bg-secondary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+                        ADD TO CART <span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+<!-- Product Card 9 -->
+<div class="group">
+<div class="aspect-[4/5] bg-surface-container-lowest overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="a collection of vintage style prayer cards with saint illustrations laid out in an aesthetic grid on a neutral surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJpwINuiN68V-FAwnMlGtLFQRJXwTQ-qvsic6dOQyOo1EbOUeVdjdgTv-XwO4PgOj15l1JacHVpQFwxGtMgXcVRYkv8vWO_DazNa_tf4w-nHP7eu8-a50271VI3btN1xEyO40iBuA7yRBRFIUqZIv0dTaiM-MFy1dDkjYCagcfcYNHVWukNryr-WoFDsDGyY9cGdA3FVhjVD-z21NsX3qUx_UG_OozLB8MFQXHpMPnVmesxy8V8kTasJXXV01-PwvJRb_mxwqVNBc"/>
+</div>
+<span class="font-label uppercase tracking-widest text-[10px] text-secondary font-bold mb-2 block">LITURGY &amp; HOME</span>
+<h3 class="font-body text-lg text-on-primary-fixed font-semibold mb-1 group-hover:text-secondary transition-colors">Legacy Prayer Card Set</h3>
+<p class="font-headline text-2xl text-on-primary-fixed mb-4">$29</p>
+<button class="w-full py-4 border border-secondary text-secondary font-label font-bold text-xs tracking-widest rounded-full hover:bg-secondary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+                        ADD TO CART <span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<section class="w-full py-32 bg-primary-container text-white text-center px-6 relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/black-paper.png')] opacity-20"></div>
+<div class="max-w-3xl mx-auto relative z-10">
+<span class="material-symbols-outlined text-secondary text-6xl mb-8" data-icon="verified">verified</span>
+<h2 class="font-headline text-5xl mb-8">Crafted for Permanence</h2>
+<p class="font-body text-white/80 text-lg leading-relaxed mb-12">
+                We believe that the objects in your home should reflect the eternal nature of the Faith. Every item in The Marketplace is vetted for quality, tradition, and the sanctity of its source.
+            </p>
+<div class="inline-flex items-center gap-4 text-secondary font-label font-bold tracking-[0.2em] text-xs">
+<div class="w-12 h-px bg-secondary/30"></div>
+                OUR PROMISE TO YOU
+                <div class="w-12 h-px bg-secondary/30"></div>
+</div>
+</div>
+</section>
+<footer class="bg-[#061b3c] dark:bg-[#000000] text-[#faf9f5] full-width pt-16 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 w-full mx-auto">
+<div class="space-y-6">
+<span class="font-serif text-3xl text-[#BE9B32] mb-6 block">Catholic Owned</span>
+<p class="font-sans font-light text-sm text-[#faf9f5]/70 max-w-xs leading-relaxed">
+                    Connecting the faithful to premium Catholic heritage goods and community-driven commerce.
+                </p>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-serif text-xl text-[#BE9B32] mb-2">Marketplace</h4>
+<a class="font-sans font-light text-sm text-[#faf9f5]/70 hover:text-[#BE9B32] hover:translate-x-1 transition-all" href="#">Shop All</a>
+<a class="font-sans font-light text-sm text-[#faf9f5]/70 hover:text-[#BE9B32] hover:translate-x-1 transition-all" href="#">New Arrivals</a>
+<a class="font-sans font-light text-sm text-[#faf9f5]/70 hover:text-[#BE9B32] hover:translate-x-1 transition-all" href="#">Best Sellers</a>
+<a class="font-sans font-light text-sm text-[#faf9f5]/70 hover:text-[#BE9B32] hover:translate-x-1 transition-all" href="#">Artisan Stories</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-serif text-xl text-[#BE9B32] mb-2">Legal</h4>
+<a class="font-sans font-light text-sm text-[#faf9f5]/70 hover:text-[#BE9B32] hover:translate-x-1 transition-all" href="#">Privacy Policy</a>
+<a class="font-sans font-light text-sm text-[#faf9f5]/70 hover:text-[#BE9B32] hover:translate-x-1 transition-all" href="#">Terms of Service</a>
+<a class="font-sans font-light text-sm text-[#faf9f5]/70 hover:text-[#BE9B32] hover:translate-x-1 transition-all" href="#">Shipping &amp; Returns</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-serif text-xl text-[#BE9B32] mb-2">Connect</h4>
+<div class="flex gap-4 mb-4">
+<span class="material-symbols-outlined cursor-pointer text-[#faf9f5]/70 hover:text-[#BE9B32]" data-icon="alternate_email">alternate_email</span>
+<span class="material-symbols-outlined cursor-pointer text-[#faf9f5]/70 hover:text-[#BE9B32]" data-icon="share">share</span>
+<span class="material-symbols-outlined cursor-pointer text-[#faf9f5]/70 hover:text-[#BE9B32]" data-icon="notifications">notifications</span>
+</div>
+<p class="font-sans font-light text-xs text-[#faf9f5]/50">Subscribe for weekly curator picks.</p>
+<div class="flex border-b border-[#faf9f5]/20 pb-2">
+<input class="bg-transparent border-none text-xs flex-grow focus:ring-0 p-0 text-[#faf9f5]" placeholder="Your email" type="email"/>
+<span class="material-symbols-outlined text-[#BE9B32] text-lg" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="mt-20 border-t border-[#faf9f5]/10 pt-8 px-12 flex justify-between items-center">
+<span class="font-sans font-light text-xs text-[#faf9f5]/50">© Catholic Owned. All rights reserved.</span>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-xs text-[#faf9f5]/30" data-icon="shield">shield</span>
+<span class="material-symbols-outlined text-xs text-[#faf9f5]/30" data-icon="verified_user">verified_user</span>
+</div>
+</div>
+</footer>
+</body></html>

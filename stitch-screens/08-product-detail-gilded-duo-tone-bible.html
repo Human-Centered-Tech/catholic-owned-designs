@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#000000",
+                    "on-surface": "#1a1c1a",
+                    "surface-dim": "#dadad6",
+                    "background": "#faf9f5",
+                    "tertiary": "#755b00",
+                    "primary-fixed": "#d8e2ff",
+                    "outline": "#75777f",
+                    "inverse-on-surface": "#f1f1ed",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#e9c256",
+                    "on-secondary-fixed": "#241a00",
+                    "on-tertiary-fixed-variant": "#584400",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#fed667",
+                    "inverse-primary": "#b5c6f0",
+                    "surface-tint": "#4d5e83",
+                    "primary-fixed-dim": "#b5c6f0",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#e6c366",
+                    "secondary-fixed": "#ffe08e",
+                    "primary-container": "#061b3c",
+                    "inverse-surface": "#2f312e",
+                    "on-primary-fixed": "#061b3c",
+                    "on-tertiary-container": "#503d00",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#7284aa",
+                    "on-background": "#1a1c1a",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#584400",
+                    "surface-container-low": "#f4f4f0",
+                    "surface": "#faf9f5",
+                    "on-primary-fixed-variant": "#354769",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#755c00",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#241a00",
+                    "tertiary-container": "#c9a84e",
+                    "surface-container-highest": "#e2e3df",
+                    "surface-bright": "#faf9f5",
+                    "tertiary-fixed": "#ffdf90",
+                    "secondary": "#755b00",
+                    "outline-variant": "#c5c6cf",
+                    "surface-variant": "#e2e3df",
+                    "surface-container": "#eeeeea",
+                    "surface-container-high": "#e8e8e4",
+                    "on-surface-variant": "#44474e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .font-serif { font-family: 'Noto Serif', serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar (Shared Component) -->
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 rounded-none bg-stone-50/85 dark:bg-stone-900/85 backdrop-blur-xl border-b border-stone-200/50 dark:border-stone-800/50">
+<div class="flex flex-col w-full max-w-full px-6 py-3">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<a class="font-['Noto_Serif'] text-2xl font-bold text-blue-950 dark:text-white uppercase tracking-widest" href="#">Catholic Owned</a>
+<span class="font-['Noto_Serif'] italic text-sm text-blue-950/70 dark:text-stone-400 tracking-wide">Marketplace</span>
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-yellow-600 dark:text-yellow-500 font-bold border-b-2 border-yellow-600 transition-colors duration-300" href="#">SHOP</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">DIRECTORY</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">EVENTS</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">BARTER</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">REGISTRY</a>
+</nav>
+<div class="flex items-center space-x-6">
+<div class="flex items-center space-x-4 text-blue-950 dark:text-stone-100">
+<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform">shopping_cart</span>
+<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform">person</span>
+</div>
+<button class="bg-primary-container text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest hover:bg-opacity-90 transition-all scale-95 active:scale-90">
+JOIN THE ECONOMY
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="max-w-7xl mx-auto px-6 py-12">
+<!-- Breadcrumbs -->
+<nav class="mb-8 flex items-center space-x-2 text-xs font-bold tracking-widest text-secondary uppercase">
+<a class="hover:text-primary transition-colors" href="#">MARKETPLACE</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">SHOP</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface-variant">GILDED DUO-TONE BIBLE</span>
+</nav>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Left Column: Gallery -->
+<div class="lg:col-span-7 space-y-6">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover" data-alt="close-up of a premium leather-bound bible with shimmering gold gilded edges lying open on a dark wooden surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjRzNMZfwu_J6A3-7shKoOa3Kdnbz2eXbz5-2ESeZPSapruR9pRrR_xGhM6QwDupL6V116c0czXA_-Wjs8Hc_zHBXeBFPIXHM31V-pnF8gDz_hEqa4tbmXcUOSICBLsobVFsPwbZC8PcA9hTc43FTYXIJVavKF40jvz3nMnIQPybNL8Kn2GxYQL3yp7nywKfi0LJ4Ov305sOD1hFGsltbAOwAFqNV2_Zgv9WjqC8k-kNeYacOMjKk6yGIyQsKAduW_bTHcuYXPFtY"/>
+</div>
+<div class="grid grid-cols-5 gap-4">
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden ring-2 ring-secondary cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="close-up detail of golden gilded edges of a holy bible" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxw94a8MXdP4On3eOrlLp5a-BgdGlUdOD6_9epakOLDPm8zLbyK_A0yrOtkK5vtEKdd-7vNqHV-snr_URnsuhf_i6RR4afH5wQTid8_LtAfWQAcIRjWMIqABnQPof8KMhwCZgV8akBjL9ldru17tQOU4HFpnXJHZ0Mx7qzZANsEtFRokVNpNcn4fF5IwIfceto0W8vpgSE_N0so34el0uu9rpWd19B-R-m41OJm6-Mg__okX1eucy3JEXTm9VCg-89Odf7dheBJeE"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden hover:opacity-75 transition-opacity cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="side view of a duo-tone leather bible cover with intricate stitching" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa0Lp39afVnLP6OS_Sgv6HkkmgVubNCxCJToEpSmhCa6anEvi1NIVDbubLEZ3rq__VF5rTBW8J8yXbxi4cyb5I3dkQxxmytIAnJ37DB3p4ir-2xxZc8xf-x8ceZ6zEGxuFgUiBedzTYYJNuiskcCTTjPE-M6d2w9Sser3xu7RhhOO4AqZpFqi4-jyd2em79BoZnm1tOEpzeHpIUwFfyN7FFpp28XlnxymblYFYRXzfp9v7DH4Q8ix-AI1LfAD_rMZtZfR08SFS4qM"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden hover:opacity-75 transition-opacity cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="open bible showing elegant serif typography on thin vellum paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxmSGIgq-pY6Qwd4wlxE0bvQr7i0K4GvTnEnDIEvxcyFdm3NORXCH12041MnGXeel3n3dLwEdwArjq0PQyM5eAfWAsGDv7fo2wMTD_9O47czHCLvg20sCkpAeZfpVaNlJp2iKn0j75N7wg2pkJCaQuyGVLFvr_22MxCSVtYqyG9O2OZ4VMJdgMLDlkKdEx1Q6htCvXodEGd5ar-XFWzdIPedoVkj9xi9KePiFXXmGUyvBhblRM4XCO543g9KGMZyo4uk8g9DMHid8"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden hover:opacity-75 transition-opacity cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="bible sitting on an altar with soft morning sunlight streaming through a window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEXSqEDGO4wZvPxWzzxq-4WIT9l8Hrfgt1xwTH4RYidOkP0b3YKg9JkoWDeqCq8COmm4CHPZfQi3sqSbyL5yOsH9rkH-WWjhVFgm7jjTtKUhqumSQidSho28LhYWDba9tVJ2eYOv3JHRB8HnMkVhuDXSB1HTsVoSaBpd9U52Xkhnb89GttjDKr7-ndEpsxBDIIj_B6RbOxJylem-rZXxs2xuPZDYzwX8ca0WllyZttGT_ZPC3iiTCV9nDQMmycP4rZgGIInm8FMFE"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden hover:opacity-75 transition-opacity cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="the gilded spine of a duo-tone bible held in hands" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCePhvoWg_VSNcTPPewOpeyYBW5rjsNHDSMEkel9uMRyYrY39uJA8EzHdYbEV1CGxiq8SYAutpl0CxCMVv0ARWzYo-Eix7ZY5IENKpEiH6dodN_UZQ548BXjq0IukWUeWcEhqIwZeEpoN2jHgNauM1d7YqlzeHkuSHaUzh6d5J2yE1w1jS7mL2Zp3lP_kd89BxUdn1MlqWWbRAhAQjLGg4sIlNASrkiuoFDcpoyL3EABr9FqoEsDfG0Uri1gfCjOc80aoJ1cEhSx-0"/>
+</div>
+</div>
+</div>
+<!-- Right Column: Details -->
+<div class="lg:col-span-5 space-y-8">
+<div>
+<h1 class="text-5xl font-serif font-bold text-on-primary-fixed tracking-tight leading-tight mb-4">Gilded Duo-Tone Bible</h1>
+<p class="text-3xl font-serif text-secondary">$85.00</p>
+</div>
+<!-- Variant Selection -->
+<div class="space-y-4">
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Cover Material</p>
+<div class="flex gap-3">
+<button class="px-6 py-2 rounded-full border-2 border-secondary bg-secondary/5 text-secondary font-bold text-sm tracking-wide">HARDCOVER</button>
+<button class="px-6 py-2 rounded-full border-2 border-surface-container-highest text-on-surface-variant font-semibold text-sm tracking-wide hover:border-outline-variant transition-colors">LEATHER</button>
+</div>
+</div>
+<!-- Quantity & Add to Cart -->
+<div class="space-y-4">
+<div class="flex items-center space-x-4">
+<div class="flex items-center border border-surface-container-highest rounded-full bg-white overflow-hidden">
+<button class="px-4 py-2 hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-4 font-bold text-blue-950">1</span>
+<button class="px-4 py-2 hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+<button class="w-full bg-primary-container text-white py-4 rounded-full font-bold uppercase tracking-widest hover:opacity-90 transition-all flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">shopping_bag</span>
+                        ADD TO CART
+                    </button>
+</div>
+<!-- Trust Badges -->
+<div class="space-y-4 pt-6 border-t border-surface-container-highest">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<p class="text-sm font-medium text-on-surface-variant">Verified Catholic vendor</p>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">storefront</span>
+<p class="text-sm font-medium text-on-surface-variant">Sold by a verified Catholic-owned business</p>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">category</span>
+<p class="text-sm font-medium text-on-surface-variant">Catholic Marketplace</p>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+<p class="text-sm font-medium text-on-surface-variant">Shipped with care within 5-7 business days</p>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">church</span>
+<p class="text-sm font-medium text-on-surface-variant">Supports the faith</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Gold Divider -->
+<div class="w-full h-px bg-secondary mt-24 mb-12 opacity-40"></div>
+<!-- Tabs Section -->
+<section class="max-w-4xl mx-auto">
+<div class="flex justify-center space-x-12 mb-12">
+<button class="text-lg font-serif font-bold text-blue-950 border-b-2 border-secondary pb-2">Description</button>
+<button class="text-lg font-serif font-medium text-stone-400 hover:text-blue-950 transition-colors pb-2">Reviews (12)</button>
+<button class="text-lg font-serif font-medium text-stone-400 hover:text-blue-950 transition-colors pb-2">Shipping Info</button>
+</div>
+<div class="prose prose-stone lg:prose-xl mx-auto text-on-surface-variant font-body leading-relaxed space-y-6">
+<p>Experience the Word of God like never before with our signature Gilded Duo-Tone Bible. This heirloom-quality edition features a stunning combination of deep navy and charcoal gray bonded materials, accented with hand-finished gold leaf gilding on every page edge.</p>
+<p>Designed for daily devotion and family legacy, the interior features high-contrast Noto Serif typography on premium thin-milled vellum paper, ensuring minimal bleed-through and maximum readability for prayerful contemplation.</p>
+<ul class="list-disc pl-6 space-y-2">
+<li>Durable duo-tone high-quality cover with gold foil stamping</li>
+<li>Traditional 11-point font size for comfortable reading</li>
+<li>Two double-sided satin ribbon markers in liturgical gold and navy</li>
+<li>Smyth-sewn binding for lifetime durability</li>
+<li>Full color maps and family record section</li>
+</ul>
+</div>
+</section>
+</main>
+<!-- Dark Navy Statement Section -->
+<section class="bg-primary-container text-white py-24 mt-24">
+<div class="max-w-7xl mx-auto px-6 text-center space-y-8">
+<h2 class="text-4xl md:text-6xl font-serif italic tracking-tight">Support the Catholic Economy</h2>
+<p class="text-lg font-body max-w-2xl mx-auto opacity-80">Every purchase through Catholic Owned directly supports verified Catholic businesses and families dedicated to the restoration of our culture.</p>
+<div class="pt-8">
+<button class="bg-gradient-to-r from-amber-700 to-amber-500 text-white px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform">EXPLORE MORE PRODUCTS</button>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component) -->
+<footer class="flex flex-col items-center justify-center py-12 px-8 w-full bg-blue-950 dark:bg-black">
+<div class="max-w-7xl w-full flex flex-col md:flex-row justify-between items-center md:items-start space-y-12 md:space-y-0">
+<div class="text-center md:text-left">
+<a class="font-['Noto_Serif'] text-2xl text-stone-50 uppercase tracking-[0.2em] mb-4 block" href="#">Catholic Owned</a>
+<p class="font-['Manrope'] text-stone-300 text-sm max-w-xs">Restoring the marketplace through tradition, trust, and community.</p>
+</div>
+<nav class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 items-center">
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">SHOP</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">DIRECTORY</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">EVENTS</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">BARTER</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-stone-300 hover:text-yellow-500 transition-colors" href="#">REGISTRY</a>
+</nav>
+<div class="flex space-x-6 text-yellow-500">
+<span class="material-symbols-outlined cursor-pointer opacity-90 hover:opacity-100 transition-opacity">public</span>
+<span class="material-symbols-outlined cursor-pointer opacity-90 hover:opacity-100 transition-opacity">mail</span>
+</div>
+</div>
+<div class="w-full h-px bg-white/10 my-12"></div>
+<p class="font-['Manrope'] text-sm tracking-wide text-stone-300 text-center opacity-70">
+&copy; 2026 Catholic Owned. All rights reserved.
+</p>
+</footer>
+</body></html>

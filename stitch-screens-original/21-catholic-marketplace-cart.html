@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Gift Registries | The Sacred Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#2f312e",
+                        "inverse-primary": "#b5c6f0",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#ffe08e",
+                        "tertiary": "#755b00",
+                        "secondary-fixed-dim": "#e9c256",
+                        "surface-container-highest": "#e2e3df",
+                        "surface-container-high": "#e8e8e4",
+                        "on-surface": "#1a1c1a",
+                        "tertiary-container": "#c9a84e",
+                        "surface-bright": "#faf9f5",
+                        "on-primary-fixed-variant": "#354769",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fed667",
+                        "tertiary-fixed": "#ffdf90",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#061b3c",
+                        "surface-dim": "#dadad6",
+                        "surface-variant": "#e2e3df",
+                        "primary": "#000000",
+                        "primary-fixed-dim": "#b5c6f0",
+                        "on-error": "#ffffff",
+                        "secondary": "#755b00",
+                        "primary-fixed": "#d8e2ff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#584400",
+                        "surface-tint": "#4d5e83",
+                        "outline": "#75777f",
+                        "on-secondary-container": "#755c00",
+                        "background": "#faf9f5",
+                        "outline-variant": "#c5c6cf",
+                        "on-background": "#1a1c1a",
+                        "on-secondary-fixed": "#241a00",
+                        "on-primary-container": "#7284aa",
+                        "tertiary-fixed-dim": "#e6c366",
+                        "on-tertiary-fixed": "#241a00",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f1f1ed",
+                        "surface-container-low": "#f4f4f0",
+                        "on-tertiary-container": "#503d00",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#061b3c",
+                        "surface": "#faf9f5",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "surface-container": "#eeeeea",
+                        "on-surface-variant": "#44474e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .serif-anchor { font-family: 'Noto Serif', serif; }
+        .sans-anchor { font-family: 'Manrope', sans-serif; }
+        .glass-header { backdrop-filter: blur(20px); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface sans-anchor">
+<!-- TOP NAVIGATION (Shared Component Implementation) -->
+<header class="fixed top-0 w-full z-50 border-b border-stone-200/10 bg-stone-50/85 backdrop-blur-xl">
+<div class="flex flex-col w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<!-- Row 1: Logo & Actions -->
+<div class="flex items-center justify-between pb-4">
+<div class="flex-1 flex items-center gap-6">
+<div class="relative w-full max-w-sm">
+<input class="w-full bg-surface-container-highest border-none rounded-full py-2 px-10 text-sm focus:ring-1 focus:ring-secondary" placeholder="Search heritage..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+</div>
+</div>
+<h1 class="text-3xl font-serif text-slate-900 tracking-tighter text-center flex-1">The Sacred Editorial</h1>
+<div class="flex-1 flex items-center justify-end gap-6 text-slate-900">
+<span class="material-symbols-outlined cursor-pointer hover:text-amber-700 transition-colors">favorite</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-amber-700 transition-colors">shopping_bag</span>
+<div class="flex items-center gap-2 cursor-pointer group">
+<span class="material-symbols-outlined text-amber-600" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+<span class="text-xs font-semibold tracking-widest uppercase">Account</span>
+</div>
+</div>
+</div>
+<!-- Row 2: Navigation Links -->
+<nav class="flex items-center justify-center gap-12 pt-2 border-t border-surface-container">
+<a class="text-slate-900 border-b-2 border-amber-600 pb-1 font-serif tracking-tight" href="#">Registry</a>
+<a class="text-slate-500 font-medium hover:text-amber-700 transition-colors duration-300" href="#">Occasions</a>
+<a class="text-slate-500 font-medium hover:text-amber-700 transition-colors duration-300" href="#">Heritage</a>
+<a class="text-slate-500 font-medium hover:text-amber-700 transition-colors duration-300" href="#">Clarity</a>
+</nav>
+</div>
+</header>
+<main class="max-w-screen-2xl mx-auto px-8 pt-44 pb-24 min-h-screen">
+<div class="flex gap-12">
+<!-- LEFT SIDEBAR: Account Navigation -->
+<aside class="w-1/4">
+<div class="bg-surface-container-low rounded-lg p-8 sticky top-44 border border-outline-variant/15">
+<h2 class="font-headline text-xl mb-8 tracking-tight text-on-primary-fixed">Account Menu</h2>
+<ul class="space-y-1">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-xl">package_2</span>
+<span class="font-medium">Orders</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-xl">mail</span>
+<span class="font-medium">Messages</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-xl">assignment_return</span>
+<span class="font-medium">Returns</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-xl">location_on</span>
+<span class="font-medium">Addresses</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-xl">rate_review</span>
+<span class="font-medium">Reviews</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-xl">list</span>
+<span class="font-medium">Wishlist</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-xl">menu_book</span>
+<span class="font-medium">Directory</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-full bg-primary-container text-on-primary font-semibold shadow-md" href="#">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">card_membership</span>
+<span>Registries</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span class="font-medium">Settings</span>
+</a>
+</li>
+</ul>
+</div>
+</aside>
+<!-- RIGHT CONTENT: Registry Dashboard -->
+<section class="w-3/4">
+<div class="flex items-end justify-between mb-12">
+<div>
+<span class="text-secondary font-bold uppercase tracking-[0.2em] text-[10px] mb-2 block sans-anchor">Heritage Collection</span>
+<h2 class="font-headline text-4xl text-on-primary-fixed tracking-tight">MY GIFT REGISTRIES</h2>
+</div>
+<button class="bg-primary-container text-on-primary px-8 py-3.5 rounded-full font-bold text-sm tracking-widest hover:bg-surface-tint transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">add</span>
+                        CREATE REGISTRY
+                    </button>
+</div>
+<!-- Registry Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg p-6 hover:shadow-xl transition-shadow group">
+<div class="aspect-square mb-6 rounded-lg overflow-hidden bg-surface-container-low relative">
+<img alt="Sacred white prayer beads and silver cross on soft textured fabric" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Elegant close-up of a silver crucifix and white prayer beads resting on delicately textured ivory linen with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1TmE9JqSC7Qtt32sL4IH1gbREcBlWKRUk34qSIOX2SASPoQV9OxUpY6OCzBmiVd9H2yvkdNiErfBOoLNO6C9SO6jy4cK1CqubFmqGTljW0OzbGMJ5baBuCia-a4IBxep1ejrhqZGl_sfgKMShTQqbASlgLIi3dUoMUt12sUupS0fX9lklWPMFLBTXX1mipqdg-pAQ4hdxkcTWrLabAWoiWaTM9WzEi8ORCFZ4mQdD3hD9G9Zy5TvWv3NPMKpXp0OtJ-XIaxDfsss"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold tracking-tighter text-on-primary-fixed">COMMUNION</div>
+</div>
+<h3 class="font-headline text-xl text-on-primary-fixed mb-1">First Communion — Sofia</h3>
+<p class="text-on-surface-variant text-xs mb-6 font-medium">May 15, 2026</p>
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-bold text-on-primary-fixed">12 items listed</span>
+<span class="text-[10px] font-bold text-secondary-fixed-variant">42% Fulfilled</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container" style="width: 42%;"></div>
+</div>
+<div class="mt-6 flex gap-3">
+<button class="flex-1 py-2 text-[10px] font-bold tracking-widest border border-outline-variant/30 rounded-full hover:bg-surface-container-low transition-colors">MANAGE</button>
+<button class="flex-1 py-2 text-[10px] font-bold tracking-widest bg-secondary-container text-on-secondary-container rounded-full hover:bg-secondary-fixed transition-colors">SHARE</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg p-6 hover:shadow-xl transition-shadow group">
+<div class="aspect-square mb-6 rounded-lg overflow-hidden bg-surface-container-low relative">
+<img alt="Minimalist wedding bands on a silver tray with white flowers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Two gold wedding bands resting on a polished silver liturgical tray surrounded by soft white ranunculus blossoms and greenery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuConI1fYN52uIN_ZG_Kif5lqmOgPNErIsybFtbWBAS5ogWwatacnbDTlwrqKjmq_Igv7tzar5N0Vmyre8jU9NcFt9igqu8jGY_VG1MDJAwZ6zQ9NIvzqkIJOc4XQ54d-jM64Kll7TygmR3i3zUdKAT7wmLiMPfTEPGW8S7kCA3juj5d9eZnasFZ8K40Z2SaBKGNWkKAokmTftISJl6eGMfgTU9vHaQevcfUxXW0m_v2sNahJ9SmYjDxV2qd-NAPZK1FnSFZBU2yw_8"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold tracking-tighter text-on-primary-fixed">MATRIMONY</div>
+</div>
+<h3 class="font-headline text-xl text-on-primary-fixed mb-1">Wedding Registry — Michael &amp; Anna</h3>
+<p class="text-on-surface-variant text-xs mb-6 font-medium">June 22, 2026</p>
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-bold text-on-primary-fixed">28 items listed</span>
+<span class="text-[10px] font-bold text-secondary-fixed-variant">36% Fulfilled</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container" style="width: 36%;"></div>
+</div>
+<div class="mt-6 flex gap-3">
+<button class="flex-1 py-2 text-[10px] font-bold tracking-widest border border-outline-variant/30 rounded-full hover:bg-surface-container-low transition-colors">MANAGE</button>
+<button class="flex-1 py-2 text-[10px] font-bold tracking-widest bg-secondary-container text-on-secondary-container rounded-full hover:bg-secondary-fixed transition-colors">SHARE</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg p-6 hover:shadow-xl transition-shadow group">
+<div class="aspect-square mb-6 rounded-lg overflow-hidden bg-surface-container-low relative">
+<img alt="Traditional baptismal candle with gold accents and lace" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Ornate white baptismal candle with gold leaf detailing resting against a backdrop of antique liturgical lace and dark wood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrVnrOyFqM-5D1TaNGx1YNErafm1-l-O20UOC4_aV7jVcsktgP8N34Q3CdcfjDeBtimRv7DcFTbQO9x0UJ2YxiwCtnhLa0SPT0xoxGvktth_Pnh5pSktiGVZmeQUNiezNNypH2z2uOVb_kIRS3aC_AvezSa_Et6n9wlJ0_dKdAsnVrfSD9xckCSQSsHW-y4t_1FQYsSCftot5ZMhE9k7F8yUlNX91JrHES97TUSk_wfRhvksOd2S_1mwLjgmczVnSPaJTC_Tq_HKk"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold tracking-tighter text-on-primary-fixed">BAPTISM</div>
+</div>
+<h3 class="font-headline text-xl text-on-primary-fixed mb-1">Baptism — Baby James</h3>
+<p class="text-on-surface-variant text-xs mb-6 font-medium">April 30, 2026</p>
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-bold text-on-primary-fixed">8 items listed</span>
+<span class="text-[10px] font-bold text-secondary-fixed-variant">75% Fulfilled</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container" style="width: 75%;"></div>
+</div>
+<div class="mt-6 flex gap-3">
+<button class="flex-1 py-2 text-[10px] font-bold tracking-widest border border-outline-variant/30 rounded-full hover:bg-surface-container-low transition-colors">MANAGE</button>
+<button class="flex-1 py-2 text-[10px] font-bold tracking-widest bg-secondary-container text-on-secondary-container rounded-full hover:bg-secondary-fixed transition-colors">SHARE</button>
+</div>
+</div>
+</div>
+<!-- Secondary Content Layer: Empty State Pattern / Inspiration -->
+<div class="mt-16 bg-primary-container rounded-lg p-12 text-center text-on-primary relative overflow-hidden">
+<div class="relative z-10 max-w-lg mx-auto">
+<span class="material-symbols-outlined text-secondary text-5xl mb-4" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h4 class="font-headline text-2xl mb-4">Curate Your Heritage</h4>
+<p class="text-on-primary-container text-sm leading-relaxed mb-8">Looking for inspiration? Our curators have assembled collections for every sacrament, from heirloom linens to artisanal bronzework.</p>
+<a class="inline-block border border-on-primary/20 px-8 py-3 rounded-full text-xs font-bold tracking-[0.2em] hover:bg-on-primary hover:text-primary-container transition-all" href="#">EXPLORE COLLECTIONS</a>
+</div>
+<!-- Decorative Element -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute -top-24 -left-24 w-64 h-64 border-8 border-secondary rounded-full"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 border-8 border-secondary-fixed rounded-full"></div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- FOOTER (Shared Component Implementation) -->
+<footer class="bg-slate-950 dark:bg-black w-full py-16 px-12">
+<div class="flex flex-col items-center gap-8 w-full max-w-screen-2xl mx-auto">
+<h2 class="text-amber-500 font-serif uppercase tracking-widest text-2xl">The Sacred Editorial</h2>
+<div class="flex gap-12 font-serif text-slate-300">
+<a class="text-slate-400 hover:text-amber-200 transition-colors" href="#">Craftsmanship</a>
+<a class="text-slate-400 hover:text-amber-200 transition-colors" href="#">Liturgical Year</a>
+<a class="text-amber-400" href="#">Registry Support</a>
+<a class="text-slate-400 hover:text-amber-200 transition-colors" href="#">Privacy</a>
+</div>
+<div class="w-full h-px bg-slate-800 my-4"></div>
+<div class="flex flex-col items-center gap-4">
+<p class="text-[10px] tracking-[0.3em] font-medium text-slate-500 uppercase">© 2024 THE SACRED EDITORIAL. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-6 opacity-80">
+<span class="material-symbols-outlined text-amber-500 cursor-pointer hover:opacity-100">share</span>
+<span class="material-symbols-outlined text-amber-500 cursor-pointer hover:opacity-100">mail</span>
+<span class="material-symbols-outlined text-amber-500 cursor-pointer hover:opacity-100">rss_feed</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

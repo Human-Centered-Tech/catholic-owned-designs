@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Events | THE SACRED EDITORIAL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#75777f",
+                        "inverse-on-surface": "#f1f1ed",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#e9c256",
+                        "on-secondary-fixed": "#241a00",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fed667",
+                        "inverse-primary": "#b5c6f0",
+                        "surface-tint": "#4d5e83",
+                        "primary-fixed-dim": "#b5c6f0",
+                        "error": "#ba1a1a",
+                        "primary": "#000000",
+                        "on-surface": "#1a1c1a",
+                        "surface-dim": "#dadad6",
+                        "background": "#faf9f5",
+                        "tertiary": "#755b00",
+                        "primary-fixed": "#d8e2ff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#241a00",
+                        "tertiary-container": "#c9a84e",
+                        "surface-container-highest": "#e2e3df",
+                        "surface-bright": "#faf9f5",
+                        "tertiary-fixed": "#ffdf90",
+                        "secondary": "#755b00",
+                        "outline-variant": "#c5c6cf",
+                        "surface-variant": "#e2e3df",
+                        "surface-container": "#eeeeea",
+                        "surface-container-high": "#e8e8e4",
+                        "on-surface-variant": "#44474e",
+                        "tertiary-fixed-dim": "#e6c366",
+                        "secondary-fixed": "#ffe08e",
+                        "primary-container": "#061b3c",
+                        "inverse-surface": "#2f312e",
+                        "on-primary-fixed": "#061b3c",
+                        "on-tertiary-container": "#503d00",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#7284aa",
+                        "on-background": "#1a1c1a",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#584400",
+                        "surface-container-low": "#f4f4f0",
+                        "surface": "#faf9f5",
+                        "on-primary-fixed-variant": "#354769",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#755c00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #faf9f5;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- Top Navigation Shell -->
+<nav class="sticky top-0 w-full z-50 bg-stone-50/85 dark:bg-stone-900/85 backdrop-blur-xl border-b border-stone-200/10 flex flex-col items-center w-full px-8 py-4">
+<div class="w-full max-w-7xl flex justify-between items-center mb-4">
+<div class="text-3xl font-serif font-bold text-blue-950 dark:text-blue-200 tracking-tighter uppercase">THE SACRED EDITORIAL</div>
+<div class="flex items-center space-x-6 text-blue-950/70 dark:text-stone-400">
+<span class="material-symbols-outlined cursor-pointer hover:text-yellow-600 transition-colors duration-300">person</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-yellow-600 transition-colors duration-300">shopping_bag</span>
+</div>
+</div>
+<div class="w-full max-w-2xl flex justify-center space-x-12">
+<a class="text-blue-950/70 dark:text-stone-400 font-medium hover:text-yellow-600 transition-colors duration-300 tracking-widest text-xs" href="#">SHOP</a>
+<a class="text-blue-950/70 dark:text-stone-400 font-medium hover:text-yellow-600 transition-colors duration-300 tracking-widest text-xs" href="#">DIRECTORY</a>
+<a class="text-yellow-700 dark:text-yellow-500 font-bold border-b border-yellow-700 tracking-widest text-xs" href="#">EVENTS</a>
+<a class="text-blue-950/70 dark:text-stone-400 font-medium hover:text-yellow-600 transition-colors duration-300 tracking-widest text-xs" href="#">BARTER</a>
+<a class="text-blue-950/70 dark:text-stone-400 font-medium hover:text-yellow-600 transition-colors duration-300 tracking-widest text-xs" href="#">REGISTRY</a>
+</div>
+</nav>
+<!-- Hero Banner -->
+<section class="bg-primary-container text-white py-32 px-6 overflow-hidden relative">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-yellow-500/20 via-transparent to-transparent"></div>
+</div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<span class="text-white/50 uppercase tracking-[0.4em] font-label text-[10px] mb-8 block font-semibold">BUILDING THE MYSTICAL BODY IN BUSINESS</span>
+<h1 class="text-6xl md:text-7xl font-bold tracking-tight mb-8">Speed Networking</h1>
+<p class="text-white/70 text-xl font-light leading-relaxed max-w-2xl mx-auto">
+                Connect with faithful entrepreneurs, skilled artisans, and principled professionals. Foster relationships rooted in tradition and excellence.
+            </p>
+</div>
+</section>
+<!-- Main Content Canvas -->
+<main class="max-w-6xl mx-auto py-24 px-6">
+<!-- Section Header -->
+<div class="mb-16 flex items-end justify-between border-b border-outline-variant/15 pb-8">
+<div>
+<h2 class="text-4xl font-serif text-on-primary-fixed mb-2">Upcoming Convocations</h2>
+<p class="text-on-surface-variant font-medium">Curated gatherings for the professional faithful.</p>
+</div>
+<div class="text-on-surface-variant text-sm font-label uppercase tracking-widest">
+                Sort by: <span class="text-on-surface font-bold cursor-pointer">Date</span>
+</div>
+</div>
+<!-- Event List Stack -->
+<div class="space-y-0">
+<!-- Event 1 -->
+<div class="group flex flex-col md:flex-row items-center py-12 px-8 transition-all hover:bg-surface-container-low rounded-xl">
+<div class="flex-shrink-0 mb-6 md:mb-0 md:mr-12">
+<div class="w-24 h-24 rounded-full border-2 border-secondary flex flex-col items-center justify-center bg-white shadow-sm transition-transform group-hover:scale-105">
+<span class="text-[10px] font-bold text-secondary tracking-widest">APR</span>
+<span class="text-3xl font-serif font-bold text-on-primary-fixed">28</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex items-center space-x-3 mb-2">
+<span class="bg-secondary-fixed text-on-secondary-fixed text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter">New Arrival</span>
+<span class="text-xs text-secondary font-bold uppercase tracking-widest">7:00 PM EST</span>
+</div>
+<h3 class="text-2xl font-bold text-on-primary-fixed mb-2 group-hover:text-tertiary transition-colors">Young Professionals Mixer</h3>
+<p class="text-on-surface-variant max-w-xl mb-4 leading-relaxed">
+                        Catholic professionals under 35 networking for career growth. Join a community that values liturgical integrity as much as fiscal responsibility.
+                    </p>
+<div class="flex items-center space-x-6 text-sm">
+<div class="flex items-center text-on-surface/60">
+<span class="material-symbols-outlined text-sm mr-2">group</span>
+                            100 participants
+                        </div>
+<div class="flex items-center text-red-700 font-semibold">
+<span class="material-symbols-outlined text-sm mr-2" style="font-variation-settings: 'FILL' 1;">error</span>
+                            5 spots left
+                        </div>
+</div>
+</div>
+<div class="mt-8 md:mt-0 md:ml-12">
+<button class="bg-gradient-to-r from-secondary to-secondary-fixed-dim text-white px-10 py-4 rounded-full font-bold tracking-widest text-xs shadow-lg hover:shadow-yellow-500/20 active:scale-95 transition-all uppercase">
+                        JOIN NOW
+                    </button>
+</div>
+</div>
+<div class="h-px w-full bg-surface-container"></div>
+<!-- Event 2 -->
+<div class="group flex flex-col md:flex-row items-center py-12 px-8 transition-all hover:bg-surface-container-low rounded-xl">
+<div class="flex-shrink-0 mb-6 md:mb-0 md:mr-12">
+<div class="w-24 h-24 rounded-full border-2 border-secondary flex flex-col items-center justify-center bg-white shadow-sm transition-transform group-hover:scale-105">
+<span class="text-[10px] font-bold text-secondary tracking-widest">MAY</span>
+<span class="text-3xl font-serif font-bold text-on-primary-fixed">07</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex items-center space-x-3 mb-2">
+<span class="text-xs text-secondary font-bold uppercase tracking-widest">6:30 PM EST</span>
+</div>
+<h3 class="text-2xl font-bold text-on-primary-fixed mb-2 group-hover:text-tertiary transition-colors">Faith &amp; Finance Q&amp;A</h3>
+<p class="text-on-surface-variant max-w-xl mb-4 leading-relaxed">
+                        Connect with Catholic CPAs, financial planners, and wealth managers. Discuss ethical investing and stewardship in the light of the Church's social teaching.
+                    </p>
+<div class="flex items-center space-x-6 text-sm">
+<div class="flex items-center text-on-surface/60">
+<span class="material-symbols-outlined text-sm mr-2">group</span>
+                            42 participants
+                        </div>
+<div class="flex items-center text-on-surface/60">
+<span class="material-symbols-outlined text-sm mr-2">event_available</span>
+                            18 spots left
+                        </div>
+</div>
+</div>
+<div class="mt-8 md:mt-0 md:ml-12">
+<button class="bg-gradient-to-r from-secondary to-secondary-fixed-dim text-white px-10 py-4 rounded-full font-bold tracking-widest text-xs shadow-lg hover:shadow-yellow-500/20 active:scale-95 transition-all uppercase">
+                        JOIN NOW
+                    </button>
+</div>
+</div>
+<div class="h-px w-full bg-surface-container"></div>
+<!-- Event 3 -->
+<div class="group flex flex-col md:flex-row items-center py-12 px-8 transition-all hover:bg-surface-container-low rounded-xl">
+<div class="flex-shrink-0 mb-6 md:mb-0 md:mr-12">
+<div class="w-24 h-24 rounded-full border-2 border-secondary flex flex-col items-center justify-center bg-white shadow-sm transition-transform group-hover:scale-105">
+<span class="text-[10px] font-bold text-secondary tracking-widest">MAY</span>
+<span class="text-3xl font-serif font-bold text-on-primary-fixed">21</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex items-center space-x-3 mb-2">
+<span class="text-xs text-secondary font-bold uppercase tracking-widest">8:00 PM EST</span>
+</div>
+<h3 class="text-2xl font-bold text-on-primary-fixed mb-2 group-hover:text-tertiary transition-colors">Catholic Tech &amp; Innovation Hub</h3>
+<p class="text-on-surface-variant max-w-xl mb-4 leading-relaxed">
+                        Catholic developers, UX designers, and digital founders building tools for the New Evangelization. A space for Silicon Valley refugees and digital pioneers.
+                    </p>
+<div class="flex items-center space-x-6 text-sm">
+<div class="flex items-center text-on-surface/60">
+<span class="material-symbols-outlined text-sm mr-2">group</span>
+                            65 participants
+                        </div>
+<div class="flex items-center text-on-surface/60">
+<span class="material-symbols-outlined text-sm mr-2">event_available</span>
+                            Limited Access
+                        </div>
+</div>
+</div>
+<div class="mt-8 md:mt-0 md:ml-12">
+<button class="bg-gradient-to-r from-secondary to-secondary-fixed-dim text-white px-10 py-4 rounded-full font-bold tracking-widest text-xs shadow-lg hover:shadow-yellow-500/20 active:scale-95 transition-all uppercase">
+                        JOIN NOW
+                    </button>
+</div>
+</div>
+<div class="h-px w-full bg-surface-container"></div>
+<!-- Event 4 -->
+<div class="group flex flex-col md:flex-row items-center py-12 px-8 transition-all hover:bg-surface-container-low rounded-xl">
+<div class="flex-shrink-0 mb-6 md:mb-0 md:mr-12">
+<div class="w-24 h-24 rounded-full border-2 border-secondary flex flex-col items-center justify-center bg-white shadow-sm transition-transform group-hover:scale-105">
+<span class="text-[10px] font-bold text-secondary tracking-widest">JUN</span>
+<span class="text-3xl font-serif font-bold text-on-primary-fixed">01</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex items-center space-x-3 mb-2">
+<span class="bg-secondary text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter">Curated Guild</span>
+<span class="text-xs text-secondary font-bold uppercase tracking-widest">10:00 AM EST</span>
+</div>
+<h3 class="text-2xl font-bold text-on-primary-fixed mb-2 group-hover:text-tertiary transition-colors">The Guild: Artisan Makers Connect</h3>
+<p class="text-on-surface-variant max-w-xl mb-4 leading-relaxed">
+                        An exclusive network for Catholic artisans, makers, and craftspeople. Focus on wood, stone, glass, and textile craftsmanship for liturgical use.
+                    </p>
+<div class="flex items-center space-x-6 text-sm">
+<div class="flex items-center text-on-surface/60">
+<span class="material-symbols-outlined text-sm mr-2">group</span>
+                            15 participants
+                        </div>
+<div class="flex items-center text-red-700 font-semibold">
+<span class="material-symbols-outlined text-sm mr-2" style="font-variation-settings: 'FILL' 1;">error</span>
+                            Waitlist Only
+                        </div>
+</div>
+</div>
+<div class="mt-8 md:mt-0 md:ml-12">
+<button class="bg-surface-container text-on-surface/50 px-10 py-4 rounded-full font-bold tracking-widest text-xs uppercase cursor-not-allowed">
+                        WAITLIST
+                    </button>
+</div>
+</div>
+<div class="h-px w-full bg-surface-container"></div>
+<!-- Event 5 -->
+<div class="group flex flex-col md:flex-row items-center py-12 px-8 transition-all hover:bg-surface-container-low rounded-xl">
+<div class="flex-shrink-0 mb-6 md:mb-0 md:mr-12">
+<div class="w-24 h-24 rounded-full border-2 border-secondary flex flex-col items-center justify-center bg-white shadow-sm transition-transform group-hover:scale-105">
+<span class="text-[10px] font-bold text-secondary tracking-widest">JUN</span>
+<span class="text-3xl font-serif font-bold text-on-primary-fixed">10</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex items-center space-x-3 mb-2">
+<span class="text-xs text-secondary font-bold uppercase tracking-widest">4:00 PM EST</span>
+</div>
+<h3 class="text-2xl font-bold text-on-primary-fixed mb-2 group-hover:text-tertiary transition-colors">Catholic Educators Roundtable</h3>
+<p class="text-on-surface-variant max-w-xl mb-4 leading-relaxed">
+                        Catholic homeschool and parochial school educators sharing resources and forming alliances to protect and promote the classical liberal arts.
+                    </p>
+<div class="flex items-center space-x-6 text-sm">
+<div class="flex items-center text-on-surface/60">
+<span class="material-symbols-outlined text-sm mr-2">group</span>
+                            88 participants
+                        </div>
+<div class="flex items-center text-on-surface/60">
+<span class="material-symbols-outlined text-sm mr-2">event_available</span>
+                            12 spots left
+                        </div>
+</div>
+</div>
+<div class="mt-8 md:mt-0 md:ml-12">
+<button class="bg-gradient-to-r from-secondary to-secondary-fixed-dim text-white px-10 py-4 rounded-full font-bold tracking-widest text-xs shadow-lg hover:shadow-yellow-500/20 active:scale-95 transition-all uppercase">
+                        JOIN NOW
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Mid-page Statement Section -->
+<section class="bg-primary-container text-white py-24">
+<div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+<div class="aspect-[4/5] overflow-hidden rounded-2xl relative">
+<img alt="Artisan workshop" class="w-full h-full object-cover grayscale opacity-80" data-alt="Close-up of craftsman hands working with gold leaf on a religious icon in a dimly lit studio with dust motes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKwtHjs8Cz4FZyBmFHZUijpRCwmJ1uo5-CmspYUvr7JEt0Rff2Mdw72jIRYRNdxPujhG4QcLoZwIbVKw2YY55zhJePklbNC5eMAj3dQjIgIwXYjPL_XKfjKF-aKUbc2J1wNr_DQ95l1KTSjLsnYGkKlOyPZB6ZN0exg3YiwzzvboIr8hNkcGaSTim3kouSvSra1HnKmdt9p55AjOb6F3DkLposjiTvi8hcFzXAM9CWj3lbueXnAOV2AUyLqgP45ARe916Z4JsdvEc"/>
+<div class="absolute inset-0 bg-blue-950/40 mix-blend-multiply"></div>
+</div>
+<div>
+<span class="text-secondary tracking-[0.3em] font-bold text-xs uppercase mb-6 block">The Guild Philosophy</span>
+<h2 class="text-4xl font-serif font-bold mb-8 leading-tight text-white">"Whatever you do, do it as if for the Lord."</h2>
+<p class="text-on-primary-container text-lg leading-relaxed mb-8">
+                    Our speed networking events are designed to move beyond the transactional. We prioritize the "Triple Excellence": Excellence in Faith, Excellence in Craft, and Excellence in Community.
+                </p>
+<div class="space-y-4">
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<span class="font-medium text-white/90">Vetted professional profiles</span>
+</div>
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<span class="font-medium text-white/90">Curated liturgical integration</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-blue-950 dark:bg-black py-24 px-12 w-full">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start space-y-12 md:space-y-0">
+<div class="max-w-sm">
+<div class="text-xl font-serif text-yellow-500 uppercase tracking-widest mb-6">THE SACRED EDITORIAL</div>
+<p class="text-stone-300 font-serif leading-relaxed italic opacity-80">
+                    "Elevating the digital craft to match the weight of eternal truth. A sanctuary for the creative and the professional soul."
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div>
+<h4 class="text-yellow-500 uppercase tracking-widest text-xs font-bold mb-6">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-300 hover:text-white transition-opacity font-serif" href="#">Marketplace</a></li>
+<li><a class="text-stone-300 hover:text-white transition-opacity font-serif" href="#">Our Story</a></li>
+<li><a class="text-stone-300 hover:text-white transition-opacity font-serif" href="#">Liturgical Calendar</a></li>
+<li><a class="text-stone-300 hover:text-white transition-opacity font-serif" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-yellow-500 uppercase tracking-widest text-xs font-bold mb-6">Connect</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-300 hover:text-white transition-opacity font-serif" href="#">The Guild</a></li>
+<li><a class="text-stone-300 hover:text-white transition-opacity font-serif" href="#">Journal</a></li>
+<li><a class="text-stone-300 hover:text-white transition-opacity font-serif" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-24 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-[10px] text-stone-500 tracking-[0.2em] font-label uppercase">
+<div>© 2024 THE SACRED EDITORIAL. CURATED HERITAGE.</div>
+<div class="flex space-x-8 mt-4 md:mt-0">
+<span class="cursor-pointer hover:text-yellow-500 transition-colors">AD MAIOREM DEI GLORIAM</span>
+<span class="cursor-pointer hover:text-yellow-500 transition-colors">PAX ET BONUM</span>
+</div>
+</div>
+</footer>
+</body></html>
