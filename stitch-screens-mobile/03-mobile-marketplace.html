@@ -129,6 +129,9 @@
 <button class="flex-none bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors border border-outline-variant/10">Art</button>
 <button class="flex-none bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors border border-outline-variant/10">Rosaries</button>
 <button class="flex-none bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors border border-outline-variant/10">Jewelry</button>
+<button class="flex-none bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors border border-outline-variant/10">Sanctuary Candles</button>
+<button class="flex-none bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors border border-outline-variant/10">Sacramentals</button>
+<button class="flex-none bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors border border-outline-variant/10">Journaling</button>
 </div>
 </section>
 <!-- Sort & Filter Controls -->
@@ -137,10 +140,52 @@
 <span class="material-symbols-outlined text-sm" data-icon="sort">sort</span>
 <span class="font-label text-xs uppercase tracking-wider font-semibold">Featured</span>
 </div>
-<button class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/10">
+<button class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/10" onclick="document.getElementById('filter-panel').classList.toggle('hidden')">
 <span class="material-symbols-outlined text-lg" data-icon="tune">tune</span>
 <span class="font-label text-xs font-bold uppercase tracking-tighter">Filter</span>
 </button>
+</section>
+<!-- Collapsible Filter Panel -->
+<section id="filter-panel" class="hidden mb-6 bg-surface-container-low rounded-2xl p-5 border border-outline-variant/10 space-y-6">
+<!-- Price Range -->
+<div>
+<h4 class="font-headline text-sm text-on-primary-fixed mb-4 border-b border-outline-variant/10 pb-2">Price Range</h4>
+<div class="px-2">
+<div class="relative h-6 flex items-center">
+<div class="absolute w-full h-1 bg-surface-container-highest rounded-lg"></div>
+<div class="absolute h-1 bg-secondary rounded-lg" style="left: 12.5%; right: 25%;"></div>
+<input class="absolute w-full h-1 appearance-none cursor-pointer accent-secondary bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-secondary [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-md" max="200" min="0" type="range" value="25"/>
+<input class="absolute w-full h-1 appearance-none cursor-pointer accent-secondary bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-secondary [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-md" max="200" min="0" type="range" value="150"/>
+</div>
+<div class="flex justify-between mt-3 font-label text-xs text-on-surface-variant font-bold">
+<span>$25</span>
+<span>$150</span>
+</div>
+</div>
+</div>
+<!-- Listing Type -->
+<div>
+<h4 class="font-headline text-sm text-on-primary-fixed mb-3 border-b border-outline-variant/10 pb-2">Listing Type</h4>
+<div class="flex flex-wrap gap-2">
+<button class="bg-primary-container text-on-primary px-4 py-1.5 rounded-full font-label text-xs font-semibold">All</button>
+<button class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-full font-label text-xs border border-outline-variant/10">For Sale</button>
+<button class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-full font-label text-xs border border-outline-variant/10">For Trade</button>
+<button class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-full font-label text-xs border border-outline-variant/10">Free</button>
+</div>
+</div>
+<!-- Distance -->
+<div>
+<h4 class="font-headline text-sm text-on-primary-fixed mb-3 border-b border-outline-variant/10 pb-2">Distance</h4>
+<div class="flex flex-wrap gap-2">
+<button class="bg-primary-container text-on-primary px-4 py-1.5 rounded-full font-label text-xs font-semibold">Any</button>
+<button class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-full font-label text-xs border border-outline-variant/10">5 mi</button>
+<button class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-full font-label text-xs border border-outline-variant/10">25 mi</button>
+<button class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-full font-label text-xs border border-outline-variant/10">50 mi</button>
+<button class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-full font-label text-xs border border-outline-variant/10">100 mi</button>
+</div>
+</div>
+<!-- Apply Button -->
+<button class="w-full py-3 bg-secondary text-on-secondary rounded-full font-label text-xs font-bold uppercase tracking-widest">Apply Filters</button>
 </section>
 <!-- Product Grid -->
 <div class="grid grid-cols-2 gap-x-4 gap-y-8">
@@ -159,6 +204,17 @@
 <p class="font-body text-xs text-on-surface-variant">By Bethlehem Crafts</p>
 <p class="font-headline text-on-surface font-bold text-lg">$48.00</p>
 </div>
+<div class="flex gap-1.5 mt-2">
+<button class="flex-1 py-2 border border-secondary text-secondary font-label font-bold text-[9px] tracking-widest rounded-full hover:bg-secondary hover:text-white transition-all flex items-center justify-center gap-0.5">
+ADD TO CART <span class="material-symbols-outlined text-xs">add</span>
+</button>
+<button class="px-3 py-2 border border-outline-variant/30 text-on-surface-variant font-label font-bold text-[9px] tracking-widest rounded-full hover:border-secondary hover:text-secondary transition-all">
+VIEW
+</button>
+</div>
+<button class="w-full mt-1 py-1 text-secondary/70 font-label text-[9px] tracking-widest hover:text-secondary transition-colors flex items-center justify-center gap-0.5">
+<span class="material-symbols-outlined text-[10px]">card_giftcard</span> ADD TO REGISTRY
+</button>
 </div>
 </div>
 <!-- Product Item 2 -->
@@ -176,6 +232,17 @@
 <p class="font-body text-xs text-on-surface-variant">By Mater Dei Studio</p>
 <p class="font-headline text-on-surface font-bold text-lg">$125.00</p>
 </div>
+<div class="flex gap-1.5 mt-2">
+<button class="flex-1 py-2 border border-secondary text-secondary font-label font-bold text-[9px] tracking-widest rounded-full hover:bg-secondary hover:text-white transition-all flex items-center justify-center gap-0.5">
+ADD TO CART <span class="material-symbols-outlined text-xs">add</span>
+</button>
+<button class="px-3 py-2 border border-outline-variant/30 text-on-surface-variant font-label font-bold text-[9px] tracking-widest rounded-full hover:border-secondary hover:text-secondary transition-all">
+VIEW
+</button>
+</div>
+<button class="w-full mt-1 py-1 text-secondary/70 font-label text-[9px] tracking-widest hover:text-secondary transition-colors flex items-center justify-center gap-0.5">
+<span class="material-symbols-outlined text-[10px]">card_giftcard</span> ADD TO REGISTRY
+</button>
 </div>
 </div>
 <!-- Product Item 3 -->
@@ -193,6 +260,17 @@
 <p class="font-body text-xs text-on-surface-variant">By Abbey Wicks</p>
 <p class="font-headline text-on-surface font-bold text-lg">$34.50</p>
 </div>
+<div class="flex gap-1.5 mt-2">
+<button class="flex-1 py-2 border border-secondary text-secondary font-label font-bold text-[9px] tracking-widest rounded-full hover:bg-secondary hover:text-white transition-all flex items-center justify-center gap-0.5">
+ADD TO CART <span class="material-symbols-outlined text-xs">add</span>
+</button>
+<button class="px-3 py-2 border border-outline-variant/30 text-on-surface-variant font-label font-bold text-[9px] tracking-widest rounded-full hover:border-secondary hover:text-secondary transition-all">
+VIEW
+</button>
+</div>
+<button class="w-full mt-1 py-1 text-secondary/70 font-label text-[9px] tracking-widest hover:text-secondary transition-colors flex items-center justify-center gap-0.5">
+<span class="material-symbols-outlined text-[10px]">card_giftcard</span> ADD TO REGISTRY
+</button>
 </div>
 </div>
 <!-- Product Item 4 -->
@@ -210,6 +288,17 @@
 <p class="font-body text-xs text-on-surface-variant">By Heritage Press</p>
 <p class="font-headline text-on-surface font-bold text-lg">$22.00</p>
 </div>
+<div class="flex gap-1.5 mt-2">
+<button class="flex-1 py-2 border border-secondary text-secondary font-label font-bold text-[9px] tracking-widest rounded-full hover:bg-secondary hover:text-white transition-all flex items-center justify-center gap-0.5">
+ADD TO CART <span class="material-symbols-outlined text-xs">add</span>
+</button>
+<button class="px-3 py-2 border border-outline-variant/30 text-on-surface-variant font-label font-bold text-[9px] tracking-widest rounded-full hover:border-secondary hover:text-secondary transition-all">
+VIEW
+</button>
+</div>
+<button class="w-full mt-1 py-1 text-secondary/70 font-label text-[9px] tracking-widest hover:text-secondary transition-colors flex items-center justify-center gap-0.5">
+<span class="material-symbols-outlined text-[10px]">card_giftcard</span> ADD TO REGISTRY
+</button>
 </div>
 </div>
 </div>
@@ -222,6 +311,20 @@
 </div>
 <div class="absolute right-[-20px] top-0 bottom-0 w-1/2 overflow-hidden rounded-l-3xl">
 <img alt="artisan" class="w-full h-full object-cover opacity-60" data-alt="blacksmith forging metal in a dark workshop with glowing orange sparks and heavy shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgJqTTbfpNQQcw_HGIibkofLfNApzaj8Ol-MTCE0419Rzyx0EVaAL82gEt9XPgKsoDQoPjn-n_wWH-jajNS4sb8nIDTjEUCfL3kO4eLW89XO6WkpXtEMOfHvi87hb8kYYTDuNH4k3p0ml5T4187B_F8XISXmINjfyKICFzasY7mF6HTSLYxFi_ydtUyddGmoGs7SiepDbKJzYeHQNJKTOCa_XYMYnwfjln7W899ymDzGbSaWdUPSo15u2TayV2x8-dupjytIg4YTQ"/>
+</div>
+</section>
+<!-- Crafted for Permanence -->
+<section class="mt-12 bg-primary-container rounded-3xl p-8 text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/black-paper.png')] opacity-20"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 block" data-icon="verified">verified</span>
+<h2 class="font-headline text-2xl text-white mb-4">Crafted for Permanence</h2>
+<p class="font-body text-white/80 text-sm leading-relaxed mb-6">Every item in The Marketplace is vetted for quality, tradition, and the sanctity of its source.</p>
+<div class="inline-flex items-center gap-3 text-secondary font-label font-bold tracking-[0.15em] text-[10px]">
+<div class="w-8 h-px bg-secondary/30"></div>
+OUR PROMISE TO YOU
+<div class="w-8 h-px bg-secondary/30"></div>
+</div>
 </div>
 </section>
 </main>
