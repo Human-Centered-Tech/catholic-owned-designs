@@ -87,6 +87,20 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+        .scroll-fade {
+            position: relative;
+        }
+        .scroll-fade::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 40px;
+            background: linear-gradient(to right, transparent, #faf9f5);
+            pointer-events: none;
+            z-index: 10;
+        }
     </style>
 <style>
     body {
@@ -122,6 +136,7 @@
 </section>
 <!-- Categories Horizontal Scroll -->
 <section class="mb-6 -mx-4">
+<div class="scroll-fade">
 <div class="flex overflow-x-auto gap-3 px-4 hide-scrollbar">
 <button class="flex-none bg-primary-container text-on-primary px-6 py-2 rounded-full font-label text-sm font-semibold whitespace-nowrap">All Items</button>
 <button class="flex-none bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors border border-outline-variant/10">Liturgy &amp; Home</button>
@@ -132,6 +147,7 @@
 <button class="flex-none bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors border border-outline-variant/10">Sanctuary Candles</button>
 <button class="flex-none bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors border border-outline-variant/10">Sacramentals</button>
 <button class="flex-none bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors border border-outline-variant/10">Journaling</button>
+</div>
 </div>
 </section>
 <!-- Sort & Filter Controls -->

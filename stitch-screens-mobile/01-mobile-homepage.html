@@ -82,6 +82,23 @@
         }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .scroll-fade {
+            position: relative;
+        }
+        .scroll-fade::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 40px;
+            background: linear-gradient(to right, transparent, #faf9f5);
+            pointer-events: none;
+            z-index: 10;
+        }
+        .scroll-fade-alt::after {
+            background: linear-gradient(to right, transparent, #f4f4f0);
+        }
     </style>
 <style>
     body {
@@ -122,6 +139,7 @@
 </div>
 </section>
 <!-- Category Filters -->
+<div class="scroll-fade">
 <section class="py-6 overflow-x-auto hide-scrollbar whitespace-nowrap px-6">
 <div class="flex gap-2">
 <span class="bg-primary-container text-on-primary px-6 py-2 rounded-full text-sm font-semibold cursor-pointer">All</span>
@@ -132,6 +150,7 @@
 <span class="bg-surface-container-highest text-on-surface-variant px-6 py-2 rounded-full text-sm font-semibold cursor-pointer hover:bg-surface-container-high">Kids &amp; Family</span>
 </div>
 </section>
+</div>
 <!-- Product Grid -->
 <section class="px-6 grid grid-cols-2 gap-x-4 gap-y-8">
 <!-- Product 1 -->
@@ -185,6 +204,7 @@
 <h2 class="font-headline text-2xl font-bold">Explore Collections</h2>
 <span class="font-body text-sm font-bold text-secondary uppercase tracking-widest border-b border-secondary">View All</span>
 </div>
+<div class="scroll-fade">
 <div class="flex gap-4 overflow-x-auto hide-scrollbar px-6">
 <div class="flex-none w-32 text-center">
 <div class="w-32 h-32 rounded-lg bg-surface-container-high overflow-hidden mb-2">
@@ -209,6 +229,7 @@
 <img alt="Sacramental" class="w-full h-full object-cover" data-alt="brass thurible with rising smoke in a dim cathedral light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZse7ejKrqp5oZmb7bOKeT928iHJGhS4k4sfXPQt3FflxbvPlQbZHljexQSPZg73Hcv7Ch-arTeRNnMA3zh9ozhY-z8tLCR7hizBise3rd5opusNHhfmTLkoqzJ47waORwfVAE8tsN5xaZP8eXoblXNqiHFAXpv09qfkjfgotZghcPkWo8qDs9PR5W0FlWJoUT_jxoHgA_U49wRFksSmtoQZXZO2h-lWwWp_KhISX5BykqDQe13rOOHkDFFPhsoCnOE-liT-lJjo4"/>
 </div>
 <span class="font-body text-xs font-bold uppercase tracking-wider">Sacred</span>
+</div>
 </div>
 </div>
 </section>
@@ -259,6 +280,7 @@
 <h2 class="font-headline text-xl font-bold text-on-primary-fixed">Trending</h2>
 <span class="font-body text-sm font-bold text-secondary uppercase tracking-widest">Shop All</span>
 </div>
+<div class="scroll-fade">
 <div class="flex gap-4 overflow-x-auto hide-scrollbar px-6">
 <div class="flex-none w-40">
 <div class="aspect-[4/5] rounded-lg overflow-hidden bg-surface-container-low mb-3">
@@ -287,6 +309,7 @@
 </div>
 <h3 class="font-headline text-sm font-bold text-on-primary-fixed">Olive Oil Gift Box</h3>
 <p class="font-headline text-secondary text-sm mt-1">$34.00</p>
+</div>
 </div>
 </div>
 </section>
@@ -336,6 +359,7 @@
 </div>
 <span class="font-body text-sm font-bold text-secondary uppercase tracking-widest">View All</span>
 </div>
+<div class="scroll-fade scroll-fade-alt">
 <div class="flex gap-4 overflow-x-auto hide-scrollbar px-6">
 <div class="flex-none w-40">
 <div class="aspect-[4/5] rounded-lg overflow-hidden bg-surface-container-lowest mb-3">
@@ -364,6 +388,7 @@
 </div>
 <h3 class="font-headline text-sm font-bold text-on-primary-fixed">Maple Building Blocks</h3>
 <p class="font-headline text-secondary text-sm mt-1">$26.00</p>
+</div>
 </div>
 </div>
 </section>

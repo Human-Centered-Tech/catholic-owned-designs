@@ -87,6 +87,20 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+    .scroll-fade {
+        position: relative;
+    }
+    .scroll-fade::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 40px;
+        background: linear-gradient(to right, transparent, #faf9f5);
+        pointer-events: none;
+        z-index: 10;
+    }
   </style>
 <style>
     body {
@@ -124,12 +138,14 @@
 </section>
 <!-- Category Chips -->
 <section class="mb-8 -mx-4">
+<div class="scroll-fade">
 <div class="flex overflow-x-auto px-4 gap-3 scrollbar-hide">
 <button class="flex-none px-6 py-2 bg-secondary rounded-full text-on-secondary font-label uppercase tracking-widest text-[10px] font-semibold shadow-sm">All</button>
 <button class="flex-none px-6 py-2 bg-surface-container-low border border-outline-variant/10 rounded-full text-on-surface-variant font-label uppercase tracking-widest text-[10px] hover:bg-surface-container-high transition-colors">Home Services</button>
 <button class="flex-none px-6 py-2 bg-surface-container-low border border-outline-variant/10 rounded-full text-on-surface-variant font-label uppercase tracking-widest text-[10px] hover:bg-surface-container-high transition-colors">Food &amp; Beverage</button>
 <button class="flex-none px-6 py-2 bg-surface-container-low border border-outline-variant/10 rounded-full text-on-surface-variant font-label uppercase tracking-widest text-[10px] hover:bg-surface-container-high transition-colors">Education</button>
 <button class="flex-none px-6 py-2 bg-surface-container-low border border-outline-variant/10 rounded-full text-on-surface-variant font-label uppercase tracking-widest text-[10px] hover:bg-surface-container-high transition-colors">Artisan Goods</button>
+</div>
 </div>
 </section>
 <!-- Results Count & Map Toggle -->

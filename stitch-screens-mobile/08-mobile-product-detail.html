@@ -81,6 +81,20 @@
         }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .scroll-fade {
+            position: relative;
+        }
+        .scroll-fade::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 40px;
+            background: linear-gradient(to right, transparent, #faf9f5);
+            pointer-events: none;
+            z-index: 10;
+        }
     </style>
 <style>
     body {
@@ -190,6 +204,7 @@
 <h3 class="font-headline text-xl font-bold text-on-primary-fixed">You May Also Like</h3>
 <button class="text-secondary font-bold text-sm">View All</button>
 </div>
+<div class="scroll-fade">
 <div class="flex overflow-x-auto hide-scrollbar gap-4 px-6">
 <!-- Rec Card 1: Leather Field Journal -->
 <div class="min-w-[130px] flex-shrink-0">
@@ -222,6 +237,7 @@
 </div>
 <p class="font-bold text-sm text-on-primary-fixed line-clamp-1">Liturgical Candle Trio</p>
 <p class="font-headline text-secondary">$36.00</p>
+</div>
 </div>
 </div>
 </section>

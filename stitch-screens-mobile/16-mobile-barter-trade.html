@@ -81,6 +81,20 @@
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
         .glass-nav { background: rgba(252, 249, 244, 0.8); backdrop-filter: blur(20px); }
+        .scroll-fade {
+            position: relative;
+        }
+        .scroll-fade::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 40px;
+            background: linear-gradient(to right, transparent, #fcf9f4);
+            pointer-events: none;
+            z-index: 10;
+        }
     </style>
 <style>
     body {
@@ -114,12 +128,14 @@
 </div>
 </section>
 <!-- Filter Tabs -->
+<div class="scroll-fade">
 <nav class="flex gap-4 overflow-x-auto no-scrollbar pb-2">
 <button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label text-xs font-bold tracking-widest uppercase transition-all shadow-lg shadow-primary/10">All</button>
 <button class="bg-surface-container-high text-on-surface-variant px-6 py-2 rounded-full font-label text-xs font-bold tracking-widest uppercase hover:bg-surface-variant transition-all">Goods</button>
 <button class="bg-surface-container-high text-on-surface-variant px-6 py-2 rounded-full font-label text-xs font-bold tracking-widest uppercase hover:bg-surface-variant transition-all">Services</button>
 <button class="bg-surface-container-high text-on-surface-variant px-6 py-2 rounded-full font-label text-xs font-bold tracking-widest uppercase hover:bg-surface-variant transition-all">Skills</button>
 </nav>
+</div>
 <!-- Active Trades Horizontal Bento -->
 <section class="space-y-4">
 <div class="flex justify-between items-end">
