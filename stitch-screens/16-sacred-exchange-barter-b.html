@@ -102,14 +102,15 @@
 <a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-yellow-600 dark:text-yellow-500 font-bold border-b-2 border-yellow-600 transition-colors duration-300" href="#">BARTER</a>
 <a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">REGISTRY</a>
 </nav>
-<div class="flex items-center space-x-6">
-<div class="flex items-center space-x-4 text-blue-950 dark:text-stone-100">
-<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform">shopping_cart</span>
-<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform">person</span>
+<div class="flex items-center space-x-4">
+<div class="relative">
+<span class="absolute inset-y-0 left-3 flex items-center text-stone-400">
+<span class="material-symbols-outlined text-lg">search</span>
+</span>
+<input class="w-64 bg-stone-100 border border-stone-200/50 rounded-full py-2 pl-9 pr-4 text-sm focus:ring-1 focus:ring-secondary focus:outline-none font-body" placeholder="Search products, businesses..." type="text"/>
 </div>
-<button class="bg-primary-container text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest hover:bg-opacity-90 transition-all scale-95 active:scale-90">
-JOIN THE ECONOMY
-</button>
+<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform text-blue-950">shopping_cart</span>
+<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform text-blue-950">person</span>
 </div>
 </div>
 </div>
@@ -154,16 +155,10 @@ JOIN THE ECONOMY
 <option>Trade</option>
 <option>For Sale</option>
 </select>
-<select class="bg-surface-container-highest border-none rounded-full py-2 px-6 text-sm font-medium text-on-surface focus:ring-1 focus:ring-secondary appearance-none cursor-pointer">
-<option>Condition</option>
-<option>New</option>
-<option>Used</option>
-<option>Heirloom</option>
-</select>
 </div>
 <button class="ml-auto bg-primary-container text-white px-8 py-2 rounded-full text-sm font-bold tracking-wide flex items-center gap-2 hover:opacity-90 transition-opacity">
-<span class="material-symbols-outlined text-sm">filter_list</span>
-                    FILTERS
+<span class="material-symbols-outlined text-sm">search</span>
+                    SEARCH
                 </button>
 </div>
 </section>
@@ -173,8 +168,92 @@ JOIN THE ECONOMY
 <h2 class="text-4xl font-bold tracking-tight text-on-primary-fixed uppercase">COMMUNITY LISTINGS</h2>
 <span class="text-on-surface-variant font-medium tracking-wide">Showing 150 results</span>
 </div>
+<div class="flex gap-10">
+<!-- Sidebar Filters -->
+<aside class="w-[280px] shrink-0 space-y-8">
+<!-- Category -->
+<div>
+<h4 class="font-headline text-sm uppercase tracking-widest text-on-primary-fixed font-bold mb-4">Category</h4>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer">
+<input type="checkbox" class="rounded border-outline-variant text-secondary focus:ring-secondary"/>
+<span class="text-sm font-body text-on-surface">Goods</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input type="checkbox" class="rounded border-outline-variant text-secondary focus:ring-secondary"/>
+<span class="text-sm font-body text-on-surface">Services</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input type="checkbox" class="rounded border-outline-variant text-secondary focus:ring-secondary"/>
+<span class="text-sm font-body text-on-surface">Religious Items</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input type="checkbox" class="rounded border-outline-variant text-secondary focus:ring-secondary"/>
+<span class="text-sm font-body text-on-surface">Food &amp; Produce</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input type="checkbox" class="rounded border-outline-variant text-secondary focus:ring-secondary"/>
+<span class="text-sm font-body text-on-surface">Handmade</span>
+</label>
+</div>
+</div>
+<div class="h-px bg-outline-variant/30"></div>
+<!-- Listing Type -->
+<div>
+<h4 class="font-headline text-sm uppercase tracking-widest text-on-primary-fixed font-bold mb-4">Listing Type</h4>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer">
+<input type="checkbox" class="rounded border-outline-variant text-secondary focus:ring-secondary"/>
+<span class="text-sm font-body text-on-surface">Barter</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input type="checkbox" class="rounded border-outline-variant text-secondary focus:ring-secondary"/>
+<span class="text-sm font-body text-on-surface">Trade</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input type="checkbox" class="rounded border-outline-variant text-secondary focus:ring-secondary"/>
+<span class="text-sm font-body text-on-surface">Wanted</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input type="checkbox" class="rounded border-outline-variant text-secondary focus:ring-secondary"/>
+<span class="text-sm font-body text-on-surface">For Sale</span>
+</label>
+</div>
+</div>
+<div class="h-px bg-outline-variant/30"></div>
+<!-- Distance -->
+<div>
+<h4 class="font-headline text-sm uppercase tracking-widest text-on-primary-fixed font-bold mb-4">Distance</h4>
+<div class="space-y-2">
+<input type="range" min="5" max="200" value="50" class="w-full accent-secondary"/>
+<div class="flex justify-between text-xs text-on-surface-variant font-body">
+<span>5 mi</span>
+<span>200 mi</span>
+</div>
+</div>
+</div>
+<div class="h-px bg-outline-variant/30"></div>
+<!-- Estimated Value -->
+<div>
+<h4 class="font-headline text-sm uppercase tracking-widest text-on-primary-fixed font-bold mb-4">Estimated Value</h4>
+<div class="flex items-center gap-3">
+<div class="flex-1">
+<label class="text-xs text-on-surface-variant font-body mb-1 block">Min</label>
+<input type="text" placeholder="$0" class="w-full bg-surface-container-highest border border-outline-variant/30 rounded-lg py-2 px-3 text-sm font-body text-on-surface focus:ring-1 focus:ring-secondary focus:border-secondary"/>
+</div>
+<span class="text-on-surface-variant mt-4">&ndash;</span>
+<div class="flex-1">
+<label class="text-xs text-on-surface-variant font-body mb-1 block">Max</label>
+<input type="text" placeholder="$500" class="w-full bg-surface-container-highest border border-outline-variant/30 rounded-lg py-2 px-3 text-sm font-body text-on-surface focus:ring-1 focus:ring-secondary focus:border-secondary"/>
+</div>
+</div>
+</div>
+<div class="h-px bg-outline-variant/30"></div>
+<button class="w-full bg-primary-container text-white py-3 rounded-full text-sm font-bold tracking-widest hover:opacity-90 transition-opacity">APPLY FILTERS</button>
+</aside>
 <!-- Grid Layout -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-12">
+<div class="flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
 <!-- Listing 1 -->
 <div class="group cursor-pointer">
 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 bg-surface-container-lowest transition-all hover:shadow-xl hover:-translate-y-1">
@@ -183,6 +262,7 @@ JOIN THE ECONOMY
 </div>
 <div class="space-y-1">
 <h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">2 Dozen Farm Fresh Eggs</h3>
+<p class="text-sm font-body text-secondary font-bold">Est. Value: $12</p>
 <div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
 <span>NEW</span>
 <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
@@ -201,6 +281,7 @@ JOIN THE ECONOMY
 </div>
 <div class="space-y-1">
 <h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Homemade Jam &amp; Preserves for Raw Honey</h3>
+<p class="text-sm font-body text-secondary font-bold">Est. Value: $15</p>
 <div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
 <span>SERVICE</span>
 <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
@@ -237,6 +318,7 @@ JOIN THE ECONOMY
 </div>
 <div class="space-y-1">
 <h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Handmade Goat Milk Soap</h3>
+<p class="text-sm font-body text-secondary font-bold">Est. Value: $8</p>
 <div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
 <span>SERVICE</span>
 <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
@@ -273,6 +355,7 @@ JOIN THE ECONOMY
 </div>
 <div class="space-y-1">
 <h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Altar Server Cassock &amp; Surplice</h3>
+<p class="text-sm font-body text-secondary font-bold">Est. Value: $30</p>
 <div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
 <span>USED</span>
 <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
@@ -309,6 +392,7 @@ JOIN THE ECONOMY
 </div>
 <div class="space-y-1">
 <h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Latin Study Books &amp; Missals</h3>
+<p class="text-sm font-body text-secondary font-bold">Est. Value: $35</p>
 <div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
 <span>NEW/USED</span>
 <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
@@ -327,6 +411,7 @@ JOIN THE ECONOMY
 </div>
 <div class="space-y-1">
 <h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Farm Fresh Produce for Woodwork</h3>
+<p class="text-sm font-body text-secondary font-bold">Est. Value: $20</p>
 <div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
 <span>FRESH</span>
 <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
@@ -341,10 +426,11 @@ JOIN THE ECONOMY
 <div class="group cursor-pointer">
 <div class="relative aspect-square overflow-hidden rounded-2xl mb-4 bg-surface-container-lowest transition-all hover:shadow-xl hover:-translate-y-1">
 <span class="absolute top-4 left-4 z-10 px-3 py-1 bg-green-600 text-white text-[10px] font-bold tracking-widest rounded-full uppercase">BARTER</span>
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="physical therapist with a client and a web developer screen representing a skills-based trade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW3AGCrjoe_kW9HLol9EUOfqb5CH5nOaNbWQc1OKK2XpQj14ASCc3vFQ1k2LAhz0svwtXdOx7vGaXjn5034JBhZOduwNWZZWemlwtRuLAM1BaHbOY1iRtT-apYQyUkpxz4EmRRSq9GW1i87PpYiZ3lFQGrgV2d-y73W2U4QeZLo7MROTPl2XaIbBG2SWjQE25hfsb1DqVmFZr0B7ugMv_m7vNQvRDbObQtpVXK4RdME4gz0rgtXbal9tVkCYgOcczdDsl9ZvRsq-Q"/>
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="stacked cord of split oak firewood with a fence in the background" src="images/barter-firewood-fencing.png"/>
 </div>
 <div class="space-y-1">
-<h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Physical Therapy for Web Dev</h3>
+<h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Firewood (1 Cord Oak) for Help with Fencing</h3>
+<p class="text-sm font-body text-secondary font-bold">Est. Value: $60</p>
 <div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
 <span>SERVICE</span>
 <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
@@ -381,6 +467,7 @@ JOIN THE ECONOMY
 </div>
 <div class="space-y-1">
 <h3 class="text-xl font-semibold leading-tight text-on-primary-fixed">Vatican II Documents Collection</h3>
+<p class="text-sm font-body text-secondary font-bold">Est. Value: $85</p>
 <div class="flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest">
 <span>COLLECTIBLE</span>
 <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
@@ -388,6 +475,8 @@ JOIN THE ECONOMY
 <span class="material-symbols-outlined text-xs">location_on</span>
                                 Atlanta, GA
                             </div>
+</div>
+</div>
 </div>
 </div>
 </div>

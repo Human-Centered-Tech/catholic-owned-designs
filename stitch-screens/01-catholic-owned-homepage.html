@@ -3,7 +3,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Catholic Owned | Building the New Catholic Economy</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;family=Cinzel:wght@400;600;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
@@ -100,14 +100,15 @@
 <a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">BARTER</a>
 <a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">REGISTRY</a>
 </nav>
-<div class="flex items-center space-x-6">
-<div class="flex items-center space-x-4 text-blue-950 dark:text-stone-100">
-<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform">shopping_cart</span>
-<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform">person</span>
+<div class="flex items-center space-x-4">
+<div class="relative">
+<span class="absolute inset-y-0 left-3 flex items-center text-stone-400">
+<span class="material-symbols-outlined text-lg">search</span>
+</span>
+<input class="w-64 bg-stone-100 border border-stone-200/50 rounded-full py-2 pl-9 pr-4 text-sm focus:ring-1 focus:ring-secondary focus:outline-none font-body" placeholder="Search products, businesses..." type="text"/>
 </div>
-<button class="bg-primary-container text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest hover:bg-opacity-90 transition-all scale-95 active:scale-90">
-JOIN THE ECONOMY
-</button>
+<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform text-blue-950">shopping_cart</span>
+<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform text-blue-950">person</span>
 </div>
 </div>
 </div>
@@ -116,7 +117,7 @@ JOIN THE ECONOMY
 <!-- Hero Section -->
 <section class="relative h-[62vh] flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover object-center" data-alt="majestic wide angle of St. Peter's Basilica at sunset with golden orange light hitting the dome and deep blue shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkWHN08i_Plfpw_yYXXV-iTGxXpWmta8_lpvXn4ATzOIgpBS-PLzd9cL_6S61G4HUKsPBDBlU9Wu7dsBXZuT-oFC9IwfLSB5eDR1oxjytxd9u3nroHge9BmrAElGffLlC1ZAQarFEx39ju8Me1b-s2STKUVq5KtPpSDCOmE0iJM-3f-544IniXW7HkoJN6EjWrXl4TYzrWiMDFgnFhcH9a3naRKndGbUg4s6pLaot5gu6H-4UIjjY_yjjuM5tkpTEvkNugJN5BV9U">
+<img class="w-full h-full object-cover object-center" data-alt="majestic wide angle of St. Peter's Basilica at sunset with golden orange light hitting the dome and deep blue shadows" src="images/stpeter-arial.jpg">
 <div class="absolute inset-0 bg-gradient-to-r from-on-primary-fixed/90 via-on-primary-fixed/50 to-transparent"></div>
 </div>
 <div class="relative z-10 w-full max-w-7xl mx-auto px-8 flex items-center justify-between">
@@ -139,9 +140,9 @@ Join Directory
 <!-- Featured Products -->
 <section class="pt-14 pb-20 bg-surface px-8">
 <div class="max-w-7xl mx-auto">
-<div class="text-center mb-12">
-<span class="font-label text-secondary font-bold tracking-[0.2em] text-xs uppercase block mb-2">Shop the Marketplace</span>
-<h2 class="font-headline text-4xl text-on-primary-fixed mt-2">Discover Something Beautiful</h2>
+<div class="flex items-baseline justify-between mb-12">
+<h2 class="font-['Cinzel'] text-3xl text-on-primary-fixed">Featured Products</h2>
+<a class="font-label text-xs font-bold tracking-widest text-secondary uppercase hover:underline" href="#">Shop All</a>
 </div>
 <!-- Category Tabs -->
 <div class="flex flex-wrap justify-center gap-3 mb-16">
@@ -210,7 +211,7 @@ Join Directory
 </div>
 <!-- Browse by Category -->
 <div class="mt-20">
-<h3 class="font-headline text-2xl text-on-primary-fixed text-center mb-10">Browse by Category</h3>
+<h3 class="font-['Cinzel'] text-2xl text-on-primary-fixed text-center mb-10">Browse by Category</h3>
 <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
 <a class="group relative aspect-square rounded-2xl overflow-hidden" href="#">
 <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc2rQhHHLt6gc162Brrv8cNWJg7pHfYvhMYOEcMFRRLXXGKh3-tWYy8ptlgJT8wf_r1K9cGglyc1Sp4AYOFe8loUkb7_kqgGFH5QJU0wIa_yDwuU0FdmzT32I1sNfAn3ZLvpJlZ-VEDurByVzcPnhwKzRjQ1U8Z7folmI2JR2BpSFI-0i0oz0LG3zQXYnt06JneMO4zwiwL7YyXUsTJG49JgS15a02tTOKm9qLNgn5Jd_iNv5gy7xRee6ZUDUvDHbZhUoYwn_q4Og" data-alt="books and journals">
@@ -249,9 +250,9 @@ Explore All Products <span class="material-symbols-outlined text-lg">arrow_forwa
 <!-- Directory Preview -->
 <section class="py-24 bg-surface-container-low px-8">
 <div class="max-w-7xl mx-auto">
-<div class="text-center mb-16">
-<h2 class="font-headline text-4xl text-on-primary-fixed" style="">From the Directory</h2>
-<p class="mt-4 text-on-surface-variant max-w-xl mx-auto" style="">Discover trusted Catholic professionals and businesses committed to excellence and the faith.</p>
+<div class="flex items-baseline justify-between mb-12">
+<h2 class="font-['Cinzel'] text-3xl text-on-primary-fixed">From the Directory</h2>
+<a class="font-label text-xs font-bold tracking-widest text-secondary uppercase hover:underline" href="#">View All</a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <!-- Business Card 1 -->
@@ -333,7 +334,7 @@ Explore All Products <span class="material-symbols-outlined text-lg">arrow_forwa
 </div>
 <div class="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between">
 <div class="mb-10 md:mb-0">
-<h2 class="font-headline text-4xl text-white mb-4" style="">Community Trade &amp; Barter</h2>
+<h2 class="font-['Cinzel'] text-3xl text-white mb-4">Community Trade &amp; Barter</h2>
 <p class="text-stone-300 text-lg max-w-xl" style="">Reconnect with the roots of exchange. Trade your skills for services within our trusted network of Catholic families.</p>
 </div>
 <button class="bg-secondary-fixed text-on-secondary-fixed px-12 py-4 rounded-full font-bold tracking-widest hover:brightness-110 transition-all" style="">
@@ -345,8 +346,8 @@ Explore All Products <span class="material-symbols-outlined text-lg">arrow_forwa
 <section class="py-24 bg-surface px-8">
 <div class="max-w-7xl mx-auto">
 <div class="flex items-baseline justify-between mb-12">
-<h2 class="font-headline text-4xl text-on-primary-fixed" style="">Upcoming Networking Events</h2>
-<a class="font-label text-xs font-bold tracking-widest text-secondary uppercase" href="#" style="">View Calendar</a>
+<h2 class="font-['Cinzel'] text-3xl text-on-primary-fixed">Upcoming Events</h2>
+<a class="font-label text-xs font-bold tracking-widest text-secondary uppercase hover:underline" href="#">View Calendar</a>
 </div>
 <div class="space-y-6">
 <!-- Event 1 -->
