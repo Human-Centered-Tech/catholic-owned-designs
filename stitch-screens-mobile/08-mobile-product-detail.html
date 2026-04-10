@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;600;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface": "#faf9f5",
+                "on-tertiary-fixed-variant": "#584400",
+                "tertiary-fixed-dim": "#e6c366",
+                "on-tertiary-fixed": "#241a00",
+                "error-container": "#ffdad6",
+                "surface-container-low": "#f4f4f0",
+                "on-tertiary-container": "#503d00",
+                "on-secondary": "#ffffff",
+                "on-primary-fixed": "#061b3c",
+                "inverse-on-surface": "#f1f1ed",
+                "surface-container": "#eeeeea",
+                "on-surface-variant": "#44474e",
+                "surface-tint": "#4d5e83",
+                "outline": "#75777f",
+                "on-secondary-fixed-variant": "#584400",
+                "on-secondary-container": "#755c00",
+                "background": "#faf9f5",
+                "on-error": "#ffffff",
+                "secondary": "#755b00",
+                "primary-fixed": "#d8e2ff",
+                "error": "#ba1a1a",
+                "on-secondary-fixed": "#241a00",
+                "on-primary-container": "#7284aa",
+                "outline-variant": "#c5c6cf",
+                "on-background": "#1a1c1a",
+                "secondary-container": "#fed667",
+                "tertiary-fixed": "#ffdf90",
+                "on-surface": "#1a1c1a",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-container": "#c9a84e",
+                "surface-bright": "#faf9f5",
+                "on-primary-fixed-variant": "#354769",
+                "surface-variant": "#e2e3df",
+                "primary": "#000000",
+                "primary-fixed-dim": "#b5c6f0",
+                "on-primary": "#ffffff",
+                "on-error-container": "#93000a",
+                "surface-dim": "#dadad6",
+                "primary-container": "#061b3c",
+                "on-tertiary": "#ffffff",
+                "inverse-surface": "#2f312e",
+                "inverse-primary": "#b5c6f0",
+                "secondary-fixed-dim": "#e9c256",
+                "surface-container-high": "#e8e8e4",
+                "surface-container-highest": "#e2e3df",
+                "tertiary": "#755b00",
+                "secondary-fixed": "#ffe08e"
+            },
+            "borderRadius": {
+                "DEFAULT": "1rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Noto Serif"],
+                "body": ["Manrope"],
+                "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#faf9f5]/85 backdrop-blur-md border-b border-[#061b3c]/10 flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="text-[#061b3c] hover:opacity-80 transition-opacity Active: scale-95 duration-150">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline text-2xl tracking-tight text-[#061b3c]">Product Detail</h1>
+</div>
+<button class="text-[#061b3c] hover:opacity-80 transition-opacity Active: scale-95 duration-150">
+<span class="material-symbols-outlined">share</span>
+</button>
+</header>
+<main class="pt-20 pb-32">
+<!-- Hero Section: Carousel -->
+<section class="relative px-4 mb-8">
+<div class="aspect-[4/5] w-full rounded-lg overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Close-up of a thick heritage bible with shimmering gold-leafed edges and a deep navy leather cover on a light marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxPBJZTZo2vIMjdhvxqO1cgWL8bHG1Mq1eHHTHhTkF6HFUDyP_vRS6NOJK2DKzBNrL5oA8UufPQzai4IdjH7yEKEuRpyzGyFnKeUFqUxnYxfMeDWc7ZPnK6EjpLFy7iJRzpknZAWbV2MTBnLH8aLoiSJ83Mw5w0MG5i3qaLh6HEHpE-BJM6bUCcPngY4SOiKYcYSVn6RxDniLc2xwr3-CGDohaz8n94UuJnfb2Hf9SsDNcungcGFZCTtnMgoosVZ7buL-4i4m2icQ"/>
+</div>
+<!-- Carousel Dots -->
+<div class="flex justify-center gap-2 mt-4">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="w-2 h-2 rounded-full bg-outline-variant/40"></span>
+<span class="w-2 h-2 rounded-full bg-outline-variant/40"></span>
+</div>
+</section>
+<!-- Product Identity -->
+<section class="px-6 mb-8">
+<div class="flex justify-between items-start mb-2">
+<p class="font-label text-xs tracking-widest uppercase text-secondary font-bold">Maker &amp; Main</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-semibold">4.8</span>
+<span class="text-sm text-outline">(124)</span>
+</div>
+</div>
+<h2 class="font-headline text-3xl font-bold leading-tight mb-2 text-on-primary-fixed">Gilded Duo-Tone Bible</h2>
+<p class="font-headline text-2xl text-on-primary-fixed mb-6">$89.99</p>
+<!-- Description -->
+<p class="text-on-surface-variant leading-relaxed body-lg">
+                This heritage-quality edition features a stunning combination of deep navy and charcoal gray bonded materials, accented with hand-finished gold leaf gilding on every page edge.
+            </p>
+</section>
+<!-- Variant Selector -->
+<section class="px-6 mb-10">
+<h3 class="font-label text-sm font-bold uppercase tracking-wider mb-4 text-on-primary-fixed/60">Color Selection</h3>
+<div class="flex gap-3">
+<button class="px-6 py-2 rounded-full border-2 border-secondary bg-secondary/5 text-secondary font-bold text-sm">Navy/Charcoal</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-medium text-sm">Burgundy/Tan</button>
+</div>
+</section>
+<!-- Product Accordion -->
+<section class="px-6 space-y-px bg-outline-variant/10 mb-12">
+<details class="bg-surface py-4 group" open="">
+<summary class="flex justify-between items-center list-none cursor-pointer">
+<span class="font-bold text-on-primary-fixed">Product Details</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 text-on-surface-variant text-sm leading-relaxed space-y-2">
+<p>• Premium Duo-Tone Bonded Leather</p>
+<p>• Hand-finished Gold Leaf Gilding</p>
+<p>• Double Ribbon Markers</p>
+<p>• 10pt Comfort Print Font</p>
+</div>
+</details>
+<details class="bg-surface py-4 group">
+<summary class="flex justify-between items-center list-none cursor-pointer">
+<span class="font-bold text-on-primary-fixed">Shipping &amp; Returns</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 text-on-surface-variant text-sm">
+                    Free standard shipping on orders over $150. 30-day heritage guarantee.
+                </div>
+</details>
+</section>
+<!-- Recommendations -->
+<section class="mb-12">
+<div class="px-6 flex justify-between items-center mb-6">
+<h3 class="font-headline text-xl font-bold text-on-primary-fixed">You May Also Like</h3>
+<button class="text-secondary font-bold text-sm">View All</button>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar gap-4 px-6">
+<!-- Rec Card 1 -->
+<div class="min-w-[160px] flex-shrink-0">
+<div class="aspect-square rounded-lg bg-surface-container-low mb-3 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Minimalist leather bound journal in matching navy blue with gold foil initials" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9BHkcz_W-glYULoAJkg_ylU8y7wnAtbgiCgDaTWQeWoKMNB9nx-pP7VbZmoTHIEVCOOxuCMpsASVzBkh2ohDVAc_J77qIl0E2sIJ80gMEsHTQjvAmeIVNcA-cGn4ctKUtTlU6mknblvLqTni7KR8hVwky0lFwtuZ26uSRyfWl0zCXZ4VBxCP51gX_P0Iq3gC1W_FQ5cHdxysGgebiFwIYPgFfqtB51nBnrNqdqqHHcPcGV2GaOW8hGR_bNsoT_OuoAJWJb8PRN-8"/>
+</div>
+<p class="font-bold text-sm text-on-primary-fixed line-clamp-1">Classic Leather Journal</p>
+<p class="font-headline text-secondary">$34.00</p>
+</div>
+<!-- Rec Card 2 -->
+<div class="min-w-[160px] flex-shrink-0">
+<div class="aspect-square rounded-lg bg-surface-container-low mb-3 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Elegant brass scripture highlighter set in a velvet lined wooden box" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACBvZrijfF7Y4QF7t73SxwNrQE1Fa0SDPWpXz_QqOJ0-rRuyopOqXVgbOYt13UdZxTyc6d3ZRbisN_nZuAX0K4t5qZxEAtVCAg6AbJAes2RWPh7wdmnxzmbpkrnyJIA2x8bcj1_wObYXhdR_epgS2WF9v5iqyR07VDqHWAS94Q78ZzX60sLU5GJu0Xg_cmOthIKMW2yFooMiMSSL2bKRdUuTl6-1ZvX5Ian_LhP_PRAZdaQzmF0skMH0EAV0wHckZy-8f0L1dBEow"/>
+</div>
+<p class="font-bold text-sm text-on-primary-fixed line-clamp-1">Brass Scripture Markers</p>
+<p class="font-headline text-secondary">$28.00</p>
+</div>
+<!-- Rec Card 3 -->
+<div class="min-w-[160px] flex-shrink-0">
+<div class="aspect-square rounded-lg bg-surface-container-low mb-3 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Handcrafted walnut wood bible stand with intricate carvings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDskr-TmbaotkJARXIR52jWNpXxjEIgC9nS3hfjpF0Kw9RO0KtSe3POIX3nDRkdpbg1V9wWPlRRvHBqTXx7r3NUnp6ayrICUmyya7vRogL5DokiKNDZLa5UNg6XIsOxnvhDvLlA3Z9i2GKhcof2MCN4dGSrrWrjCxJiN_2I6DniRezpQJhj8YcAvxNSjTfuae1ExARMo76mznBAFV6KL5aSRvyDYgwPH9JZImGnUY51KjJKZfxRoW5EUaFOGAPvKuJddjxfRy_Ir_c"/>
+</div>
+<p class="font-bold text-sm text-on-primary-fixed line-clamp-1">Walnut Display Stand</p>
+<p class="font-headline text-secondary">$55.00</p>
+</div>
+</div>
+</section>
+<!-- CTA Floating Action Bar -->
+<div class="fixed bottom-24 left-0 w-full px-6 z-40">
+<button class="w-full bg-gradient-to-r from-secondary to-secondary-fixed-dim text-white font-bold py-4 rounded-full shadow-lg flex justify-center items-center gap-3 transition-transform active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+                ADD TO CART
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#faf9f5] border-t border-[#061b3c]/5 shadow-[0_-4px_20px_0_rgba(6,27,60,0.06)] rounded-t-full">
+<div class="flex flex-col items-center justify-center text-[#BE9B32] bg-[#755b00]/5 rounded-full px-4 py-1 transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-manrope text-[10px] font-semibold tracking-wide uppercase">Shop</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#061b3c]/60 hover:text-[#BE9B32] transition-colors">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-manrope text-[10px] font-semibold tracking-wide uppercase">Directory</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#061b3c]/60 hover:text-[#BE9B32] transition-colors">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-manrope text-[10px] font-semibold tracking-wide uppercase">Events</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#061b3c]/60 hover:text-[#BE9B32] transition-colors">
+<span class="material-symbols-outlined" data-icon="swap_horiz">swap_horiz</span>
+<span class="font-manrope text-[10px] font-semibold tracking-wide uppercase">Barter</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#061b3c]/60 hover:text-[#BE9B32] transition-colors">
+<span class="material-symbols-outlined" data-icon="card_giftcard">card_giftcard</span>
+<span class="font-manrope text-[10px] font-semibold tracking-wide uppercase">Registry</span>
+</div>
+</nav>
+</body></html>

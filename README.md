@@ -63,3 +63,21 @@ The `stitch-screens/` directory contains the exported HTML for each page:
 | 22-gift-registries-a.html | Gift registry dashboard |
 
 The `stitch-screens-original/` directory contains the unmodified exports from Stitch for reference.
+
+## Mobile Screens
+
+The `stitch-screens-mobile/` directory contains mobile/native app versions of each page, all featuring a fixed 5-button bottom navigation bar (Shop, Directory, Events, Barter, Registry):
+
+| File | Page |
+|------|------|
+| 01-mobile-homepage.html | Mobile homepage |
+| 03-mobile-marketplace.html | Mobile marketplace browse |
+| 06-mobile-directory.html | Mobile business directory |
+| 08-mobile-product-detail.html | Mobile product detail |
+| 11-mobile-vendor-storefront.html | Mobile vendor storefront |
+| 12-mobile-business-listing.html | Mobile business listing |
+| 14-mobile-business-detail.html | Mobile business detail |
+| 16-mobile-barter-trade.html | Mobile barter & trade |
+| 18-mobile-events.html | Mobile events & networking |
+| 20-mobile-shopping-cart.html | Mobile shopping cart |
+| 22-mobile-gift-registries.html | Mobile gift registry dashboard |

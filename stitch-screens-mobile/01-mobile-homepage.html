@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#7284aa",
+                        "primary-fixed-dim": "#b5c6f0",
+                        "surface": "#faf9f5",
+                        "outline": "#75777f",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#e9c256",
+                        "primary-fixed": "#d8e2ff",
+                        "background": "#faf9f5",
+                        "inverse-on-surface": "#f1f1ed",
+                        "on-secondary-fixed": "#241a00",
+                        "tertiary-container": "#c9a84e",
+                        "on-secondary-container": "#755c00",
+                        "on-primary-fixed": "#061b3c",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#241a00",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#584400",
+                        "on-background": "#1a1c1a",
+                        "inverse-primary": "#b5c6f0",
+                        "surface-container-low": "#f4f4f0",
+                        "surface-container": "#eeeeea",
+                        "surface-container-high": "#e8e8e4",
+                        "secondary-container": "#fed667",
+                        "tertiary-fixed-dim": "#e6c366",
+                        "secondary": "#755b00",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e2e3df",
+                        "inverse-surface": "#2f312e",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-tertiary-container": "#503d00",
+                        "on-surface": "#1a1c1a",
+                        "primary-container": "#061b3c",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#faf9f5",
+                        "secondary-fixed": "#ffe08e",
+                        "on-surface-variant": "#44474e",
+                        "primary": "#000000",
+                        "tertiary": "#755b00",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#ffdf90",
+                        "surface-tint": "#4d5e83",
+                        "surface-variant": "#e2e3df",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#dadad6",
+                        "outline-variant": "#c5c6cf",
+                        "on-primary-fixed-variant": "#354769"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-fixed-dim selection:text-on-secondary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#faf9f5]/85 dark:bg-[#061b3c]/85 backdrop-blur-xl border-b border-[#061b3c]/10 dark:border-[#faf9f5]/10 flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[#061b3c] dark:text-[#faf9f5] hover:opacity-80 transition-opacity cursor-pointer active:scale-95">menu</span>
+</div>
+<h1 class="font-['Noto_Serif'] text-3xl tracking-tighter font-bold uppercase text-[#061b3c] dark:text-[#faf9f5]">The Sacred Editorial</h1>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[#061b3c] dark:text-[#faf9f5] hover:opacity-80 transition-opacity cursor-pointer active:scale-95">shopping_cart</span>
+</div>
+</header>
+<main class="pt-16 pb-24">
+<!-- Hero Section -->
+<section class="relative h-[353px] w-full overflow-hidden flex items-center justify-center text-center px-6">
+<div class="absolute inset-0 bg-primary-container">
+<img alt="St. Peter's Basilica at sunset" class="w-full h-full object-cover opacity-60" data-alt="cinematic wide shot of St. Peter's Basilica in Rome at golden hour sunset with warm orange and deep blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0tztBTtwgYUNyNFEvnoojxpuCHIyGKJnDCDQLJDHRdSUhKaUH9den9iogPB1jq3FipV0RLbu0azRW7rVVSJ84Pea-WN3px4JSDxU_qxdVkv-RyESbT6Ol1V10x6yPS-l_AUXYjXq9lrND7GxAibQjupK6-Rz3OTWlZ0JhMkUAuonbKESM4GgiltKEX_8dgcRJ1LAIzgJ6sQJeRoMbDjo_5mR2f99hDDUFFaJITYh1I82oUQ3cQEfMRXtv9LqikeRUUjDKDQNUb7U"/>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-4">
+<h2 class="font-headline text-3xl md:text-5xl font-extrabold text-on-primary leading-tight tracking-tight uppercase">
+                    BUILDING THE NEW<br/>CATHOLIC ECONOMY
+                </h2>
+<p class="font-body text-lg text-on-primary/90 font-medium">Businesses you can believe in</p>
+<div class="flex flex-wrap justify-center gap-3 mt-4">
+<button class="bg-gradient-to-r from-secondary to-secondary-fixed-dim text-on-secondary px-8 py-3 rounded-full font-semibold transition-all hover:brightness-110 active:scale-95 shadow-lg">
+                        Shop Marketplace
+                    </button>
+<button class="bg-transparent border-2 border-on-primary text-on-primary px-8 py-3 rounded-full font-semibold transition-all hover:bg-on-primary/10 active:scale-95">
+                        Join Directory
+                    </button>
+</div>
+</div>
+</section>
+<!-- Category Filters -->
+<section class="py-6 overflow-x-auto hide-scrollbar whitespace-nowrap px-6">
+<div class="flex gap-2">
+<span class="bg-primary-container text-on-primary px-6 py-2 rounded-full text-sm font-semibold cursor-pointer">All</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-6 py-2 rounded-full text-sm font-semibold cursor-pointer hover:bg-surface-container-high">Home &amp; Living</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-6 py-2 rounded-full text-sm font-semibold cursor-pointer hover:bg-surface-container-high">Books &amp; Journals</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-6 py-2 rounded-full text-sm font-semibold cursor-pointer hover:bg-surface-container-high">Art &amp; Prints</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-6 py-2 rounded-full text-sm font-semibold cursor-pointer hover:bg-surface-container-high">Jewelry</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-6 py-2 rounded-full text-sm font-semibold cursor-pointer hover:bg-surface-container-high">Kids &amp; Family</span>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="px-6 grid grid-cols-2 gap-x-4 gap-y-8">
+<!-- Product 1 -->
+<div class="group">
+<div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-low mb-3">
+<img alt="Heritage Gilded Bible" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="close-up of a premium leather bound bible with ornate gold foil lettering and gilded edges on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB04u-ftNEOoIJi5TVtXLWgVoDXvSdkYNpeTVco3lN-kNIpq6gff7tEPRk2I3Rn502QQ5CY3W8WzbTmBhHczrt8s9WAtNuA1p8lpnknbvm4PsjdmzV79Hooq-NrqJi5R8_kz2tNvqnVJMWy0d07F3taNIw5oXgL74D7U2YdHKD_erP1yTXJee9NOeTbnpdFfueptkD7bddwVu-EEwQOJYqywSanfV3iLzf8cg2foqkwsRDxhqxu9SibQaeMsbvbInV6cZlxCWwwMNQ"/>
+<button class="absolute top-3 right-3 w-8 h-8 bg-surface/80 backdrop-blur-sm rounded-full flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm text-secondary">favorite</span>
+</button>
+</div>
+<h3 class="font-headline text-lg font-bold text-on-primary-fixed leading-tight">Heritage Gilded Bible</h3>
+<p class="font-headline text-secondary font-medium mt-1">$85</p>
+</div>
+<!-- Product 2 -->
+<div class="group">
+<div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-low mb-3">
+<img alt="Olive Wood Rosary" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="handcrafted olive wood rosary beads with a silver crucifix resting on a piece of natural linen fabric" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ65jP3oAUkgoJyFzUvPYu0GBMIT-B_XvgpTFUYr0REsL5oh4waprWk5sIloL7ya0qTAAZc7DvI6LBrmRsT3ogkvCoNsHOWoKtrrKjxyNSu6AaerqkSosNvur0thbYnwkNNdAY5iiufMpFkyVTfRT6X0DHkJuJ1TNBnqWH32CVgKZJYRrs7zJjcDwuufmPm-EUg_shUT61ZZ0kANf1-vHeXDeXbf92qeJR8z-C4syhxXnxn_o44BLj4YsKJbNoJZ2n2Ze6rn5pWxs"/>
+<button class="absolute top-3 right-3 w-8 h-8 bg-surface/80 backdrop-blur-sm rounded-full flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm text-on-surface-variant">favorite</span>
+</button>
+</div>
+<h3 class="font-headline text-lg font-bold text-on-primary-fixed leading-tight">Olive Wood Rosary</h3>
+<p class="font-headline text-secondary font-medium mt-1">$45</p>
+</div>
+<!-- Product 3 -->
+<div class="group">
+<div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-low mb-3">
+<img alt="Sanctuary Candle" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="aesthetic artisanal candle in a glass jar with a minimalist label on a dark marble surface with soft candlelight glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANC2F63NxogC5zemjiZaElMxjvf8ByvjFaduFMCoB1PWn8bMEu-u7QyhpJH0OzB4u-qhXmUGDTuK11nQzVsBf_Bf2hOcWb4h1ix2Oo83_2_s3oWdcaAc8aLfVQpuGgjOVARy0AGTkWKOgGHnj2CCe-DKqFAmCoxyP1ZKbpTw6P-I6ojUGFpoRqWw38IAd_YQbw8fnRE3cqqf7tzaC6rpJv_WdQp8xPYnb-gPlTxLMpB--93fv8nYfbzmSwmmUZJstmXvtNv867WIQ"/>
+<button class="absolute top-3 right-3 w-8 h-8 bg-surface/80 backdrop-blur-sm rounded-full flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm text-on-surface-variant">favorite</span>
+</button>
+</div>
+<h3 class="font-headline text-lg font-bold text-on-primary-fixed leading-tight">Sanctuary Candle</h3>
+<p class="font-headline text-secondary font-medium mt-1">$32</p>
+</div>
+<!-- Product 4 -->
+<div class="group">
+<div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-low mb-3">
+<img alt="Sacred Art Print" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="fine art print of a classic religious painting framed in a thin gold frame leaning against a white wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK9WgRGrkGbDerbVqjN3HzcRurqJ8aq2oroSSgHBWv_PIMejBNH3u0Df9M2t6VewzhFIX1_AsMQLtblVQw35Y3BFYHCyq-odVwzn1WIHtdxQbLeU8YhxyAMF0PyBtivN0S6HfURIIqu6faA88kH-eR_S4oqSc9Ic_kiFkykZW1iMGBsKTLmnoThAo-cr-zGm5kWRROlCwEUGqQyUIUsER3xFPv1AR8VPaLshn8zJJMYDSzMVrU3uGyU3-EHaLqE9WqhwEK6pfOLmg"/>
+<button class="absolute top-3 right-3 w-8 h-8 bg-surface/80 backdrop-blur-sm rounded-full flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm text-on-surface-variant">favorite</span>
+</button>
+</div>
+<h3 class="font-headline text-lg font-bold text-on-primary-fixed leading-tight">Sacred Art Print</h3>
+<p class="font-headline text-secondary font-medium mt-1">$55</p>
+</div>
+</section>
+<!-- Statement Section -->
+<section class="mt-12 bg-primary-container py-12 px-8 text-center">
+<h2 class="font-headline text-2xl font-bold text-on-primary mb-4 italic">"True wealth is found in the craftsmanship of the spirit."</h2>
+<p class="font-body text-secondary-fixed text-sm uppercase tracking-[0.2em] font-bold">Curated Heritage Collections</p>
+</section>
+<!-- Browse by Category Tiles -->
+<section class="py-12">
+<div class="flex justify-between items-end px-6 mb-6">
+<h2 class="font-headline text-2xl font-bold">Explore Collections</h2>
+<span class="font-body text-sm font-bold text-secondary uppercase tracking-widest border-b border-secondary">View All</span>
+</div>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar px-6">
+<div class="flex-none w-32 text-center">
+<div class="w-32 h-32 rounded-2xl bg-surface-container-high overflow-hidden mb-2">
+<img alt="Home" class="w-full h-full object-cover" data-alt="modern minimalist home altar setup with a small crucifix and linen cloth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmbBipV1UYlNKu5YI-nUbkexvcgn8_V-rD_a5h5kFEfcEkPeTHBkGMDZWceJFOob_h29OuRVStopS0FSYDypla4_rz1ofWh_U_rsDu4XHgzIpGn9URNtiysVKfGOchyMKyuUHDQCaOpDuZ9iqx2x6cju6egx-X3RU-AohUzLLTH6Af0631h7xWvUXEn62aNzP60QbbcYTTrv-DCSAtDjPbBT7myQ08wc5MzS5WQRHUlGEVXIozERpeOWjs5a_TjWbUC4A_ibcjl8E"/>
+</div>
+<span class="font-body text-xs font-bold uppercase tracking-wider">Home</span>
+</div>
+<div class="flex-none w-32 text-center">
+<div class="w-32 h-32 rounded-2xl bg-surface-container-high overflow-hidden mb-2">
+<img alt="Books" class="w-full h-full object-cover" data-alt="stack of vintage leather books with old parchment paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVyPumPs5dw6WC-YbNdL415dtS8rIX8K-PpJLh3uUGYmp2FJVT3Cc5W14JQ9MoN9V6Lfk7WOKQp0EGhokSg2iaXCsQis35p6BOwcRFMBJcLiRJLbfJiOTf9UnRFPxcoStjJglIhrOW0yJYZLhCaz-nXu5NSIysoXO0_SPg49P3S0zCw8BoVZqpMchM_tnoDlg99UP26aCjNbdbMs8mSoFrNLhYGD3kPtBxfPcNTVgXqlUUWEG6ZL2hwxBAJrNaCX2PvaIY0DyLDpM"/>
+</div>
+<span class="font-body text-xs font-bold uppercase tracking-wider">Books</span>
+</div>
+<div class="flex-none w-32 text-center">
+<div class="w-32 h-32 rounded-2xl bg-surface-container-high overflow-hidden mb-2">
+<img alt="Jewelry" class="w-full h-full object-cover" data-alt="delicate gold necklace with a tiny cross pendant laying on a white marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5E3nIYq9hnq7es90nwEMvDkpz17vBODblTUygQSKzHyEgR3_lznuY03PUxst-Py3EU8fidM218rnCmMfPzA_NoSOqNnIdB0TEECs_PARkzojkjqUyOrdjy0QaeWFqmdsMNjMrT5ieSxW5u8b7KWeKnNsXu3T-Hb80JVr72I47vJdpocXY8RABah_rvJC9t5hYk0qIowoGp3m3MHSO7l9oC2UIRYcQogQdFfE1cZBZXj8y4vaEEya1yocXIFPPPXSmXc-oNCpfJfI"/>
+</div>
+<span class="font-body text-xs font-bold uppercase tracking-wider">Jewelry</span>
+</div>
+<div class="flex-none w-32 text-center">
+<div class="w-32 h-32 rounded-2xl bg-surface-container-high overflow-hidden mb-2">
+<img alt="Sacramental" class="w-full h-full object-cover" data-alt="brass thurible with rising smoke in a dim cathedral light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZse7ejKrqp5oZmb7bOKeT928iHJGhS4k4sfXPQt3FflxbvPlQbZHljexQSPZg73Hcv7Ch-arTeRNnMA3zh9ozhY-z8tLCR7hizBise3rd5opusNHhfmTLkoqzJ47waORwfVAE8tsN5xaZP8eXoblXNqiHFAXpv09qfkjfgotZghcPkWo8qDs9PR5W0FlWJoUT_jxoHgA_U49wRFksSmtoQZXZO2h-lWwWp_KhISX5BykqDQe13rOOHkDFFPhsoCnOE-liT-lJjo4"/>
+</div>
+<span class="font-body text-xs font-bold uppercase tracking-wider">Sacred</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 pb-safe bg-[#faf9f5] dark:bg-[#061b3c] border-t border-[#061b3c]/5 dark:border-[#faf9f5]/5 shadow-[0_-4px_40px_rgba(0,20,53,0.06)]">
+<!-- Active Tab: Shop -->
+<a class="flex flex-col items-center justify-center text-[#755b00] dark:text-[#BE9B32] gap-1 hover:text-[#BE9B32] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 gap-1 hover:text-[#BE9B32] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">store</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest">Directory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 gap-1 hover:text-[#BE9B32] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">event</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 gap-1 hover:text-[#BE9B32] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">swap_horiz</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest">Barter</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 gap-1 hover:text-[#BE9B32] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">card_giftcard</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest">Registry</span>
+</a>
+</nav>
+</body></html>

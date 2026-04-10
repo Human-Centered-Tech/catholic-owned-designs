@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#000000",
+                    "surface-dim": "#dadad6",
+                    "on-surface": "#1a1c1a",
+                    "background": "#faf9f5",
+                    "tertiary": "#755b00",
+                    "primary-fixed": "#d8e2ff",
+                    "secondary-fixed-dim": "#e9c256",
+                    "on-secondary-fixed": "#241a00",
+                    "outline": "#75777f",
+                    "inverse-on-surface": "#f1f1ed",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#584400",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#b5c6f0",
+                    "error": "#ba1a1a",
+                    "secondary-container": "#fed667",
+                    "inverse-primary": "#b5c6f0",
+                    "surface-tint": "#4d5e83",
+                    "primary-container": "#061b3c",
+                    "inverse-surface": "#2f312e",
+                    "tertiary-fixed-dim": "#e6c366",
+                    "secondary-fixed": "#ffe08e",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#7284aa",
+                    "on-background": "#1a1c1a",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#061b3c",
+                    "on-tertiary-container": "#503d00",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#755c00",
+                    "on-secondary-fixed-variant": "#584400",
+                    "surface-container-low": "#f4f4f0",
+                    "surface": "#faf9f5",
+                    "on-primary-fixed-variant": "#354769",
+                    "on-tertiary-fixed": "#241a00",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdf90",
+                    "tertiary-container": "#c9a84e",
+                    "surface-container-highest": "#e2e3df",
+                    "surface-bright": "#faf9f5",
+                    "surface-container": "#eeeeea",
+                    "surface-container-high": "#e8e8e4",
+                    "secondary": "#755b00",
+                    "outline-variant": "#c5c6cf",
+                    "surface-variant": "#e2e3df",
+                    "on-surface-variant": "#44474e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-[#061b3c]/10 dark:border-stone-50/10 bg-stone-50/85 dark:bg-[#061b3c]/85 backdrop-blur-xl flex justify-between items-center px-6 h-16">
+<div class="flex flex-col">
+<span class="font-serif text-xl font-bold text-[#061b3c] dark:text-[#BE9B32]">Catholic Owned</span>
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-[#061b3c]/60">Marketplace</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#061b3c] dark:text-stone-50 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="text-[#061b3c] dark:text-stone-50 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</header>
+<main class="pt-20 pb-28 px-4 max-w-lg mx-auto">
+<!-- Search Section -->
+<section class="mb-6">
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</div>
+<input class="w-full bg-surface-container-highest border-none rounded-full py-4 pl-12 pr-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-on-surface-variant/60 text-on-surface font-body transition-all" placeholder="Search for products..." type="text"/>
+</div>
+</section>
+<!-- Categories Horizontal Scroll -->
+<section class="mb-6 -mx-4">
+<div class="flex overflow-x-auto gap-3 px-4 hide-scrollbar">
+<button class="flex-none bg-primary-container text-on-primary px-6 py-2 rounded-full font-label text-sm font-semibold whitespace-nowrap">All Items</button>
+<button class="flex-none bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors border border-outline-variant/10">Liturgy &amp; Home</button>
+<button class="flex-none bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors border border-outline-variant/10">Books</button>
+<button class="flex-none bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors border border-outline-variant/10">Art</button>
+<button class="flex-none bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors border border-outline-variant/10">Rosaries</button>
+<button class="flex-none bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors border border-outline-variant/10">Jewelry</button>
+</div>
+</section>
+<!-- Sort & Filter Controls -->
+<section class="flex justify-between items-center mb-6">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="sort">sort</span>
+<span class="font-label text-xs uppercase tracking-wider font-semibold">Featured</span>
+</div>
+<button class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/10">
+<span class="material-symbols-outlined text-lg" data-icon="tune">tune</span>
+<span class="font-label text-xs font-bold uppercase tracking-tighter">Filter</span>
+</button>
+</section>
+<!-- Product Grid -->
+<div class="grid grid-cols-2 gap-x-4 gap-y-8">
+<!-- Product Item 1 -->
+<div class="group">
+<div class="relative aspect-[4/5] rounded-xl overflow-hidden mb-3 bg-surface-container-low">
+<img alt="product" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="handcrafted wooden rosary beads on a piece of vintage linen with soft dramatic window light and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfF5cwua9uXhFUV4Jh7CUCSfcQV2_VbZyPV7Eiy7NXWcle_AkA0qlCeMauvYPkgH8iIfKIiO7d2p3t4LtpsxeZSYgo4qZ7gdoIRC3ytJ4-5mbgI7NS8pEO7i_mE2BekdJVKYX65NSnE41bdSiEOJksYMqWZF95wjL0MsBySmH8lbwyy0CvLazkMuZIsrX2Vlse_nhRyQ1aDgk58RSESJo9rMERtq_9m3sHeVU-HOsH2L6Wq8mDPBWUDfbdHQKqlYWRfmXr3e1gtec"/>
+<button class="absolute top-3 right-3 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-primary-container shadow-sm">
+<span class="material-symbols-outlined text-lg" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="space-y-1">
+<p class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Sacramental</p>
+<h3 class="font-headline text-lg leading-tight text-on-primary-fixed">Hand-Carved Olive Wood Rosary</h3>
+<div class="flex justify-between items-baseline pt-1">
+<p class="font-body text-xs text-on-surface-variant">By Bethlehem Crafts</p>
+<p class="font-headline text-on-surface font-bold text-lg">$48.00</p>
+</div>
+</div>
+</div>
+<!-- Product Item 2 -->
+<div class="group">
+<div class="relative aspect-[4/5] rounded-xl overflow-hidden mb-3 bg-surface-container-low">
+<img alt="product" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="fine art oil painting of the Madonna and child in a classic renaissance style with gold leaf accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0_JIC5tPgSJ2iwZ5u3bw2npHOGoDeS9Aq7D6JlWMbHYg4hHVn4Kr5MnPP_JPjIUxJrOm8TGwHTkOobXRTBmKzxvQXHCPihkmsMbebV1VhlsEA2BnpGwYpoF-4Cf6oNbodbbdKOgIt1nZCyYr7MqeL21laWQNU5xCYOOS7gV_2heg_uYhSnIWLZnudkSibU8bCwuBM8bL4LZN0DUMuKG-QviKf2PMZKLy55j9LggvdZog8Sqt3LNS7SsOKSp7ThB9vlxPWEOXHX0I"/>
+<button class="absolute top-3 right-3 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-primary-container shadow-sm">
+<span class="material-symbols-outlined text-lg" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="space-y-1">
+<p class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Art &amp; Prints</p>
+<h3 class="font-headline text-lg leading-tight text-on-primary-fixed">Madonna of the Lilies Giclée</h3>
+<div class="flex justify-between items-baseline pt-1">
+<p class="font-body text-xs text-on-surface-variant">By Mater Dei Studio</p>
+<p class="font-headline text-on-surface font-bold text-lg">$125.00</p>
+</div>
+</div>
+</div>
+<!-- Product Item 3 -->
+<div class="group">
+<div class="relative aspect-[4/5] rounded-xl overflow-hidden mb-3 bg-surface-container-low">
+<img alt="product" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="artisan beeswax pillar candles with intricate liturgical patterns carved into the surface on a stone tray" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrUfA4803x5gn8Fc1yUgcc8j9e5kt9vNGD-dBKKFlMV7WN_sXzKjUtW4GCxufu9iVrcCL6T3Q8erdSd2-iRlr_aKzdyhPpBtZhTDjkhHlbxX7OL-Qc4Fmsl3zhI3d16zar5wIod47Ta06KlXRP-17CA9D1fPxNRG0hlkBFwdWtHXWXkKEJgK4v7H5yqqREHGrbqJLkrAKc4HyQoeqmqexFz3eTWATanqMqnqYD7brmqTAxOuE4WoUT9JvA17FjxOBfCOke2TQBq0Y"/>
+<button class="absolute top-3 right-3 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-primary-container shadow-sm">
+<span class="material-symbols-outlined text-lg" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="space-y-1">
+<p class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Home</p>
+<h3 class="font-headline text-lg leading-tight text-on-primary-fixed">Pure Beeswax Paschal Candle</h3>
+<div class="flex justify-between items-baseline pt-1">
+<p class="font-body text-xs text-on-surface-variant">By Abbey Wicks</p>
+<p class="font-headline text-on-surface font-bold text-lg">$34.50</p>
+</div>
+</div>
+</div>
+<!-- Product Item 4 -->
+<div class="group">
+<div class="relative aspect-[4/5] rounded-xl overflow-hidden mb-3 bg-surface-container-low">
+<img alt="product" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="stack of beautifully bound classical theology books with gold embossed titles on leather spines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1xr314MHVBTnMWmBpWC64ysMPwafZSDUax2j7TtK6cQ5kaMFG_o5kIfc40EuOFbLYG-5aobNOzZlZNxIVFrtDY38xfIdpBTk0ikFenCWe85bOR1jw3ZgekJ44cFmF9m4NrJK0eYuNXMienE82ULQ675Wc1twLGP5tMGDWjbWTbtAM6D8yzHS72kJgdzgzdo0YnIrjkfYr-Zf9au-5ftWuecBf5N4ZX9Ijx1DFxgFzMfpm4G9iVoZvW7NjJKIDsSJwwi55O-8Qdjk"/>
+<button class="absolute top-3 right-3 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-primary-container shadow-sm">
+<span class="material-symbols-outlined text-lg" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="space-y-1">
+<p class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Books</p>
+<h3 class="font-headline text-lg leading-tight text-on-primary-fixed">Introduction to Devout Life</h3>
+<div class="flex justify-between items-baseline pt-1">
+<p class="font-body text-xs text-on-surface-variant">By Heritage Press</p>
+<p class="font-headline text-on-surface font-bold text-lg">$22.00</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Seller Banner (Asymmetric Layout) -->
+<section class="mt-12 bg-primary-container rounded-3xl p-6 relative overflow-hidden text-on-primary">
+<div class="relative z-10">
+<p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-2 font-bold">Featured Artisan</p>
+<h2 class="font-headline text-2xl mb-4 max-w-[180px]">Sacred Heart Ironworks</h2>
+<button class="bg-gradient-to-r from-secondary to-secondary-fixed-dim text-on-secondary px-6 py-2 rounded-full font-label text-xs font-bold uppercase tracking-widest">Shop Collection</button>
+</div>
+<div class="absolute right-[-20px] top-0 bottom-0 w-1/2 overflow-hidden rounded-l-3xl">
+<img alt="artisan" class="w-full h-full object-cover opacity-60" data-alt="blacksmith forging metal in a dark workshop with glowing orange sparks and heavy shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgJqTTbfpNQQcw_HGIibkofLfNApzaj8Ol-MTCE0419Rzyx0EVaAL82gEt9XPgKsoDQoPjn-n_wWH-jajNS4sb8nIDTjEUCfL3kO4eLW89XO6WkpXtEMOfHvi87hb8kYYTDuNH4k3p0ml5T4187B_F8XISXmINjfyKICFzasY7mF6HTSLYxFi_ydtUyddGmoGs7SiepDbKJzYeHQNJKTOCa_XYMYnwfjln7W899ymDzGbSaWdUPSo15u2TayV2x8-dupjytIg4YTQ"/>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-2 pb-6 bg-stone-50 dark:bg-[#061b3c] rounded-t-3xl border-t border-[#061b3c]/5 dark:border-stone-50/5 shadow-[0_-4px_40px_rgba(6,27,60,0.06)]">
+<button class="flex flex-col items-center justify-center text-[#755b00] dark:text-[#BE9B32] bg-stone-200/50 dark:bg-stone-50/10 rounded-full px-4 py-1 transition-all scale-110 duration-300 ease-out">
+<span class="material-symbols-outlined" data-icon="shopping_bag" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<span class="font-sans text-[10px] uppercase tracking-widest mt-0.5">Shop</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#061b3c]/50 dark:text-stone-50/50 hover:text-[#755b00] dark:hover:text-[#BE9B32] transition-colors">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-sans text-[10px] uppercase tracking-widest mt-0.5">Directory</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#061b3c]/50 dark:text-stone-50/50 hover:text-[#755b00] dark:hover:text-[#BE9B32] transition-colors">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="font-sans text-[10px] uppercase tracking-widest mt-0.5">Events</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#061b3c]/50 dark:text-stone-50/50 hover:text-[#755b00] dark:hover:text-[#BE9B32] transition-colors">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+<span class="font-sans text-[10px] uppercase tracking-widest mt-0.5">Barter</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#061b3c]/50 dark:text-stone-50/50 hover:text-[#755b00] dark:hover:text-[#BE9B32] transition-colors">
+<span class="material-symbols-outlined" data-icon="card_giftcard">card_giftcard</span>
+<span class="font-sans text-[10px] uppercase tracking-widest mt-0.5">Registry</span>
+</button>
+</nav>
+</body></html>

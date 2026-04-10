@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-lowest": "#ffffff",
+            "outline-variant": "#c5c6cf",
+            "surface": "#faf9f5",
+            "on-background": "#1a1c1a",
+            "tertiary-fixed-dim": "#e6c366",
+            "outline": "#75777f",
+            "surface-dim": "#dadad6",
+            "surface-bright": "#faf9f5",
+            "primary-fixed-dim": "#b5c6f0",
+            "tertiary-container": "#c9a84e",
+            "error": "#ba1a1a",
+            "on-tertiary-fixed-variant": "#584400",
+            "inverse-surface": "#2f312e",
+            "surface-container-low": "#f4f4f0",
+            "on-error": "#ffffff",
+            "on-primary": "#ffffff",
+            "surface-tint": "#4d5e83",
+            "surface-container-high": "#e8e8e4",
+            "on-secondary": "#ffffff",
+            "surface-container-highest": "#e2e3df",
+            "inverse-primary": "#b5c6f0",
+            "on-primary-fixed": "#061b3c",
+            "surface-variant": "#e2e3df",
+            "on-tertiary-fixed": "#241a00",
+            "on-surface": "#1a1c1a",
+            "primary-fixed": "#d8e2ff",
+            "on-secondary-container": "#755c00",
+            "on-secondary-fixed": "#241a00",
+            "secondary-fixed": "#ffe08e",
+            "inverse-on-surface": "#f1f1ed",
+            "on-primary-fixed-variant": "#354769",
+            "secondary-container": "#fed667",
+            "error-container": "#ffdad6",
+            "primary-container": "#061b3c",
+            "on-tertiary-container": "#503d00",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#e9c256",
+            "tertiary": "#755b00",
+            "secondary": "#755b00",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#44474e",
+            "on-primary-container": "#7284aa",
+            "tertiary-fixed": "#ffdf90",
+            "primary": "#000000",
+            "surface-container": "#eeeeea",
+            "on-secondary-fixed-variant": "#584400",
+            "background": "#faf9f5"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline": ["Noto Serif"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#faf9f5]/85 backdrop-blur-xl border-b border-[#061b3c]/10">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-screen-xl mx-auto">
+<button class="text-[#061b3c] hover:opacity-80 transition-opacity active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-serif text-xl font-bold tracking-tighter text-[#061b3c]">The Sacred Editorial</h1>
+<button class="text-[#061b3c] hover:opacity-80 transition-opacity active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<main class="pt-20 pb-32 px-4 max-w-md mx-auto">
+<!-- Editorial Header Section -->
+<section class="mb-8">
+<h2 class="font-headline italic tracking-tight text-3xl text-on-primary-fixed mb-2">Heritage Directory</h2>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">Curating the finest Catholic-owned establishments across the country.</p>
+</section>
+<!-- Search Section -->
+<section class="mb-6">
+<div class="relative flex items-center">
+<div class="absolute left-4 text-outline pointer-events-none">
+<span class="material-symbols-outlined text-xl" data-icon="magnifying_glass">magnification_large</span>
+</div>
+<input class="w-full h-14 pl-12 pr-4 bg-surface-container-highest border-none rounded-full text-on-surface placeholder-on-surface-variant/60 focus:ring-2 focus:ring-secondary/20 transition-shadow font-body text-sm" placeholder="Search businesses, services..." type="text"/>
+</div>
+</section>
+<!-- Category Chips -->
+<section class="mb-8 -mx-4">
+<div class="flex overflow-x-auto px-4 gap-3 scrollbar-hide">
+<button class="flex-none px-6 py-2 bg-secondary rounded-full text-on-secondary font-label uppercase tracking-widest text-[10px] font-semibold shadow-sm">All</button>
+<button class="flex-none px-6 py-2 bg-surface-container-low border border-outline-variant/10 rounded-full text-on-surface-variant font-label uppercase tracking-widest text-[10px] hover:bg-surface-container-high transition-colors">Home Services</button>
+<button class="flex-none px-6 py-2 bg-surface-container-low border border-outline-variant/10 rounded-full text-on-surface-variant font-label uppercase tracking-widest text-[10px] hover:bg-surface-container-high transition-colors">Food &amp; Beverage</button>
+<button class="flex-none px-6 py-2 bg-surface-container-low border border-outline-variant/10 rounded-full text-on-surface-variant font-label uppercase tracking-widest text-[10px] hover:bg-surface-container-high transition-colors">Education</button>
+<button class="flex-none px-6 py-2 bg-surface-container-low border border-outline-variant/10 rounded-full text-on-surface-variant font-label uppercase tracking-widest text-[10px] hover:bg-surface-container-high transition-colors">Artisan Goods</button>
+</div>
+</section>
+<!-- Business Directory List -->
+<div class="space-y-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group hover:bg-surface-container-low transition-colors duration-300">
+<div class="relative h-48 w-full">
+<img class="w-full h-full object-cover" data-alt="modern rustic plumbing workshop with specialized tools on wooden workbench and soft sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhiWfdS1VJWMbbzA3M2pkHlKMoKnuQ105XlT_xtLzNakSP9Nu1y-C8lIHyiuGCSB19efl1rFyAMARmGoCMmeAu1B3h5IBdYke-m9kBvCa6rKH7YKWMoRcHcrzYAA9-ZBIcCuMhDjqUjKv9MbVMuSfVO7PlUdNfzTExJzgmD2Rg6zjGVXyZPvDRDhQ2GrUY6OXpy6ffCG2Th-IEyxyWwjOW7bZvIo5ftSyGo6gnSdQLH1DvqrzpPUdIIfXqMsJTKXT4Umqc9O4JCcA"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-primary-container/90 backdrop-blur-md text-white px-3 py-1 rounded-full font-label uppercase tracking-widest text-[10px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+              Verified
+            </span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<div>
+<span class="font-label uppercase tracking-widest text-[10px] text-secondary font-bold">Home Services</span>
+<h3 class="font-headline text-xl text-on-primary-fixed mt-1">Steve's Plumbing</h3>
+</div>
+<button class="text-secondary active:translate-x-1 transition-transform">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<p class="font-body text-sm text-on-surface-variant mb-4 leading-relaxed line-clamp-2">Master craftsmanship in residential and commercial plumbing, serving the community with integrity for over 20 years.</p>
+<div class="flex items-center text-on-surface-variant gap-2 text-xs font-medium">
+<span class="material-symbols-outlined text-base" data-icon="location_on">location_on</span>
+<span>Charleston, SC</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group hover:bg-surface-container-low transition-colors duration-300">
+<div class="relative h-48 w-full">
+<img class="w-full h-full object-cover" data-alt="artisanal sourdough loaves cooling on a cooling rack in a warm bakery with golden flour dusting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmJgdkDPWJ7rThAtrFD3Ba_2pnEFGnADspdc7TKwnbKihOzWEDeOuBuHXhutT8xpCued5d96liUH7dh3kwiexT-zAvtV8RkKp98Fwqv__A8Wscxnu7BeuUOwWch9vg0byvNFC_tDOmuQhFvQLSR4hELLX1HKxxqCWKG3HWuEt-PTKnUzs6fe6IypBFvUaZGYheiOYJykbeKooLRexNZa8nJsRemvUcp7CB7hY89PVdnPKOr4EaWGbb326E3maJyDqZ9-KKm0ztHnA"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary text-on-secondary px-3 py-1 rounded-full font-label uppercase tracking-widest text-[10px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="grade" style="font-variation-settings: 'FILL' 1;">grade</span>
+              Featured
+            </span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<div>
+<span class="font-label uppercase tracking-widest text-[10px] text-secondary font-bold">Food &amp; Beverage</span>
+<h3 class="font-headline text-xl text-on-primary-fixed mt-1">Golden Crust Bakery</h3>
+</div>
+<button class="text-secondary active:translate-x-1 transition-transform">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<p class="font-body text-sm text-on-surface-variant mb-4 leading-relaxed line-clamp-2">Traditional European sourdoughs and pastries baked fresh daily using local, stone-ground grains.</p>
+<div class="flex items-center text-on-surface-variant gap-2 text-xs font-medium">
+<span class="material-symbols-outlined text-base" data-icon="location_on">location_on</span>
+<span>St. Louis, MO</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group hover:bg-surface-container-low transition-colors duration-300">
+<div class="relative h-48 w-full">
+<img class="w-full h-full object-cover" data-alt="high-end woodworking studio with natural wood slabs and hand chisels in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiG_ARoAbE4BXWCYAEJxrQnBXEhpoIQj53CysJhW6qCogIkS67IPj9DULna8L9iPId3czB1j-9cYlzx5d6DglNVGG2BKVN7OCIVqt5n8TIC1PSAjRBGKDY90fSuKlT5h8PKpJ4KLnLo7Ee4niYNzXBUwSBX7MFDUdlMRA6XuFNWjt1ZiPC331yUdMmxDdvFcX8F2yrHoRxORzWSH66iTFk9mONcpNcepc7SWmbiLPJA5NY7t871gyu3XBdD_GgH-BPA7jzJiMWlfI"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<div>
+<span class="font-label uppercase tracking-widest text-[10px] text-secondary font-bold">Artisan Goods</span>
+<h3 class="font-headline text-xl text-on-primary-fixed mt-1">Vellum Woodworking</h3>
+</div>
+<button class="text-secondary active:translate-x-1 transition-transform">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<p class="font-body text-sm text-on-surface-variant mb-4 leading-relaxed line-clamp-2">Bespoke sacred furniture and liturgical arts crafted from sustainable walnut and white oak.</p>
+<div class="flex items-center text-on-surface-variant gap-2 text-xs font-medium">
+<span class="material-symbols-outlined text-base" data-icon="location_on">location_on</span>
+<span>Grand Rapids, MI</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-4 pb-safe bg-[#faf9f5] border-t border-[#061b3c]/5 shadow-[0_-4px_20px_rgba(0,0,0,0.04)] z-50">
+<a class="flex flex-col items-center justify-center text-[#061b3c]/40 hover:text-[#755b00]" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-sans text-[10px] font-medium uppercase tracking-widest">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#755b00] relative after:content-[''] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-[#755b00] after:rounded-full translate-y-[-2px] transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="menu_book">menu_book</span>
+<span class="font-sans text-[10px] font-medium uppercase tracking-widest">Directory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#061b3c]/40 hover:text-[#755b00]" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="calendar_month">calendar_month</span>
+<span class="font-sans text-[10px] font-medium uppercase tracking-widest">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#061b3c]/40 hover:text-[#755b00]" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="handshake">handshake</span>
+<span class="font-sans text-[10px] font-medium uppercase tracking-widest">Barter</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#061b3c]/40 hover:text-[#755b00]" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="app_registration">app_registration</span>
+<span class="font-sans text-[10px] font-medium uppercase tracking-widest">Registry</span>
+</a>
+</nav>
+</body></html>

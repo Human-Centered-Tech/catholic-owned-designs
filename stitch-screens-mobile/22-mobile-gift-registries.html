@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#ebe8e3",
+                      "secondary-container": "#ffdc7e",
+                      "tertiary-fixed-dim": "#e4c368",
+                      "on-error": "#ffffff",
+                      "secondary": "#745b04",
+                      "inverse-surface": "#31302d",
+                      "surface-container-highest": "#e5e2dd",
+                      "on-surface": "#1c1c19",
+                      "on-tertiary-container": "#4f3d00",
+                      "on-tertiary-fixed-variant": "#584400",
+                      "primary-container": "#1b2a4a",
+                      "error": "#ba1a1a",
+                      "secondary-fixed": "#ffe08d",
+                      "on-surface-variant": "#45464e",
+                      "surface-bright": "#fcf9f4",
+                      "primary": "#041534",
+                      "error-container": "#ffdad6",
+                      "tertiary": "#745b04",
+                      "tertiary-fixed": "#ffe08d",
+                      "surface-tint": "#4f5e81",
+                      "surface-variant": "#e5e2dd",
+                      "on-error-container": "#93000a",
+                      "surface-dim": "#dcdad5",
+                      "outline-variant": "#c5c6cf",
+                      "on-primary-fixed-variant": "#384668",
+                      "on-primary-container": "#8392b7",
+                      "on-tertiary": "#ffffff",
+                      "primary-fixed-dim": "#b7c6ee",
+                      "surface": "#fcf9f4",
+                      "outline": "#75777f",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed-dim": "#e4c368",
+                      "primary-fixed": "#d9e2ff",
+                      "background": "#fcf9f4",
+                      "inverse-on-surface": "#f3f0eb",
+                      "on-secondary-fixed": "#241a00",
+                      "on-secondary-container": "#78600a",
+                      "tertiary-container": "#c7a850",
+                      "on-primary-fixed": "#0a1a3a",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed": "#241a00",
+                      "inverse-primary": "#b7c6ee",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed-variant": "#584400",
+                      "on-background": "#1c1c19",
+                      "surface-container-low": "#f6f3ee",
+                      "surface-container": "#f0ede9"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Noto Serif"],
+                      "body": ["Manrope"],
+                      "label": ["Manrope"]
+              }
+            },
+          }
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Noto Serif', serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#FCF9F4] dark:bg-[#041534] shadow-[0_1px_0_0_rgba(4,21,52,0.05)] flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[#041534] dark:text-[#FCF9F4] hover:opacity-80 transition-opacity active:scale-95 duration-150 cursor-pointer">menu</span>
+</div>
+<h1 class="font-['Noto_Serif'] text-xl font-semibold text-[#041534] dark:text-[#FCF9F4]">Gift Registries</h1>
+<div class="w-6"></div> <!-- Spacer for centering -->
+</header>
+<main class="pt-20 px-6 max-w-md mx-auto">
+<!-- Hero/Search & CTA -->
+<section class="mb-10">
+<div class="relative mb-6">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded-xl py-4 pl-12 pr-4 focus:ring-2 focus:ring-tertiary-container text-body outline-none placeholder-on-surface-variant/60" placeholder="Find a registry by name or email" type="text"/>
+</div>
+<button class="w-full bg-tertiary-container text-on-tertiary-container font-semibold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-tertiary-container/10 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<span>Create a Registry</span>
+</button>
+</section>
+<!-- Tabs -->
+<nav class="flex gap-4 overflow-x-auto pb-4 mb-8 no-scrollbar scroll-smooth">
+<button class="px-5 py-2 rounded-full bg-primary text-on-primary whitespace-nowrap text-sm font-medium">All</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant whitespace-nowrap text-sm font-medium hover:bg-surface-container-high transition-colors">Wedding</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant whitespace-nowrap text-sm font-medium hover:bg-surface-container-high transition-colors">Baptism</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant whitespace-nowrap text-sm font-medium hover:bg-surface-container-high transition-colors">Confirmation</button>
+</nav>
+<!-- Featured Section (Asymmetric Editorial Style) -->
+<section class="mb-12">
+<p class="text-[10px] tracking-[0.2em] font-bold text-on-surface-variant uppercase mb-4">Featured Celebration</p>
+<div class="relative group">
+<div class="aspect-[4/5] w-full rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Close-up of elegant wedding rings on a velvet cushion inside a sunlit stone cathedral with soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5sY3Tzmpl_Bapp6BzQoPcLCgy-CceHyGj2FeJQyXzAh4H4x-2mFogVZfsiNKHDr_s9Qgqp-ZEw5vL2jf4oc42JyEIKqM8MAo7GMfYgGVC21M2vEIlxt1TVh-7IVUltj_gNbvU32dta0XIyRzEPxJ3OVsN2XCJ3SQqt2GXI8IFyxNOtmlauMiYbBDhGHItI8r1wtRWGb3LKgwA2kTrp86CT62HcyEm9bK-Ae8uerGfjaGYxV1IK2CqAax7IZnURUUoMJQ4Q0FbRmM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h2 class="text-on-primary text-3xl font-bold mb-2">Michael &amp; Anna</h2>
+<p class="text-on-primary-container text-sm font-medium mb-4 italic">The Sacrament of Holy Matrimony</p>
+<div class="flex items-center gap-2">
+<span class="text-on-primary-container text-[12px] font-bold uppercase tracking-wider">June 14, 2024</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Registry List (Tonal Layering Cards) -->
+<section class="space-y-6 mb-12">
+<h3 class="text-2xl font-bold mb-6">Active Registries</h3>
+<!-- Card 1 -->
+<div class="bg-surface-container-low p-6 rounded-xl space-y-4 hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-[10px] tracking-widest font-bold text-tertiary uppercase">Wedding Registry</span>
+<h4 class="text-xl font-bold mt-1">Michael &amp; Anna</h4>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</div>
+<p class="text-sm text-on-surface-variant font-medium">October 12, 2024</p>
+<div class="space-y-2">
+<div class="flex justify-between text-[11px] font-bold text-on-surface-variant uppercase tracking-tight">
+<span>72% Fulfilled</span>
+<span>42 items listed</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 72%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low p-6 rounded-xl space-y-4 hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-[10px] tracking-widest font-bold text-tertiary uppercase">Baptism</span>
+<h4 class="text-xl font-bold mt-1">Baby Jude Ignatius</h4>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</div>
+<p class="text-sm text-on-surface-variant font-medium">May 19, 2024</p>
+<div class="space-y-2">
+<div class="flex justify-between text-[11px] font-bold text-on-surface-variant uppercase tracking-tight">
+<span>34% Fulfilled</span>
+<span>15 items listed</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 34%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low p-6 rounded-xl space-y-4 hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-[10px] tracking-widest font-bold text-tertiary uppercase">First Communion</span>
+<h4 class="text-xl font-bold mt-1">Gianna Marie</h4>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</div>
+<p class="text-sm text-on-surface-variant font-medium">June 02, 2024</p>
+<div class="space-y-2">
+<div class="flex justify-between text-[11px] font-bold text-on-surface-variant uppercase tracking-tight">
+<span>88% Fulfilled</span>
+<span>24 items listed</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-safe h-20 bg-[#FCF9F4]/90 dark:bg-[#041534]/90 backdrop-blur-xl z-50 rounded-t-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.04)] border-t border-[#041534]/5 dark:border-[#FCF9F4]/5">
+<a class="flex flex-col items-center justify-center text-[#041534]/60 dark:text-[#FCF9F4]/60 py-2 gap-1 hover:text-[#C7A850] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-['Manrope'] text-[10px] font-medium tracking-wide uppercase">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#041534]/60 dark:text-[#FCF9F4]/60 py-2 gap-1 hover:text-[#C7A850] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">import_contacts</span>
+<span class="font-['Manrope'] text-[10px] font-medium tracking-wide uppercase">Directory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#041534]/60 dark:text-[#FCF9F4]/60 py-2 gap-1 hover:text-[#C7A850] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-['Manrope'] text-[10px] font-medium tracking-wide uppercase">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#041534]/60 dark:text-[#FCF9F4]/60 py-2 gap-1 hover:text-[#C7A850] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">swap_horiz</span>
+<span class="font-['Manrope'] text-[10px] font-medium tracking-wide uppercase">Barter</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#C7A850] font-bold py-2 gap-1 hover:text-[#C7A850] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">card_giftcard</span>
+<span class="font-['Manrope'] text-[10px] font-medium tracking-wide uppercase">Registry</span>
+</a>
+</nav>
+</body></html>

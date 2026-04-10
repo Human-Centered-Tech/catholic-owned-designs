@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#e4c368",
+                    "tertiary-container": "#bfa96d",
+                    "surface-tint": "#4f5e81",
+                    "surface-container-low": "#f6f3ee",
+                    "surface-variant": "#e5e2dd",
+                    "surface-container": "#f0ede9",
+                    "inverse-primary": "#b7c6ee",
+                    "surface": "#fcf9f4",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#ffdc7e",
+                    "on-primary-fixed": "#0a1a3a",
+                    "surface-bright": "#fcf9f4",
+                    "secondary": "#745b04",
+                    "surface-container-highest": "#e5e2dd",
+                    "secondary-fixed": "#ffe08d",
+                    "tertiary": "#6e5d28",
+                    "surface-dim": "#dcdad5",
+                    "on-surface": "#1c1c19",
+                    "on-tertiary-fixed-variant": "#554513",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#384668",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1c1c19",
+                    "on-tertiary-container": "#4d3e0b",
+                    "tertiary-fixed-dim": "#dcc586",
+                    "on-tertiary-fixed": "#231a00",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f3f0eb",
+                    "outline": "#75777f",
+                    "tertiary-fixed": "#f9e19f",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#45464e",
+                    "primary": "#041534",
+                    "on-secondary": "#ffffff",
+                    "background": "#fcf9f4",
+                    "primary-container": "#1b2a4a",
+                    "surface-container-high": "#ebe8e3",
+                    "outline-variant": "#c5c6cf",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#31302d",
+                    "on-secondary-fixed": "#241a00",
+                    "on-primary-container": "#8392b7",
+                    "primary-fixed-dim": "#b7c6ee",
+                    "on-secondary-fixed-variant": "#584400",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#78600a",
+                    "primary-fixed": "#d9e2ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { background: rgba(252, 249, 244, 0.8); backdrop-filter: blur(20px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 dark:bg-slate-950/80 backdrop-blur-md shadow-[0_30px_60px_-15px_rgba(4,21,52,0.05)]">
+<div class="flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#041534] dark:text-slate-100 cursor-pointer active:scale-95 duration-200">menu</span>
+<h1 class="font-['Noto_Serif'] text-2xl tracking-tight font-bold text-[#041534] dark:text-white">The Marketplace</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#041534] dark:text-slate-100 cursor-pointer active:scale-95 duration-200">search</span>
+</div>
+</div>
+</header>
+<main class="pt-20 px-6 space-y-8">
+<!-- Hero Search Section -->
+<section class="space-y-4">
+<div class="space-y-1">
+<h2 class="font-headline text-3xl font-bold tracking-tight text-primary">Barter &amp; Trade</h2>
+<p class="font-body text-on-surface-variant text-sm">Exchange your talents and treasures within the community.</p>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant">search</span>
+<input class="w-full bg-surface-container-low border-b-2 border-outline-variant/30 focus:border-secondary transition-colors pl-12 pr-4 py-4 rounded-t-xl outline-none font-body text-primary placeholder:text-outline-variant/60" placeholder="Search for trade opportunities..." type="text"/>
+</div>
+</section>
+<!-- Filter Tabs -->
+<nav class="flex gap-4 overflow-x-auto no-scrollbar pb-2">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label text-xs font-bold tracking-widest uppercase transition-all shadow-lg shadow-primary/10">All</button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-2 rounded-full font-label text-xs font-bold tracking-widest uppercase hover:bg-surface-variant transition-all">Goods</button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-2 rounded-full font-label text-xs font-bold tracking-widest uppercase hover:bg-surface-variant transition-all">Services</button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-2 rounded-full font-label text-xs font-bold tracking-widest uppercase hover:bg-surface-variant transition-all">Skills</button>
+</nav>
+<!-- Active Trades Horizontal Bento -->
+<section class="space-y-4">
+<div class="flex justify-between items-end">
+<h3 class="font-headline text-xl text-primary font-bold">My Active Trades</h3>
+<span class="font-label text-xs text-secondary font-bold tracking-widest uppercase cursor-pointer">View All</span>
+</div>
+<div class="flex gap-4 overflow-x-auto no-scrollbar">
+<div class="min-w-[280px] bg-surface-container-lowest p-5 rounded-xl shadow-[0_10px_30px_rgba(4,21,52,0.03)] border-b-4 border-secondary/20">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-secondary-container/30 px-3 py-1 rounded-full">
+<span class="font-label text-[10px] font-bold text-secondary uppercase tracking-tighter">In Discussion</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-sm">more_horiz</span>
+</div>
+<p class="font-headline text-lg text-primary leading-snug mb-2 italic">Web Maintenance for Legal Consultation</p>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a professional man in a clean white studio setting with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5nkmhxL0HHM856pY1MpzpHTNz_NiUIM2L2PG-lKQKre3nlo0zcYVUJGlTOHOO_78kPmrGTy5uAmKagJtXJ6uM9A8pyV-BmvVaPioy6W1qBC1oD4OADX3lt_iHgCuetVWxVH1fcn9YWIQvVkobH452OnDP4OvW4pc-S-oGvjGoDK5CeASipPlFpKKKRdm7EF4bsdBGMp31Z28eB4vSS7kEdYKtzKpcaBfrmYC3vf0D_dpzHDcxJyfkM8Vd68ELQI-RC4RY27tNRO8"/>
+</div>
+<span class="font-body text-xs text-on-surface-variant">with St. Jude Legal</span>
+</div>
+</div>
+<div class="min-w-[280px] bg-surface-container-lowest p-5 rounded-xl shadow-[0_10px_30px_rgba(4,21,52,0.03)] border-b-4 border-tertiary-container/20">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-surface-container-high px-3 py-1 rounded-full">
+<span class="font-label text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Pending</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-sm">more_horiz</span>
+</div>
+<p class="font-headline text-lg text-primary leading-snug mb-2 italic">Handmade Rosaries for Altar Linens</p>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a craftswoman in her studio with natural soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiyAv8p_5xzoHPksg4J8dYC82BtLIcieZh9G3Wm0xdH69acfQyHmg0do6NDugVAyeVvlTRCI3mBxU21iQgFOBrf_udesEuQ98h4y9bEv7qv1k1d49mTZI2sCgImQo_WvCTjvresZQTYNWhYXN5sDTAN0MbymZM6KEc-c4i1i9Fk1Ac81mdGWbzj8vgwRndLjDMlZaZQsts4j6si280zHNLqTc5lcuu5w-a17NLqQIZm8c90yBq68HxYMHiRMkXbq3U5uXMfcrsfYs"/>
+</div>
+<span class="font-body text-xs text-on-surface-variant">with Regina Arts</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Listings -->
+<section class="space-y-6">
+<h3 class="font-headline text-2xl text-primary font-bold">Community Listings</h3>
+<div class="space-y-8">
+<!-- Listing Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(4,21,52,0.04)]">
+<div class="aspect-[16/9] w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="aesthetic workspace with a laptop, graphic tablet, and blueprints under elegant soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDzD8g4WOM9PSwrwqhZ7KUu9M-1v84Rgq5Ge7ZoE8JrjA65BS1yhKZqM9nrcfxzGvNYIcTN93gBko8H8BLlxnk8sLjMLx8GT3Epg6fOpUwPT0fe-AS1ipcnAXSyjozxoIrqjqCbkVXw4N-PvyctohIUN0Q5mQ-k4iS5NcU3QkkuXopQmtzK-CLHzmW5dzlOgf2KOZSEWbGdw9X16ZIBvrPOjqk0UaLqz_2wNwC4-L_nC_OatZ9sRxwkUwhVv0PuHykbyd_2u84Tkc"/>
+</div>
+<div class="p-6 space-y-4">
+<div class="space-y-1">
+<div class="flex justify-between items-start">
+<h4 class="font-headline text-xl text-primary leading-tight">Graphic Design for Legal Services</h4>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">swap_horiz</span>
+</div>
+<p class="font-body text-xs text-on-surface-variant uppercase tracking-wider font-semibold">Veritas Creative • Denver, CO</p>
+</div>
+<div class="grid grid-cols-2 gap-4 py-4 border-y border-outline-variant/10">
+<div class="space-y-1">
+<p class="font-label text-[10px] text-secondary font-bold uppercase tracking-widest">Offered</p>
+<p class="font-body text-sm text-primary font-medium">Full Brand Identity Design Package</p>
+</div>
+<div class="space-y-1">
+<p class="font-label text-[10px] text-secondary font-bold uppercase tracking-widest">Wanted</p>
+<p class="font-body text-sm text-primary font-medium">Estate Planning or IP Legal Council</p>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-label text-sm font-bold tracking-widest uppercase shadow-xl shadow-primary/20 active:scale-95 transition-all">
+                            Propose Trade
+                        </button>
+</div>
+</div>
+<!-- Listing Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(4,21,52,0.04)]">
+<div class="aspect-[16/9] w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="close-up of piano keys with elegant afternoon sunlight streaming through a window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeQ15Vqulf5Ov8BNOUvm2QedtqoeHH-akQv876f5JDdqrzOqqQyNfQkZ6BM0uaaekfbX2QaUuwvupL8tgms0KlxTYQF1Caxk6lGV9-f4M6LRPFeG2KZ6aQJf0ZQrsk4vJWYaSz0RXswFdDyXVU8qX90lDkoj1Oc0AOXUItb5pfEkCgWTDW5IzDv4qGMdhErG_gVqTreBstBphQUk2is7pQBzngZJKoBhFp_HHiKlbygFPVG4HVwkRi6VM1X4dLikfDvkq-7hGKT_E"/>
+</div>
+<div class="p-6 space-y-4">
+<div class="space-y-1">
+<div class="flex justify-between items-start">
+<h4 class="font-headline text-xl text-primary leading-tight">Piano Lessons for Marketing</h4>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">swap_horiz</span>
+</div>
+<p class="font-body text-xs text-on-surface-variant uppercase tracking-wider font-semibold">St. Cecilia Academy • Austin, TX</p>
+</div>
+<div class="grid grid-cols-2 gap-4 py-4 border-y border-outline-variant/10">
+<div class="space-y-1">
+<p class="font-label text-[10px] text-secondary font-bold uppercase tracking-widest">Offered</p>
+<p class="font-body text-sm text-primary font-medium">Weekly Advanced Classical Piano</p>
+</div>
+<div class="space-y-1">
+<p class="font-label text-[10px] text-secondary font-bold uppercase tracking-widest">Wanted</p>
+<p class="font-body text-sm text-primary font-medium">Social Media Strategy &amp; SEO</p>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-label text-sm font-bold tracking-widest uppercase shadow-xl shadow-primary/20 active:scale-95 transition-all">
+                            Propose Trade
+                        </button>
+</div>
+</div>
+<!-- Scripture Callout -->
+<div class="p-8 bg-surface-container-low rounded-2xl border-l-4 border-secondary flex flex-col items-center text-center space-y-4">
+<p class="font-headline text-xl italic text-primary">"And all that believed were together, and had all things common."</p>
+<p class="font-label text-[10px] text-secondary font-bold uppercase tracking-[0.2em]">Acts 2:44</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-[#fcf9f4]/90 dark:bg-slate-900/90 backdrop-blur-xl shadow-[0_-10px_40px_rgba(4,21,52,0.03)]">
+<div class="flex justify-around items-center h-20 pb-safe px-4">
+<div class="flex flex-col items-center justify-center text-[#1b2a4a]/50 hover:text-[#041534] transition-all">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Shop</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#1b2a4a]/50 hover:text-[#041534] transition-all">
+<span class="material-symbols-outlined">domain</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Directory</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#1b2a4a]/50 hover:text-[#041534] transition-all">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Events</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#745b04] scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">swap_horiz</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Barter</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#1b2a4a]/50 hover:text-[#041534] transition-all">
+<span class="material-symbols-outlined">featured_seasonal_and_gifts</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Registry</span>
+</div>
+</div>
+</nav>
+</body></html>

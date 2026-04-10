@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Maker &amp; Main Storefront</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#b5c6f0",
+                    "tertiary-container": "#c9a84e",
+                    "tertiary-fixed": "#ffdf90",
+                    "surface-container-highest": "#e2e3df",
+                    "inverse-on-surface": "#f1f1ed",
+                    "inverse-surface": "#2f312e",
+                    "surface-container": "#eeeeea",
+                    "surface-variant": "#e2e3df",
+                    "surface-container-high": "#e8e8e4",
+                    "primary-container": "#061b3c",
+                    "on-tertiary-container": "#503d00",
+                    "on-error": "#ffffff",
+                    "primary": "#000000",
+                    "on-primary-container": "#7284aa",
+                    "on-tertiary-fixed": "#241a00",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary": "#755b00",
+                    "secondary": "#755b00",
+                    "on-surface-variant": "#44474e",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#faf9f5",
+                    "background": "#faf9f5",
+                    "on-tertiary-fixed-variant": "#584400",
+                    "surface-dim": "#dadad6",
+                    "primary-fixed": "#d8e2ff",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#1a1c1a",
+                    "tertiary-fixed-dim": "#e6c366",
+                    "surface-bright": "#faf9f5",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#354769",
+                    "on-secondary-container": "#755c00",
+                    "on-secondary-fixed": "#241a00",
+                    "secondary-fixed": "#ffe08e",
+                    "secondary-fixed-dim": "#e9c256",
+                    "primary-fixed-dim": "#b5c6f0",
+                    "on-primary-fixed": "#061b3c",
+                    "outline-variant": "#c5c6cf",
+                    "surface-tint": "#4d5e83",
+                    "outline": "#75777f",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f4f4f0",
+                    "on-secondary-fixed-variant": "#584400",
+                    "secondary-container": "#fed667",
+                    "on-background": "#1a1c1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            background-color: rgba(250, 247, 242, 0.85);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-surface selection:bg-secondary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-[100] bg-glass border-b border-on-primary-fixed/10 flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-primary-fixed cursor-pointer" data-icon="arrow_back">arrow_back</span>
+</div>
+<h1 class="text-xl font-headline font-bold text-on-primary-fixed tracking-tight">Maker &amp; Main</h1>
+<div class="w-6"></div> <!-- Spacer for symmetry -->
+</header>
+<main class="pt-[64px] pb-24">
+<!-- Hero Shop Banner -->
+<section class="w-full h-48 overflow-hidden relative">
+<img alt="Artisanal workshop" class="w-full h-full object-cover" data-alt="Close-up of a sun-drenched artisan woodshop with sawdust on a heavy oak workbench and traditional carving tools in warm light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASUl3mKLhiX_UyqnQPWygQTnSMGx5TeaqIjRKOqCutDRv_Nz618lCBx2ojGpHZdJppVLfkJ8qDf60rZB08NU7Vl0CSDzy3OO3IZQ7fMo3doJXUcLyz1qv5F84NybqvdETSzH9tv8JQS3nLUAe0jDy2cl_hDJAVB8h7Ffu7fv_CVpno4kabnGY51a5LQQnn-Hl-Ku4cMQwkQb1gq9paWVHD8pFqAb5l0t36pTMAUHRvYLKEbjmFZ8L00nmrKIo6klAKKJGC0gm7AnU"/>
+<div class="absolute inset-0 bg-primary-container/20"></div>
+</section>
+<!-- Shop Profile section -->
+<section class="px-6 -mt-12 relative z-10">
+<div class="bg-surface-container-lowest rounded-lg p-6 shadow-sm flex flex-col items-center">
+<div class="w-24 h-24 rounded-full border-4 border-surface bg-primary-container flex items-center justify-center mb-4 overflow-hidden">
+<div class="text-on-primary font-headline font-bold text-2xl tracking-tighter">M&amp;M</div>
+</div>
+<h2 class="text-2xl font-headline font-bold text-on-primary-fixed">Maker &amp; Main</h2>
+<p class="text-on-surface-variant font-medium mb-2">Charleston, SC</p>
+<div class="flex items-center gap-1 mb-6">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-headline font-bold text-on-primary-fixed">4.9</span>
+<span class="text-on-surface-variant text-sm ml-1">(128 reviews)</span>
+</div>
+<div class="flex w-full gap-3">
+<button class="flex-1 py-3 rounded-full border border-on-primary-fixed text-on-primary-fixed font-semibold text-sm hover:bg-on-primary-fixed/5 transition-colors">
+                        Follow
+                    </button>
+<button class="flex-1 py-3 rounded-full bg-primary-container text-on-primary font-semibold text-sm shadow-sm hover:opacity-90 transition-opacity">
+                        Message
+                    </button>
+</div>
+</div>
+</section>
+<!-- Tab Bar -->
+<nav class="mt-8 px-6 border-b border-outline-variant/30 flex justify-around">
+<button class="pb-3 px-2 border-b-2 border-secondary text-secondary font-bold text-sm tracking-wide">Products</button>
+<button class="pb-3 px-2 text-on-surface-variant font-medium text-sm hover:text-on-primary-fixed transition-colors">About</button>
+<button class="pb-3 px-2 text-on-surface-variant font-medium text-sm hover:text-on-primary-fixed transition-colors">Reviews</button>
+</nav>
+<!-- Content: 2-column Product Grid -->
+<section class="px-6 py-8">
+<div class="grid grid-cols-2 gap-x-4 gap-y-8">
+<!-- Product 1 -->
+<div class="flex flex-col">
+<div class="aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden mb-3">
+<img alt="Heritage Gilded Bible" class="w-full h-full object-cover" data-alt="Exquisite leather-bound bible with intricate gold leaf gilding on the cover and edges resting on a dark velvet cloth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9WuTXq83N2V9_EE0M95Ylf4Z5S6UBod3m0CFN3JM-YjPo8FqCbr22hsSHbH4iEmB3OLkLObBSTKDYWuyY6RXq42Z8iu8mHA1y-PTSdNem6WYhdxoNLcly38_UoDZ3ETe39FtBsXmsDi9VgXUTEnzbTav27XFks-umXURW4_YXog6Wlgm9PqQ6gZCGddJvvtYqeZ_gwhaIjWFFyeREo8GjQiis8fk0mDqILuns6Rr36DtM2FNXuEduGc8z3g9SozOE9EJHCVm9PBA"/>
+</div>
+<h3 class="text-sm font-semibold text-on-primary-fixed leading-tight mb-1">Heritage Gilded Bible</h3>
+<p class="font-headline font-bold text-on-primary-fixed">$85.00</p>
+</div>
+<!-- Product 2 -->
+<div class="flex flex-col">
+<div class="aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden mb-3">
+<img alt="Olive Wood Rosary" class="w-full h-full object-cover" data-alt="Handcrafted rosary beads made from textured olive wood with a heavy bronze crucifix lying on a rustic linen background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJf0OPyKfZ0EQEkz6Y7QiC4_zpmzKdwdrBY_dYrlEEwfv_UrFwZbyVJMJCQWYeB4-LPmk0ectTJTyDRYSRpwSXvkjMrLKCrXbfliz9TBQKNaocTBE59cS99RLe5xBV6DGavpYMOpyzdF0Q0KwV66L4P9XhpMQ3cuKwaxP1GYoLERznEztgUzV6pfMjZwHBvz0mBhwwa2qcze5C0w4_PnhJKePpALPhh4XgSyKg6D7hz92Qep9rUJOv5TPPlBf63S0WMwXgCyF_hH8"/>
+</div>
+<h3 class="text-sm font-semibold text-on-primary-fixed leading-tight mb-1">Olive Wood Rosary</h3>
+<p class="font-headline font-bold text-on-primary-fixed">$45.00</p>
+</div>
+<!-- Product 3 -->
+<div class="flex flex-col">
+<div class="aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden mb-3">
+<img alt="Sanctuary Amber Candle" class="w-full h-full object-cover" data-alt="A minimalist amber glass candle jar with a lit flame emitting soft warm light on a stone windowsill at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD54Ukif2kA0E1jxhWjf3N1tF-p9SJfmZMiVxUhqInnjuau85ysOjX5YmnhvICltt4bRD0e56euuuMzBqhu5CZ-WIerxQdQMFc2ZlyuU-d8Bj1QJczkEj6g-5NI2w5FkSbaRsQJOlp1-WsPj9BPbeaoa4TOhflqYaHE9DGQ-rNnfaEVJdU5MZONDZoJhjKaGxGysnLb6huqBp9Fk_W9Yd2WvY_9XtYchGftI6CEz20ZLwrdWsAixGxM0ZSDYysP53CXGORogEw7Zq0"/>
+</div>
+<h3 class="text-sm font-semibold text-on-primary-fixed leading-tight mb-1">Sanctuary Amber Candle</h3>
+<p class="font-headline font-bold text-on-primary-fixed">$32.00</p>
+</div>
+<!-- Product 4 -->
+<div class="flex flex-col">
+<div class="aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden mb-3">
+<img alt="Hand-Bound Prayer Journal" class="w-full h-full object-cover" data-alt="Beautifully hand-bound journal with a linen cover and thick cream deckle-edge paper lying open with a fountain pen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbF5HlrT3qSvtZFb8t1qxsmC9wKtXgjIpECsiO6YNYGYXXFDZqMyQUsoBMU6w1AplsmkdPjvttWAaL0MJV970XCB-lroABb_wdEyGmPxDseWwI7z9Nwwhu-yXS-OyZOSe-uvQYdZ0XLQgwQ2QFEwMK_70S2q7grq-CtB-sv35Zi7Xwh7kB6zLPs6WuWRtZRDpmjWuF7iiqBnP2HdkPsXrc9mZu5HUAXczDIDSrSBMniVKnNl1eTTyniYd3Pp21UKjGvcmWvK0xF9U"/>
+</div>
+<h3 class="text-sm font-semibold text-on-primary-fixed leading-tight mb-1">Hand-Bound Prayer Journal</h3>
+<p class="font-headline font-bold text-on-primary-fixed">$18.00</p>
+</div>
+<!-- Product 5 -->
+<div class="flex flex-col">
+<div class="aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden mb-3">
+<img alt="Sacred Art Print - Madonna" class="w-full h-full object-cover" data-alt="Traditional sacred art print of the Madonna in rich blues and golds framed in a simple dark wood frame on a plaster wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBddMlGtExyv3OawEeqsRc282GVsNwE4YRKlcOQvCUD2uMdTiUozVAbTswx8YcLKspNhyFf_LOQSXvpzpASrlxfUJCWfNo6ilU88AiZ1qFo1tilU7dgh3VjxJoQiyxmddvz3C8wNidiRdEDNTVTBeSrrKFE74XNsCqEkTXq694M49-instYGzqpTcLZtjzmYzSx8DT-6QxayN9UvMhNtcPzEDO2aRjlni91llPdg50bpRYC4iC6QihoJQwDj-G8xWfvNIE6gAHT5LU"/>
+</div>
+<h3 class="text-sm font-semibold text-on-primary-fixed leading-tight mb-1">Sacred Art Print - Madonna</h3>
+<p class="font-headline font-bold text-on-primary-fixed">$55.00</p>
+</div>
+<!-- Product 6 -->
+<div class="flex flex-col">
+<div class="aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden mb-3">
+<img alt="Bronze Wall Crucifix" class="w-full h-full object-cover" data-alt="Solid heavy bronze wall crucifix with a weathered patina hanging on a dark textured wood paneled wall with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrJCPp36GH4xf-IOqAtw3qzeYB2wI1K98vQvJfYjaylH2w_Cb-ayOOkjYlGPjAjs9KVARq34vEmWsnzSZP7FaF7kvjyD9qhuU7_f1p-1hWOzHMr0-yI6TEK05LpVCnobf2beM3ohtyued6MGX46M45Mv5P0gquBCjnO9xYdMC2oOe96ZVg7LjKqm5kkteXg6hoQ0fpGna5w5NJsjKqxfE6WDDJYDeIATzswztm15Y5oLr45RGvHkP1QIwm3Jlc1TB6_GoO-mT_yw4"/>
+</div>
+<h3 class="text-sm font-semibold text-on-primary-fixed leading-tight mb-1">Bronze Wall Crucifix</h3>
+<p class="font-headline font-bold text-on-primary-fixed">$120.00</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-[#FAF7F2] dark:bg-[#001435] flex justify-around items-center px-4 py-3 pb-safe border-t border-[#001435]/10">
+<!-- Shop (Active) -->
+<div class="flex flex-col items-center justify-center text-[#BE9B32] font-semibold">
+<span class="material-symbols-outlined mb-1" data-icon="shopping_bag" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<span class="text-[10px] uppercase tracking-wider font-label">Shop</span>
+</div>
+<!-- Directory -->
+<div class="flex flex-col items-center justify-center text-[#001435]/60 dark:text-[#FAF7F2]/60 hover:text-[#BE9B32] transition-colors">
+<span class="material-symbols-outlined mb-1" data-icon="store">store</span>
+<span class="text-[10px] uppercase tracking-wider font-label">Directory</span>
+</div>
+<!-- Events -->
+<div class="flex flex-col items-center justify-center text-[#001435]/60 dark:text-[#FAF7F2]/60 hover:text-[#BE9B32] transition-colors">
+<span class="material-symbols-outlined mb-1" data-icon="calendar_today">calendar_today</span>
+<span class="text-[10px] uppercase tracking-wider font-label">Events</span>
+</div>
+<!-- Barter -->
+<div class="flex flex-col items-center justify-center text-[#001435]/60 dark:text-[#FAF7F2]/60 hover:text-[#BE9B32] transition-colors">
+<span class="material-symbols-outlined mb-1" data-icon="swap_horiz">swap_horiz</span>
+<span class="text-[10px] uppercase tracking-wider font-label">Barter</span>
+</div>
+<!-- Registry -->
+<div class="flex flex-col items-center justify-center text-[#001435]/60 dark:text-[#FAF7F2]/60 hover:text-[#BE9B32] transition-colors">
+<span class="material-symbols-outlined mb-1" data-icon="featured_gift_card">card_giftcard</span>
+<span class="text-[10px] uppercase tracking-wider font-label">Registry</span>
+</div>
+</nav>
+</body></html>
