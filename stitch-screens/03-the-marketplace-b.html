@@ -93,30 +93,25 @@
 </head>
 <body class="bg-background text-on-background font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
 <!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 rounded-none bg-stone-50/85 dark:bg-stone-900/85 backdrop-blur-xl border-b border-stone-200/50 dark:border-stone-800/50">
-<div class="flex flex-col w-full max-w-full px-6 py-3">
-<div class="flex items-center justify-between">
-<div class="flex flex-col">
-<a class="font-['Noto_Serif'] text-2xl font-bold text-blue-950 dark:text-white uppercase tracking-widest" href="#">Catholic Owned</a>
-<span class="font-['Noto_Serif'] italic text-sm text-blue-950/70 dark:text-stone-400 tracking-wide">Marketplace</span>
-</div>
-<nav class="hidden md:flex items-center space-x-8">
-<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-yellow-600 dark:text-yellow-500 font-bold border-b-2 border-yellow-600 transition-colors duration-300" href="#">SHOP</a>
-<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">DIRECTORY</a>
-<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">EVENTS</a>
-<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">BARTER</a>
-<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 dark:text-stone-300 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors duration-300" href="#">REGISTRY</a>
-</nav>
-<div class="flex items-center gap-4 flex-1 ml-6">
+<header class="fixed top-0 w-full z-50 bg-stone-50/95 backdrop-blur-xl border-b border-stone-200/50">
+<div class="max-w-screen-2xl mx-auto px-6 py-3 flex items-center gap-6">
+<a class="font-['Noto_Serif'] text-xl font-bold text-blue-950 uppercase tracking-widest whitespace-nowrap shrink-0" href="#">Catholic Owned</a>
 <div class="relative flex-1 max-w-2xl">
 <span class="absolute inset-y-0 left-4 flex items-center text-stone-400">
 <span class="material-symbols-outlined text-xl">search</span>
 </span>
-<input class="w-full bg-stone-100 border border-stone-200/50 rounded-full py-3 pl-12 pr-6 text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary focus:outline-none font-body" placeholder="Search products, businesses, and more..." type="text"/>
+<input class="w-full bg-stone-100 border border-stone-200/50 rounded-full py-2.5 pl-12 pr-6 text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary focus:outline-none font-body" placeholder="Search products, businesses, and more..." type="text"/>
 </div>
-<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform text-blue-950 text-[26px]">shopping_cart</span>
-<span class="material-symbols-outlined cursor-pointer scale-95 active:opacity-80 transition-transform text-blue-950 text-[26px]">person</span>
-</div>
+<nav class="hidden lg:flex items-center gap-6 shrink-0">
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-yellow-600 font-bold border-b-2 border-yellow-600 transition-colors duration-300" href="#">SHOP</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 hover:text-yellow-700 transition-colors duration-300" href="#">DIRECTORY</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 hover:text-yellow-700 transition-colors duration-300" href="#">EVENTS</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 hover:text-yellow-700 transition-colors duration-300" href="#">BARTER</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight uppercase text-xs text-blue-950 hover:text-yellow-700 transition-colors duration-300" href="#">REGISTRY</a>
+</nav>
+<div class="flex items-center gap-4 shrink-0">
+<span class="material-symbols-outlined cursor-pointer text-blue-950 hover:text-secondary transition-colors">shopping_cart</span>
+<span class="material-symbols-outlined cursor-pointer text-blue-950 hover:text-secondary transition-colors">person</span>
 </div>
 </div>
 </header>
