@@ -118,11 +118,9 @@ JOIN THE ECONOMY
 </div>
 </div>
 </div>
-</header><header class="cross-pattern pt-24 pb-32 px-6 overflow-hidden">
+</header><header class="cross-pattern pt-24 pb-8 px-6 overflow-hidden">
 <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
-<span class="font-label uppercase tracking-[0.4em] text-xs text-secondary mb-6 block font-bold">ESTABLISHED IN FAITH</span>
-<h1 class="font-headline italic text-7xl md:text-8xl tracking-tighter text-on-primary-fixed hero-title-shadow leading-none">THE MARKETPLACE</h1>
-<div class="mt-12 w-full max-w-2xl relative group">
+<div class="mt-4 w-full max-w-2xl relative group">
 <div class="absolute inset-0 bg-secondary/5 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 <div class="relative bg-surface-container-lowest border border-outline-variant/20 rounded-full flex items-center p-2 shadow-sm transition-all focus-within:ring-2 focus-within:ring-secondary/20">
 <span class="material-symbols-outlined ml-4 text-outline" data-icon="search">search</span>
@@ -146,7 +144,7 @@ JOIN THE ECONOMY
 </li>
 <li class="group">
 <a class="flex items-center justify-between text-on-surface/70 font-body group-hover:text-secondary group-hover:translate-x-1 transition-transform" href="#">
-<span>Sacred Texts</span>
+<span>Books</span>
 <span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100" data-icon="arrow_forward_ios">arrow_forward_ios</span>
 </a>
 </li>
@@ -173,10 +171,15 @@ JOIN THE ECONOMY
 <section>
 <h3 class="font-headline text-xl text-on-primary-fixed mb-6 border-b border-outline-variant/10 pb-2">Price Range</h3>
 <div class="px-2">
-<input class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-secondary" max="200" min="0" type="range" value="150"/>
+<div class="relative h-6 flex items-center">
+<div class="absolute w-full h-1 bg-surface-container-highest rounded-lg"></div>
+<div class="absolute h-1 bg-secondary rounded-lg" style="left: 12.5%; right: 25%;"></div>
+<input class="absolute w-full h-1 appearance-none cursor-pointer accent-secondary bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:bg-secondary [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-md" max="200" min="0" type="range" value="25"/>
+<input class="absolute w-full h-1 appearance-none cursor-pointer accent-secondary bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:bg-secondary [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-md" max="200" min="0" type="range" value="150"/>
+</div>
 <div class="flex justify-between mt-4 font-label text-xs text-on-surface-variant font-bold">
-<span>$0</span>
-<span>$200+</span>
+<span>$25</span>
+<span>$150</span>
 </div>
 </div>
 </section>
